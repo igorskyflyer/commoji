@@ -37,8 +37,6 @@ Commoji’s purpose is to transform the way developers communicate intent throug
 
 ## 🕵🏼 Usage
 
-<br>
-
 ### 📝 Format
 
 Commoji proposes the following format when writing commit messages:
