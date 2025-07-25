@@ -89,7 +89,6 @@ Commoji also proposes the following verbs to be used when writing commit message
 | **refactor**   | _Improve structure without changing behavior_ |
 | **optimize**   | _Improve performance or efficiency_           |
 | **test**       | _Add or modify tests_                         |
-| **document**   | _Update or add documentation_                 |
 | **configure**  | _Adjust system or environment settings_       |
 | **prepare**    | _Set up for release or deployment_            |
 | **release**    | _Publish or ship a version_                   |
