@@ -16,7 +16,6 @@
 
 - [Features](#-features)
 - [Usage](#-usage)
-- [Example](#️-example)
 - [Changelog](#-changelog)
 - [Support](#-support)
 - [License](#-license)
@@ -40,7 +39,8 @@ Commoji defines the following tags:
 | ⚡ **perf**         | *Performance improvements*                     | `:zap:`                      |
 | ✅ **test**         | *Adding/modifying tests*                       | `:white_check_mark:`         |
 | 🏭 **build**        | *Build system updates*                         | `:factory:`                  |
-| 🚀 **ci**           | *CI configuration changes*                     | `:rocket:`                   |
+| 👷🏻 **ci**           | *CI configuration changes*                     | `:construction_worker:`      |
+| 🚀 **deploy**       | *Deployment*                                   | `:rocket:`                   |
 | 🔧 **chore**        | *Misc tasks and maintenance*                   | `:wrench:`                   |
 | ⏪ **revert**       | *Reverting changes*                            | `:rewind:`                   |
 | 🔀 **merge**        | *Merge commits*                                | `:twisted_rightwards_arrows:`|
@@ -55,11 +55,6 @@ Commoji defines the following tags:
 <br>
 
 ## 🕵🏼 Usage
-
----
-
-## 🗒️ Example
-
 
 ---
 
