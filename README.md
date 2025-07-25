@@ -43,7 +43,7 @@ Commoji proposes the following format when writing commit messages:
 
 `:emoji: (tag): verb + object`  
 
-All the elements except the `object` should be taken from the tables above. While the `object` is free-form, it should ideally be a concise, semantically clear noun phrase. See additional recommendations for the [`object`](#-object) below.
+All the elements except the `object` should be taken from the tables below. While the `object` is free-form, it should ideally be a concise, semantically clear noun phrase. See additional recommendations for the [`object`](#-object) below.
 
 <br>
 
