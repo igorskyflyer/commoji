@@ -1,6 +1,6 @@
 ## 📒 Changelog
 
-### of [Commoji for Visual Studio Code](https://github.com/igorskyflyer/{{repo}})
+### of [Commoji](https://github.com/igorskyflyer/commoji)
 
 <br>
 
