@@ -49,7 +49,7 @@ Commoji defines the following tags:
 | 🔐 security     | Security patches or enhancements              | `:closed_lock_with_key:`     |
 | 🧠 ux           | UX improvements beyond styling                | `:brain:`                    |
 | ♿ accessibility| Enhancing accessibility                       | `:wheelchair:`               |
-| 🌍 i18n         | Internationalization / localization           | `:earth_africa:`             |
+| 🌐 i18n         | Internationalization / localization           | `:globe_with_meridians:`             |
 
 <br>
 
