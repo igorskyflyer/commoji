@@ -262,25 +262,33 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 🧬 Related
 
-[]()
+[@igor.dvlpr/scrollend-polyfill](https://www.npmjs.com/package/@igor.dvlpr/scrollend-polyfill)
 
-> __
+> _🛴 A performant and light (< 1.5KB) JavaScript polyfill for the scrollend Event. ⛸️_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/zing](https://www.npmjs.com/package/@igor.dvlpr/zing)
 
-[]()
+> _🐌 Zing is a C# style String formatter for JavaScript that empowers Strings with positional arguments - composite formatting. 🚀_
 
-> __
+<br>
 
-[]()
+[@igor.dvlpr/strip-yaml-front-matter](https://www.npmjs.com/package/@igor.dvlpr/strip-yaml-front-matter)
 
-> __
+> _🦓 Strips YAML front matter from a String or a file. 👾_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/registry-apppaths](https://www.npmjs.com/package/@igor.dvlpr/registry-apppaths)
+
+> _🪀 A Node.js module for reading the AppPaths registry key on Windows. Useful for retrieving applications that can be launched from the command prompt. 🗃_
+
+<br>
+
+[@igor.dvlpr/emojilyzer](https://www.npmjs.com/package/@igor.dvlpr/emojilyzer)
+
+> _💬 Emojifies strings, converting textual representations of emojis to graphical ones. 🖌️_
 
 ---
 
