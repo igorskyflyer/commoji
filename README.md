@@ -69,6 +69,7 @@ Commoji achieves its goal by defining the following tags, their purpose and emoj
 </div>
 
 <br>
+<br>
 
 > [!NOTE]
 > Tags should be written in lowercase.
@@ -109,6 +110,7 @@ Commoji also proposes the following verbs to be used when writing commit message
   <em>Table 2. <strong>Commoji</strong>'s verbs</em>
 </div>
 
+<br>
 <br>
 
 > [!NOTE]
