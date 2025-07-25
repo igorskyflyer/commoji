@@ -55,28 +55,28 @@ Commoji achieves its goal by defining the following tags, their purpose and emoj
 
 |     **Tag**         |                  **Purpose**                   |          **Emoji**           |
 |:-------------------:|:----------------------------------------------:|:----------------------------:|
-| 🐣 **init**         | *Initial commit / setup*                       | `:hatching_chick:`           |
-| ✨ **feat**         | *New feature*                                  | `:sparkles:`                 |
-| 🐛 **fix**          | *Bug fix*                                      | `:bug:`                      |
-| 📚 **docs**         | *Documentation updates*                        | `:books:`                    |
-| 💄 **style**        | *Code style or visual tweaks (no logic change)*| `:lipstick:`                 |
-| 🔨 **refactor**     | *Code refactoring*                             | `:hammer:`                   |
-| ⚡ **perf**         | *Performance improvements*                     | `:zap:`                      |
-| ✅ **test**         | *Adding/modifying tests*                       | `:white_check_mark:`         |
-| 🏭 **build**        | *Build system updates*                         | `:factory:`                  |
-| 👷🏻 **ci**           | *CI configuration changes*                     | `:construction_worker:`      |
-| 🚀 **deploy**       | *Deployment*                                   | `:rocket:`                   |
-| 🔧 **chore**        | *Misc tasks and maintenance*                   | `:wrench:`                   |
-| 🔬 **experiments**  | *Experimental features*                        | `:microscope:`               |
-| ⏪ **revert**       | *Reverting changes*                            | `:rewind:`                   |
-| 🔀 **merge**        | *Merge commits*                                | `:twisted_rightwards_arrows:`|
-| 📦 **deps**         | *Dependency updates*                           | `:package:`                  |
-| ⚙️ **config**       | *Configuration changes*                        | `:gear:`                     |
-| 🔥 **cleanup**      | *Remove dead code*                             | `:fire:`                     |
-| 🔐 **security**     | *Security patches or enhancements*             | `:closed_lock_with_key:`     |
-| 🧠 **ux**           | *UX improvements beyond styling*               | `:brain:`                    |
-| ♿ **accessibility**| *Enhancing accessibility*                      | `:wheelchair:`               |
-| 🌐 **i18n**         | *Internationalization / localization*          | `:globe_with_meridians:`     |
+| 🐣 **init**         | _Initial commit / setup_                       | `:hatching_chick:`           |
+| ✨ **feat**         | _New feature_                                  | `:sparkles:`                 |
+| 🐛 **fix**          | _Bug fix_                                      | `:bug:`                      |
+| 📚 **docs**         | _Documentation updates_                        | `:books:`                    |
+| 💄 **style**        | _Code style or visual tweaks (no logic change)_| `:lipstick:`                 |
+| 🔨 **refactor**     | _Code refactoring_                             | `:hammer:`                   |
+| ⚡ **perf**         | _Performance improvements_                     | `:zap:`                      |
+| ✅ **test**         | _Adding/modifying tests_                       | `:white_check_mark:`         |
+| 🏭 **build**        | _Build system updates_                         | `:factory:`                  |
+| 👷🏻 **ci**           | _CI configuration changes_                     | `:construction_worker:`      |
+| 🚀 **deploy**       | _Deployment_                                   | `:rocket:`                   |
+| 🔧 **chore**        | _Misc tasks and maintenance_                   | `:wrench:`                   |
+| 🔬 **experiments**  | _Experimental features_                        | `:microscope:`               |
+| ⏪ **revert**       | _Reverting changes_                            | `:rewind:`                   |
+| 🔀 **merge**        | _Merge commits_                                | `:twisted_rightwards_arrows:`|
+| 📦 **deps**         | _Dependency updates_                           | `:package:`                  |
+| ⚙️ **config**       | _Configuration changes_                        | `:gear:`                     |
+| 🔥 **cleanup**      | _Remove dead code_                             | `:fire:`                     |
+| 🔐 **security**     | _Security patches or enhancements_             | `:closed_lock_with_key:`     |
+| 🧠 **ux**           | _UX improvements beyond styling_               | `:brain:`                    |
+| ♿ **accessibility**| _Enhancing accessibility_                      | `:wheelchair:`               |
+| 🌐 **i18n**         | _Internationalization / localization_          | `:globe_with_meridians:`     |
 
 </div>
 
@@ -179,16 +179,16 @@ Here are some examples of `object`s when writing commit messages that adhere to 
 
 |                **Summary**                | **Valid** |          **Reason**          |
 |:-----------------------------------------:|:---------:|:----------------------------:|
-|    `:books: (docs)`: add ToC in README    |     ✅     |   _specific feature added_   |
-| `:books: (docs)`: rename section headings |     ✅     |      _clear noun phrase_     |
-|`:books: (docs)`: update installation guide|     ✅     |  _specific docs subsection_  |
-| `:sparkles: (feat)`: add dark mode toggle |     ✅     |     _pinpointed feature_     |
-|   `:bug: (fix)`: fix login null pointer   |     ✅     |   _precise bug identifier_   |
-|   `:zap: (perf)`: optimize startup time   |     ✅     | _measurable metric improved_ |
-|       `:books: (docs)`: update docs       |     ❌     |      _object too broad_      |
-|       `:sparkles: (feat)`: add mode       |     ❌     |      _ambiguous object_      |
-|           `:bug: (fix)`: fix bug          |     ❌     |       _generic object_       |
-|    `:zap: (perf)`: improve performance    |     ❌     |     _unspecified metric_     |
+|    `:books: (docs)`: add ToC in README    |     ✅     |   _Specific feature added_   |
+| `:books: (docs)`: rename section headings |     ✅     |      _Clear noun phrase_     |
+|`:books: (docs)`: update installation guide|     ✅     |  _Specific docs subsection_  |
+| `:sparkles: (feat)`: add dark mode toggle |     ✅     |     _Pinpointed feature_     |
+|   `:bug: (fix)`: fix login null pointer   |     ✅     |   _Precise bug identifier_   |
+|   `:zap: (perf)`: optimize startup time   |     ✅     | _Measurable metric improved_ |
+|       `:books: (docs)`: update docs       |     ❌     |      _Object too broad_      |
+|       `:sparkles: (feat)`: add mode       |     ❌     |      _Ambiguous object_      |
+|           `:bug: (fix)`: fix bug          |     ❌     |       _Generic object_       |
+|    `:zap: (perf)`: improve performance    |     ❌     |     _Unspecified metric_     |
 
 </div>
 
@@ -208,15 +208,15 @@ The following table shows some usage examples that are valid or invalid accordin
 
 |               **Commit Message**         | Valid |                           **Why**                           |
 |:----------------------------------------:|:-----:|:-----------------------------------------------------------:|
-| `:books: (docs)`: update README          |  ✅  | All elements follow Commoji format                          |
-| `:sparkles: (feat)`: implement login flow|  ✅  | Emoji, tag, verb, and object aligned                        |
-| `:bug: (fix)`: Fix Login Bug             |  ❌  | Verb is capitalized – should be lowercase                   |
-| `:books:` update README                  |  ❌  | Tag (`docs`) is missing                                     |
-| `:rocket: (deploy)`: deploy to prod      |  ❌  | Verb is not from verb list (`deploy` ≠ `release`)           |
-| `:hammer: (refactor)`: refactored auth   |  ❌  | Verb refactored is not in imperative, present tense         |
-| `:bug: (fix)`: remove typo               |  ✅  | Uses tag `fix`, verb `remove`, valid object                 |
-| `:fire: (cleanup)`: remove unused imports|  ✅  | Grammatically clear and semantically precise                |
-| `:sparkles: (feat)`: implement dark mode |  ✅  | Grammatically clear and semantically precise                |
+| `:books: (docs)`: update README          |  ✅  | _All elements follow Commoji format_                         |
+| `:sparkles: (feat)`: implement login flow|  ✅  | _Emoji, tag, verb, and object aligned_                       |
+| `:bug: (fix)`: Fix Login Bug             |  ❌  | _Verb is capitalized – should be lowercase_                  |
+| `:books:` update README                  |  ❌  | _Tag (`docs`) is missing_                                    |
+| `:rocket: (deploy)`: deploy to prod      |  ❌  | _Verb is not from verb list (`deploy` ≠ `release`)_          |
+| `:hammer: (refactor)`: refactored auth   |  ❌  | _Verb refactored is not in imperative, present tense_        |
+| `:bug: (fix)`: remove typo               |  ✅  | _Uses tag `fix`, verb `remove`, valid object_                |
+| `:fire: (cleanup)`: remove unused imports|  ✅  | _Grammatically clear and semantically precise_               |
+| `:sparkles: (feat)`: implement dark mode |  ✅  | _Grammatically clear and semantically precise_               |
 
 </div>
 
