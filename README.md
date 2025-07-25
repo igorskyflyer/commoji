@@ -3,11 +3,15 @@
 <h1 align="center">Commoji</h1>
 </div>
 
-This file contains the **`v1.0.0`** • _25 Jul 2025_ specification and documentation of `Commoji`.
+<div align="center">
+This file contains the <strong><code>v1.0.0</code></strong> • <em>25 Jul 2025</em> specification and documentation of <code>Commoji</code>.
 
 <br>
 
-> 🚀 Head to the [Releases](https://github.com/igorskyflyer/commoji/releases/) page to browse the other versions.
+<blockquote>
+  🚀 Head to the <a href="https://github.com/igorskyflyer/commoji/releases/">Releases</a> page to browse the other versions.
+</blockquote>
+</div>
 
 <br>
 
