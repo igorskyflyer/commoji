@@ -6,7 +6,7 @@
 <br>
 
 <div align="center">
-  🐉 Commoji is a compact and expressive tagging system that blends meaning and emoji to make your commit history more readable and beautiful. 🏷️
+  🐉 Commoji is a compact, expressive tagging system that blends meaning and emoji to make your commit history more readable and beautiful. 🏷️
 </div>
 
 <br>
