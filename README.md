@@ -15,12 +15,12 @@
 ## 📃 Table of Contents
 
 - [Features](#-features)
+- [Usage](#-usage)
   - [Format](#-format)
   - [Tags](#️-tags)
   - [Verbs](#️-verbs)
   - [Object](#-object)
-    - [Examples](#-examples)
-- [Usage](#-usage)
+- [Examples](#️-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
 - [Support](#-support)
@@ -31,7 +31,11 @@
 
 ## 🤖 Features
 
-Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with visual expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.  
+Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with visual expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.
+
+---
+
+## 🕵🏼 Usage
 
 <br>
 
@@ -167,7 +171,9 @@ When a change truly spans multiple concerns, choose a higher-level verb:
 
 <br>
 
-#### 🔬 Examples
+**🔬 Examples**
+
+<br>
 
 Here are some examples of `object`s when writing commit messages that adhere to Commoji's conventions.
 
@@ -194,7 +200,7 @@ Here are some examples of `object`s when writing commit messages that adhere to 
 
 ---
 
-## 🕵🏼 Usage
+## 🗒️ Examples
 
 The following table shows some usage examples that are valid or invalid according to Commoji’s formatting guidelines.
 
