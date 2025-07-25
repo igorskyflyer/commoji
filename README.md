@@ -42,6 +42,7 @@ Commoji defines the following tags:
 | 👷🏻 **ci**           | *CI configuration changes*                     | `:construction_worker:`      |
 | 🚀 **deploy**       | *Deployment*                                   | `:rocket:`                   |
 | 🔧 **chore**        | *Misc tasks and maintenance*                   | `:wrench:`                   |
+| 🔬 **experiments**  | *Experimental features*                        | `:microscope:`               |
 | ⏪ **revert**       | *Reverting changes*                            | `:rewind:`                   |
 | 🔀 **merge**        | *Merge commits*                                | `:twisted_rightwards_arrows:`|
 | 📦 **deps**         | *Dependency updates*                           | `:package:`                  |
