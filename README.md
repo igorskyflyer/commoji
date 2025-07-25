@@ -20,8 +20,8 @@
   - [Format](#-format)
 - [Usage](#-usage)
 - [Changelog](#-changelog)
-- [Support](#-support)
 - [License](#-license)
+- [Support](#-support)
 - [Related](#-related)
 - [Author](#-author)
 
@@ -29,7 +29,7 @@
 
 ## 🤖 Features
 
-Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with symbolic expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.  
+Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with visual expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.  
 
 <br>
 
@@ -139,27 +139,27 @@ The following table shows some usage examples that are valid or invalid accordin
 
 |               **Commit Message**         | Valid |                           **Why**                           |
 |:----------------------------------------:|:-----:|:-----------------------------------------------------------:|
-| `:books:` (docs): update README          |  ✅  | All elements follow Commoji format.                          |
-| `:sparkles:` (feat): implement login flow|  ✅  | Emoji, tag, verb, and object aligned.                        |
-| `:bug:` (fix): Fix Login Bug             |  ❌  | Verb is capitalized – should be lowercase.                   |
+| `:books: (docs)`: update README          |  ✅  | All elements follow Commoji format.                          |
+| `:sparkles: (feat)`: implement login flow|  ✅  | Emoji, tag, verb, and object aligned.                        |
+| `:bug: (fix)`: Fix Login Bug             |  ❌  | Verb is capitalized – should be lowercase.                   |
 | `:books:` update README                  |  ❌  | Tag (docs) is missing.                                       |
-| `:rocket:` (deploy): deploy to prod      |  ❌  | Verb is not from verb list (deploy ≠ release).               |
-| `:hammer:` (refactor): refactored auth   |  ❌  | Verb refactored is not in imperative, present tense.         |
-| `:bug:` (fix): remove typo               |  ✅  | Uses tag fix, verb remove, valid object.                     |
-| `:fire:` (cleanup): remove unused imports|  ✅  | Grammatically clear and semantically precise.                |
-| `:sparkles:` (feat): implement dark mode |  ✅  | Grammatically clear and semantically precise.                |
+| `:rocket: (deploy)`: deploy to prod      |  ❌  | Verb is not from verb list (deploy ≠ release).               |
+| `:hammer: (refactor)`: refactored auth   |  ❌  | Verb refactored is not in imperative, present tense.         |
+| `:bug: (fix)`: remove typo               |  ✅  | Uses tag fix, verb remove, valid object.                     |
+| `:fire: (cleanup)`: remove unused imports|  ✅  | Grammatically clear and semantically precise.                |
+| `:sparkles: (feat)`: implement dark mode |  ✅  | Grammatically clear and semantically precise.                |
 
 </div>
 
 <div align="center">
-  <em>Table 3. <strong>Commoji</strong> examples</em>
+  <em>Table 3. <strong>Commoji</strong>-formatted commit messages</em>
 </div>
 
 ---
 
 ## 📝 Changelog
 
-📑 The changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/commoji/blob/main/CHANGELOG.md).
+📑 See the full changelog in: [CHANGELOG.md](https://github.com/igorskyflyer/commoji/blob/main/CHANGELOG.md).
 
 ---
 
