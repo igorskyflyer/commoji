@@ -31,6 +31,9 @@
 
 Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with symbolic expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.  
 
+<br>
+<br>
+
 ### 🏷️ Tags
 
 Commoji achieves its goal by defining the following tags, their purpose and emoji:
