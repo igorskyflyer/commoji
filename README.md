@@ -15,9 +15,11 @@
 ## 📃 Table of Contents
 
 - [Features](#-features)
+  - [Format](#-format)
   - [Tags](#️-tags)
   - [Verbs](#️-verbs)
-  - [Format](#-format)
+  - [Object](#-object)
+    - [Examples](#-examples)
 - [Usage](#-usage)
 - [Changelog](#-changelog)
 - [License](#-license)
@@ -30,6 +32,16 @@
 ## 🤖 Features
 
 Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with visual expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.  
+
+<br>
+
+### 📝 Format
+
+Commoji proposes the following format when writing commit messages:
+
+`:emoji: (tag): verb + object`  
+
+All the elements except the `object` should be taken from the tables above. While the `object` is free-form, it should ideally be a concise, semantically clear noun phrase. See additional recommendations for the `object` below.
 
 <br>
 
@@ -119,15 +131,7 @@ Commoji also proposes the following imperative verbs to be used when writing com
 
 <br>
 
-### 📝 Format
-
-Commoji proposes the following format when writing commit messages:
-
-`:emoji: (tag): verb + object`  
-
-All the elements except the `object` should be taken from the tables above. While the `object` is free-form, it should ideally be a concise, semantically clear noun phrase. See additional recommendations for the `object` below.
-
-#### 📚 Object
+### 📚 Object
 
 The object in the commit message should be specific enough to convey what changed. Aim for a concise noun phrase that captures intent; use the commit body for details.
 
@@ -163,7 +167,7 @@ When a change truly spans multiple concerns, choose a higher-level verb:
 
 <br>
 
-#### Examples
+#### 🔬 Examples
 
 Here are some examples of `object`s when writing commit messages that adhere to Commoji's conventions.
 
