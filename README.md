@@ -35,6 +35,8 @@ Commoji’s purpose is to transform the way developers communicate intent throug
 
 Commoji achieves its goal by defining the following tags, their purpose and emoji:
 
+<div align="center">
+
 |     **Tag**         |                  **Purpose**                   |          **Emoji**           |
 |:-------------------:|:----------------------------------------------:|:----------------------------:|
 | 🐣 **init**         | *Initial commit / setup*                       | `:hatching_chick:`           |
@@ -60,6 +62,8 @@ Commoji achieves its goal by defining the following tags, their purpose and emoj
 | ♿ **accessibility**| *Enhancing accessibility*                      | `:wheelchair:`               |
 | 🌐 **i18n**         | *Internationalization / localization*          | `:globe_with_meridians:`     |
 
+</div>
+
 <div align="center">
   <em>Table 1. <strong>Commoji</strong>'s tagging system</em>
 </div>
@@ -70,6 +74,8 @@ Commoji achieves its goal by defining the following tags, their purpose and emoj
 ### 🛠️ Verbs
 
 Commoji also proposes the following verbs to be used when writing commit messages:
+
+<div align="center">
 
 |    **Verb**    |               **Action Purpose**              |
 |:--------------:|:---------------------------------------------:|
@@ -92,6 +98,8 @@ Commoji also proposes the following verbs to be used when writing commit message
 | **experiment** | _Try out prototype ideas_                     |
 | **clean**      | _Purge unused or obsolete elements_           |
 | **translate**  | _Add or revise localization_                  |
+
+</div>
 
 <div align="center">
   <em>Table 2. <strong>Commoji</strong>'s verbs</em>
