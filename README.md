@@ -35,7 +35,7 @@ Commoji’s purpose is to transform the way developers communicate intent throug
 
 Commoji achieves its goal by defining the following tags, their purpose and emoji:
 
-|       Tag           |                    Purpose                     |            Emoji             |
+|     **Tag**         |                  **Purpose**                   |          **Emoji**           |
 |:-------------------:|:----------------------------------------------:|:----------------------------:|
 | 🐣 **init**         | *Initial commit / setup*                       | `:hatching_chick:`           |
 | ✨ **feat**         | *New feature*                                  | `:sparkles:`                 |
@@ -60,12 +60,42 @@ Commoji achieves its goal by defining the following tags, their purpose and emoj
 | ♿ **accessibility**| *Enhancing accessibility*                      | `:wheelchair:`               |
 | 🌐 **i18n**         | *Internationalization / localization*          | `:globe_with_meridians:`     |
 
+<div align="center">
+  <em>Table 1. <strong>Commoji</strong>'s tagging system</em>
+</div>
+
 <br>
 <br>
 
 ### 🛠️ Verbs
 
 Commoji also proposes the following verbs to be used when writing commit messages:
+
+|    **Verb**    |               **Action Purpose**              |
+|:--------------:|:---------------------------------------------:|
+| **add**        | _Introduce a new element_                     |
+| **update**     | _Modify an existing element_                  |
+| **remove**     | _Eliminate something_                         |
+| **rename**     | _Change a name or label_                      |
+| **move**       | _Reposition without modifying content_        |
+| **implement**  | _Build out functionality_                     |
+| **fix**        | _Resolve a fault or issue_                    |
+| **refactor**   | _Improve structure without changing behavior_ |
+| **optimize**   | _Improve performance or efficiency_           |
+| **test**       | _Add or modify tests_                         |
+| **document**   | _Update or add documentation_                 |
+| **configure**  | _Adjust system or environment settings_       |
+| **prepare**    | _Set up for release or deployment_            |
+| **release**    | _Publish or ship a version_                   |
+| **revert**     | _Undo a previous change_                      |
+| **merge**      | _Combine branches or changes_                 |
+| **experiment** | _Try out prototype ideas_                     |
+| **clean**      | _Purge unused or obsolete elements_           |
+| **translate**  | _Add or revise localization_                  |
+
+<div align="center">
+  <em>Table 2. <strong>Commoji</strong>'s verbs</em>
+</div>
 
 <br>
 <br>
@@ -74,7 +104,9 @@ Commoji also proposes the following verbs to be used when writing commit message
 
 Commoji proposes the following format when writing commit messages:
 
-`:emoji: (tag): verb + message`
+`:emoji: (tag): verb + message`  
+
+All the elements except the `message` should be taken from the tables above.
 
 <br>
 
