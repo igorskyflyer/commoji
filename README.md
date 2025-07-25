@@ -69,6 +69,11 @@ Commoji achieves its goal by defining the following tags, their purpose and emoj
 </div>
 
 <br>
+
+> [!NOTE]
+> Tags should be written in lowercase.
+
+<br>
 <br>
 
 ### 🛠️ Verbs
@@ -105,15 +110,20 @@ Commoji also proposes the following verbs to be used when writing commit message
 </div>
 
 <br>
+
+> [!NOTE]
+> Verbs should be written in lowercase.
+
+<br>
 <br>
 
 ### 📝 Format
 
 Commoji proposes the following format when writing commit messages:
 
-`:emoji: (tag): verb + message`  
+`:emoji: (tag): verb + object`  
 
-All the elements except the `message` should be taken from the tables above.
+All the elements except the `object` should be taken from the tables above.
 
 <br>
 
