@@ -139,11 +139,11 @@ The object in the commit message should be specific enough to convey what change
 <br>
 
 **Guidelines**:
-- use a precise noun phrase
+- use a precise noun phrase whenever applicable
 
 > ✅ Good: :books: (docs): add ToC to README
 
->❌ Bad: :books: (docs): update README (too generic)
+> ❌ Bad: :books: (docs): update README (too generic)
 
 - don’t list every change in the summary
 - summarize the primary intent, e.g., “add OAuth section,” not “add OAuth section, fix typo, update link.”
@@ -165,10 +165,18 @@ When a change truly spans multiple concerns, choose a higher-level verb:
 
 #### Examples
 
+<div align="center">
+
 |             **Summary**             | **Valid**  |     **Reason**     |
 |:-----------------------------------:|:----------:|:-----------------:|
 | `:books: (docs)`: update README     |     ❌     | _Too generic_     |
 | `:books: (docs)`: add ToC to README |     ✅     | _Clear_           |
+
+</div>
+
+<div align="center">
+  <em>Table 3. <strong>Commoji</strong>'s object examples</em>
+</div>
 
 ---
 
@@ -195,7 +203,7 @@ The following table shows some usage examples that are valid or invalid accordin
 </div>
 
 <div align="center">
-  <em>Table 3. <strong>Commoji</strong>-formatted commit messages</em>
+  <em>Table 4. <strong>Commoji</strong>-formatted commit messages</em>
 </div>
 
 ---
