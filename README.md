@@ -15,6 +15,9 @@
 ## 📃 Table of Contents
 
 - [Features](#-features)
+  - [Tags](#️-tags)
+  - [Verbs](#️-verbs)
+  - [Format](#-format)
 - [Usage](#-usage)
 - [Changelog](#-changelog)
 - [Support](#-support)
@@ -26,9 +29,11 @@
 
 ## 🤖 Features
 
-Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with symbolic expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.
+Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with symbolic expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.  
 
-Commoji defines the following tags, their purpose and emoji:
+### 🏷️ Tags
+
+Commoji achieves its goal by defining the following tags, their purpose and emoji:
 
 |       Tag           |                    Purpose                     |            Emoji             |
 |:-------------------:|:----------------------------------------------:|:----------------------------:|
@@ -54,6 +59,22 @@ Commoji defines the following tags, their purpose and emoji:
 | 🧠 **ux**           | *UX improvements beyond styling*               | `:brain:`                    |
 | ♿ **accessibility**| *Enhancing accessibility*                      | `:wheelchair:`               |
 | 🌐 **i18n**         | *Internationalization / localization*          | `:globe_with_meridians:`     |
+
+<br>
+<br>
+
+### 🛠️ Verbs
+
+Commoji also proposes the following verbs to be used when writing commit messages:
+
+<br>
+<br>
+
+### 📝 Format
+
+Commoji proposes the following format when writing commit messages:
+
+`:emoji: (tag): verb + message`
 
 <br>
 
