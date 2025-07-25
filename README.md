@@ -131,7 +131,7 @@ All the elements except the `object` should be taken from the tables above. Whil
 
 ## 🕵🏼 Usage
 
-The following tables shows some usage examples.
+The following table shows some usage examples that are valid or invalid according to Commoji’s formatting guidelines.
 
 <br>
 
