@@ -3,11 +3,11 @@
 <h1 align="center">Commoji</h1>
 </div>
 
-This file contains the latest (**`v1.0.0`**) specification and documentation of `Commoji`.
+This file contains the **`v1.0.0`** • _25 Jul 2025_ specification and documentation of `Commoji`.
 
 <br>
 
-> 🚀 Head to the [Releases](https://github.com/igorskyflyer/commoji/releases/) page to read the specifications of all revisions.
+> 🚀 Head to the [Releases](https://github.com/igorskyflyer/commoji/releases/) page to browse the other versions.
 
 <br>
 
