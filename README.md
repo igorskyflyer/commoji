@@ -133,7 +133,8 @@ The object in the commit message should be specific enough to convey what change
 
 <br>
 
-[!NOTE] Keep your summary under ~50 characters. If it grows longer, split out details into the body.
+> [!INFO]
+> Keep your summary under ~50 characters. If it grows longer, split out details into the body.
 
 <br>
 
