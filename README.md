@@ -39,13 +39,14 @@ Commoji defines the following tags:
 | 🔨 refactor     | Code refactoring                              | `:hammer:`                   |
 | ⚡ perf         | Performance improvements                      | `:zap:`                      |
 | ✅ test         | Adding/modifying tests                        | `:white_check_mark:`         |
-| 📦 build        | Build system updates                          | `:package:`                  |
+| 🏭 build        | Build system updates                          | `:factory:`                  |
 | 🚀 ci           | CI configuration changes                      | `:rocket:`                   |
 | 🔧 chore        | Misc tasks and maintenance                    | `:wrench:`                   |
 | ⏪ revert       | Reverting changes                             | `:rewind:`                   |
 | 🔀 merge        | Merge commits                                 | `:twisted_rightwards_arrows:`|
 | 📦 deps         | Dependency updates                            | `:package:`                  |
 | ⚙️ config       | Configuration changes                         | `:gear:`                     |
+| 🔥 cleanup      | Remove dead code                              | `:fire:`                     |
 | 🔐 security     | Security patches or enhancements              | `:closed_lock_with_key:`     |
 | 🧠 ux           | UX improvements beyond styling                | `:brain:`                    |
 | ♿ accessibility| Enhancing accessibility                       | `:wheelchair:`               |
