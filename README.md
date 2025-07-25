@@ -26,7 +26,9 @@
 
 ## 🤖 Features
 
-Commoji defines the following tags:
+Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with symbolic expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.
+
+Commoji defines the following tags, their purpose and emoji:
 
 |       Tag           |                    Purpose                     |            Emoji             |
 |:-------------------:|:----------------------------------------------:|:----------------------------:|
