@@ -165,6 +165,8 @@ When a change truly spans multiple concerns, choose a higher-level verb:
 
 #### Examples
 
+Here are some examples of `object`s when writing commit messages that adhere to Commoji's conventions.
+
 <div align="center">
 
 |             **Summary**             | **Valid**  |     **Reason**     |
