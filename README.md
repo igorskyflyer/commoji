@@ -125,7 +125,49 @@ Commoji proposes the following format when writing commit messages:
 
 `:emoji: (tag): verb + object`  
 
-All the elements except the `object` should be taken from the tables above. While the `object` is free-form, it should ideally be a concise, semantically clear noun phrase.
+All the elements except the `object` should be taken from the tables above. While the `object` is free-form, it should ideally be a concise, semantically clear noun phrase. See additional recommendations for the `object` below.
+
+#### 📚 Object
+
+The object in the commit message should be specific enough to convey what changed. Aim for a concise noun phrase that captures intent; use the commit body for details.
+
+<br>
+
+[!NOTE] Keep your summary under ~50 characters. If it grows longer, split out details into the body.
+
+<br>
+
+**Guidelines**:
+- use a precise noun phrase
+
+> ✅ Good: :books: (docs): add ToC to README
+
+>❌ Bad: :books: (docs): update README (too generic)
+
+- don’t list every change in the summary
+- summarize the primary intent, e.g., “add OAuth section,” not “add OAuth section, fix typo, update link.”
+- leverage the commit body for elaboration:
+
+```markdown
+:books: (docs): add ToC to README
+
+- generated Table of Contents for each heading  
+- updated README links to anchor tags  
+- fixed minor typos in examples
+```
+
+When a change truly spans multiple concerns, choose a higher-level verb:
+
+`:books: (docs): overhaul README`, then explain sub-items in the body.
+
+<br>
+
+#### Examples
+
+|             **Summary**             | **Valid**  |     **Reason**     |
+|:-----------------------------------:|:----------:|:-----------------:|
+| `:books: (docs)`: update README     |     ❌     | _Too generic_     |
+| `:books: (docs)`: add ToC to README |     ✅     | _Clear_           |
 
 ---
 
