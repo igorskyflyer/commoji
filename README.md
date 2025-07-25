@@ -29,28 +29,28 @@
 
 Commoji defines the following tags:
 
-|       Tag       |                    Purpose                    |            Emoji             |
-|:---------------:|:---------------------------------------------:|:----------------------------:|
-| 🐣 init         | Initial commit / setup                        | `:hatching_chick:`           |
-| ✨ feat         | New feature                                   | `:sparkles:`                 |
-| 🐛 fix          | Bug fix                                       | `:bug:`                      |
-| 📚 docs         | Documentation updates                         | `:books:`                    |
-| 💄 style        | Code style or visual tweaks (no logic change) | `:lipstick:`                 |
-| 🔨 refactor     | Code refactoring                              | `:hammer:`                   |
-| ⚡ perf         | Performance improvements                      | `:zap:`                      |
-| ✅ test         | Adding/modifying tests                        | `:white_check_mark:`         |
-| 🏭 build        | Build system updates                          | `:factory:`                  |
-| 🚀 ci           | CI configuration changes                      | `:rocket:`                   |
-| 🔧 chore        | Misc tasks and maintenance                    | `:wrench:`                   |
-| ⏪ revert       | Reverting changes                             | `:rewind:`                   |
-| 🔀 merge        | Merge commits                                 | `:twisted_rightwards_arrows:`|
-| 📦 deps         | Dependency updates                            | `:package:`                  |
-| ⚙️ config       | Configuration changes                         | `:gear:`                     |
-| 🔥 cleanup      | Remove dead code                              | `:fire:`                     |
-| 🔐 security     | Security patches or enhancements              | `:closed_lock_with_key:`     |
-| 🧠 ux           | UX improvements beyond styling                | `:brain:`                    |
-| ♿ accessibility| Enhancing accessibility                       | `:wheelchair:`               |
-| 🌐 i18n         | Internationalization / localization           | `:globe_with_meridians:`             |
+|       Tag           |                    Purpose                     |            Emoji             |
+|:-------------------:|:----------------------------------------------:|:----------------------------:|
+| 🐣 **init**         | *Initial commit / setup*                       | `:hatching_chick:`           |
+| ✨ **feat**         | *New feature*                                  | `:sparkles:`                 |
+| 🐛 **fix**          | *Bug fix*                                      | `:bug:`                      |
+| 📚 **docs**         | *Documentation updates*                        | `:books:`                    |
+| 💄 **style**        | *Code style or visual tweaks (no logic change)*| `:lipstick:`                 |
+| 🔨 **refactor**     | *Code refactoring*                             | `:hammer:`                   |
+| ⚡ **perf**         | *Performance improvements*                     | `:zap:`                      |
+| ✅ **test**         | *Adding/modifying tests*                       | `:white_check_mark:`         |
+| 🏭 **build**        | *Build system updates*                         | `:factory:`                  |
+| 🚀 **ci**           | *CI configuration changes*                     | `:rocket:`                   |
+| 🔧 **chore**        | *Misc tasks and maintenance*                   | `:wrench:`                   |
+| ⏪ **revert**       | *Reverting changes*                            | `:rewind:`                   |
+| 🔀 **merge**        | *Merge commits*                                | `:twisted_rightwards_arrows:`|
+| 📦 **deps**         | *Dependency updates*                           | `:package:`                  |
+| ⚙️ **config**       | *Configuration changes*                        | `:gear:`                     |
+| 🔥 **cleanup**      | *Remove dead code*                             | `:fire:`                     |
+| 🔐 **security**     | *Security patches or enhancements*             | `:closed_lock_with_key:`     |
+| 🧠 **ux**           | *UX improvements beyond styling*               | `:brain:`                    |
+| ♿ **accessibility**| *Enhancing accessibility*                      | `:wheelchair:`               |
+| 🌐 **i18n**         | *Internationalization / localization*          | `:globe_with_meridians:`               |
 
 <br>
 
