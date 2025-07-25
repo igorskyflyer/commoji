@@ -169,10 +169,18 @@ Here are some examples of `object`s when writing commit messages that adhere to 
 
 <div align="center">
 
-|             **Summary**             | **Valid**  |     **Reason**     |
-|:-----------------------------------:|:----------:|:-----------------:|
-| `:books: (docs)`: update README     |     ❌     | _Too generic_     |
-| `:books: (docs)`: add ToC to README |     ✅     | _Clear_           |
+|                **Summary**                | **Valid** |          **Reason**          |
+|:-----------------------------------------:|:---------:|:----------------------------:|
+|    `:books: (docs)`: add ToC in README    |     ✅     |   _specific feature added_   |
+| `:books: (docs)`: rename section headings |     ✅     |      _clear noun phrase_     |
+|`:books: (docs)`: update installation guide|     ✅     |  _specific docs subsection_  |
+| `:sparkles: (feat)`: add dark mode toggle |     ✅     |     _pinpointed feature_     |
+|   `:bug: (fix)`: fix login null pointer   |     ✅     |   _precise bug identifier_   |
+|   `:zap: (perf)`: optimize startup time   |     ✅     | _measurable metric improved_ |
+|       `:books: (docs)`: update docs       |     ❌     |      _object too broad_      |
+|       `:sparkles: (feat)`: add mode       |     ❌     |      _ambiguous object_      |
+|           `:bug: (fix)`: fix bug          |     ❌     |       _generic object_       |
+|    `:zap: (perf)`: improve performance    |     ❌     |     _unspecified metric_     |
 
 </div>
 
