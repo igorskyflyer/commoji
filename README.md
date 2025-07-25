@@ -80,7 +80,7 @@ Commoji achieves its goal by defining the following tags, their purpose and emoj
 
 ### 🛠️ Verbs
 
-Commoji also proposes the following verbs to be used when writing commit messages:
+Commoji also proposes the following imperative verbs to be used when writing commit messages:
 
 <div align="center">
 
@@ -115,7 +115,7 @@ Commoji also proposes the following verbs to be used when writing commit message
 <br>
 
 > [!NOTE]
-> Verbs should be written in lowercase.
+> Verbs should be written in lowercase. Use the imperative, present tense.
 
 <br>
 
@@ -125,7 +125,7 @@ Commoji proposes the following format when writing commit messages:
 
 `:emoji: (tag): verb + object`  
 
-All the elements except the `object` should be taken from the tables above.
+All the elements except the `object` should be taken from the tables above. While the `object` is free-form, it should ideally be a concise, semantically clear noun phrase.
 
 ---
 
@@ -137,16 +137,17 @@ The following tables shows some usage examples.
 
 <div align="center">
 
-|            **Commit Message**             | ✅/❌ |                           **Why**                           |
-|:-----------------------------------------:|:-----:|:-----------------------------------------------------------:|
-| `:books:` (docs): update README           |  ✅  | All elements follow Commoji format.                         |
-| `:sparkles:` (feat): implement login flow |  ✅  | Emoji, tag, verb, and object aligned.                       |
-| `:bug:` (fix): Fix Login Bug              |  ❌  | Verb is capitalized — should be lowercase.                  |
-| `:books:` update README                   |  ❌  | Tag (docs) is missing.                                      |
-| `:rocket:` (deploy): deploying to prod    |  ❌  | Verb is not from verb list (deploy ≠ release).              |
-| `:hammer:` (refactor): refactored auth    |  ❌  | Verb refactored is conjugated — must be base form refactor. |
-| `:bug:` (fix): remove typo                |  ✅  | Uses tag fix, verb remove, valid object.                    |
-| `:fire:` (cleanup): remove unused imports |  ✅  | Grammatically clear and semantically precise.               |
+|               **Commit Message**                | Valid |                           **Why**                           |
+|:-----------------------------------------------:|:-----:|:-----------------------------------------------------------:|
+| `:books:` (docs): update README                 |  ✅  | All elements follow Commoji format.                          |
+| `:sparkles:` (feat): implement login flow       |  ✅  | Emoji, tag, verb, and object aligned.                        |
+| `:bug:` (fix): Fix Login Bug                    |  ❌  | Verb is capitalized — should be lowercase.                   |
+| `:books:` update README                         |  ❌  | Tag (docs) is missing.                                       |
+| `:rocket:` (deploy): deploy to prod             |  ❌  | Verb is not from verb list (deploy ≠ release).               |
+| `:hammer:` (refactor): refactored auth          |  ❌  | Verb refactored is not in imperative, present tense.         |
+| `:bug:` (fix): remove typo                      |  ✅  | Uses tag fix, verb remove, valid object.                     |
+| `:fire:` (cleanup): remove unused imports       |  ✅  | Grammatically clear and semantically precise.                |
+| `:sparkles:` (feat): implement dark mode toggle |  ✅  | Grammatically clear and semantically precise.                |
 
 </div>
 
