@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/igorskyflyer/commoji/main/assets/commoji.png" alt="Icon of Commoji, a Visual Studio Code extension" width="256" height="256">
-<h1 align="center">Commoji</h1>
+<h1 align="center"><code>Commoji</code></h1>
 </div>
 
 <div align="center">
@@ -20,7 +20,7 @@ specification and documentation of <code>Commoji</code>.
 <br>
 
 <div align="center">
-  🐉 Commoji is a compact, expressive tagging system that blends meaning and emoji to make your commit history more readable and beautiful. 🏷️
+  🐉 <code>Commoji</code> is a compact, expressive tagging system that blends meaning and emoji to make your commit history more readable and beautiful. 🏷️
 </div>
 
 <br>
@@ -46,7 +46,7 @@ specification and documentation of <code>Commoji</code>.
 
 ## 🤖 Features
 
-Commoji’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with visual expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.
+`Commoji`’s purpose is to transform the way developers communicate intent through commit messages – by blending semantic clarity with visual expressiveness. It's not just a tagging system; it’s a visual grammar for storytelling in code.
 
 ---
 
@@ -54,7 +54,7 @@ Commoji’s purpose is to transform the way developers communicate intent throug
 
 ### 📝 Format
 
-Commoji proposes the following formats when writing commit messages:
+`Commoji` proposes the following formats when writing commit messages:
 
 - when the scope is known or not global:
 `<emoji> <tag>(<scope>): <verb> <object>`  
@@ -71,7 +71,7 @@ All the elements except the `scope` and the `object` should be taken from the ta
 
 ### 🏷️ Tags
 
-Commoji achieves its goal by defining the following tags, their purpose, emoji and the fallback/alias ASCII sequence:
+`Commoji` achieves its goal by defining the following tags, their purpose, emoji and the fallback/alias ASCII sequence:
 
 <div align="center">
 
@@ -103,7 +103,7 @@ Commoji achieves its goal by defining the following tags, their purpose, emoji a
 </div>
 
 <div align="center">
-  <em>Table 1. <strong>Commoji</strong>'s tagging system</em>
+  <em>Table 1. <code>Commoji</code>'s tagging system</em>
 </div>
 
 <br>
@@ -128,7 +128,7 @@ When selecting a scope, please follow these guidelines:
 
 ### 🛠️ Verbs
 
-Commoji also proposes the following imperative verbs to be used when writing commit messages:
+`Commoji` also proposes the following imperative verbs to be used when writing commit messages:
 
 <div align="center">
 
@@ -156,7 +156,7 @@ Commoji also proposes the following imperative verbs to be used when writing com
 </div>
 
 <div align="center">
-  <em>Table 2. <strong>Commoji</strong>'s verbs</em>
+  <em>Table 2. <code>Commoji</code>'s verbs</em>
 </div>
 
 <br>
@@ -207,7 +207,7 @@ When a change truly spans multiple concerns, choose a higher-level verb:
 
 <br>
 
-Here are some examples of `object`s when writing commit messages that adhere to Commoji's conventions.
+Here are some examples of `object`s when writing commit messages that adhere to `Commoji`'s conventions.
 
 <div align="center">
 
@@ -227,14 +227,14 @@ Here are some examples of `object`s when writing commit messages that adhere to 
 </div>
 
 <div align="center">
-  <em>Table 3. <strong>Commoji</strong>'s object examples</em>
+  <em>Table 3. <code>Commoji</code>'s object examples</em>
 </div>
 
 ---
 
 ## 🗒️ Examples
 
-The following table shows some usage examples that are valid or invalid according to Commoji’s formatting guidelines.
+The following table shows some usage examples that are valid or invalid according to `Commoji`’s formatting guidelines.
 
 <br>
 
@@ -255,7 +255,7 @@ The following table shows some usage examples that are valid or invalid accordin
 </div>
 
 <div align="center">
-  <em>Table 4. <strong>Commoji</strong>-formatted commit messages</em>
+  <em>Table 4. <code>Commoji</code>-formatted commit messages</em>
 </div>
 
 ---
