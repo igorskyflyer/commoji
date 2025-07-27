@@ -75,30 +75,30 @@ Commoji achieves its goal by defining the following tags, their purpose, emoji a
 
 <div align="center">
 
-|**Emoji**|       **Tag**       |                  **Purpose**                   |      **ASCII Alias**      |
-|:-------:|:-------------------:|:----------------------------------------------:|:-------------------------:|
-|   🐣    |  **init**           | _Initial commit / setup_                       |:hatching_chick:           |
-|   ✨    |  **feat**           | _New feature_                                  |:sparkles:                 |
-|   🐛    |  **fix**            | _Bug fix_                                      |:bug:                      |
-|   📚    |  **docs**           | _Documentation updates_                        |:books:                    |
-|   💄    |  **style**          | _Code style or visual tweaks (no logic change)_|:lipstick:                 |
-|   🔨    |  **refactor**       | _Code refactoring_                             |:hammer:                   |
-|   ⚡    |  **perf**           | _Performance improvements_                     |:zap:                      |
-|   ✅    |  **test**           | _Adding/modifying tests_                       |:white_check_mark:         |
-|   🏭    |  **build**          | _Build system updates_                         |:factory:                  |
-|   👷🏻    |  **ci**             | _CI configuration changes_                     |:construction_worker:      |
-|   🚀    |  **deploy**         | _Deployment_                                   |:rocket:                   |
-|   🔧    |  **chore**          | _Misc tasks and maintenance_                   |:wrench:                   |
-|   🔬    |  **experiments**    | _Experimental features_                        |:microscope:               |
-|   ⏪    |  **revert**         | _Reverting changes_                            |rewind:                   |
-|   🔀    |  **merge**          | _Merge commits_                                |:twisted_rightwards_arrows:|
-|   📦    |  **deps**           | _Dependency updates_                           |:package:                  |
-|   ⚙️    |  **config**         | _Configuration changes_                        |:gear:                     |
-|   🔥    |  **cleanup**        | _Remove dead code_                             |:fire:                     |
-|   🔐    |  **security**       | _Security patches or enhancements_             |:closed_lock_with_key:     |
-|   🧠    |  **ux**             | _UX improvements beyond styling_               |:brain:                    |
-|   ♿    |  **accessibility**  | _Enhancing accessibility_                      |:wheelchair:               |
-|   🌐    |  **i18n**           | _Internationalization / localization_          |:globe_with_meridians:     |
+|**Emoji**|       **Tag**       |                  **Purpose**                   |       **ASCII Alias**       |
+|:-------:|:-------------------:|:----------------------------------------------:|:---------------------------:|
+|   🐣    |  **init**           | _Initial commit / setup_                       |`:hatching_chick:`           |
+|   ✨    |  **feat**           | _New feature_                                  |`:sparkles:`                 |
+|   🐛    |  **fix**            | _Bug fix_                                      |`:bug:`                      |
+|   📚    |  **docs**           | _Documentation updates_                        |`:books:`                    |
+|   💄    |  **style**          | _Code style or visual tweaks (no logic change)_|`:lipstick:`                 |
+|   🔨    |  **refactor**       | _Code refactoring_                             |`:hammer:`                   |
+|   ⚡    |  **perf**           | _Performance improvements_                     |`:zap:`                      |
+|   ✅    |  **test**           | _Adding/modifying tests_                       |`:white_check_mark:`         |
+|   🏭    |  **build**          | _Build system updates_                         |`:factory:`                  |
+|   👷🏻    |  **ci**             | _CI configuration changes_                     |`:construction_worker:`      |
+|   🚀    |  **deploy**         | _Deployment_                                   |`:rocket:`                   |
+|   🔧    |  **chore**          | _Misc tasks and maintenance_                   |`:wrench:`                   |
+|   🔬    |  **experiments**    | _Experimental features_                        |`:microscope:`               |
+|   ⏪    |  **revert**         | _Reverting changes_                            |`rewind:`                    |
+|   🔀    |  **merge**          | _Merge commits_                                |`:twisted_rightwards_arrows:`|
+|   📦    |  **deps**           | _Dependency updates_                           |`:package:`                  |
+|   ⚙️    |  **config**         | _Configuration changes_                        |`:gear:`                     |
+|   🔥    |  **cleanup**        | _Remove dead code_                             |`:fire:`                     |
+|   🔐    |  **security**       | _Security patches or enhancements_             |`:closed_lock_with_key:`     |
+|   🧠    |  **ux**             | _UX improvements beyond styling_               |`:brain:`                    |
+|   ♿    |  **accessibility**  | _Enhancing accessibility_                      |`:wheelchair:`               |
+|   🌐    |  **i18n**           | _Internationalization / localization_          |`:globe_with_meridians:`     |
 
 </div>
 
