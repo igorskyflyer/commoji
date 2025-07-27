@@ -62,7 +62,7 @@ specification and documentation of <code>Commoji</code>.
 - when the scope is unknown or global:
 `<emoji> <tag>: <verb> <object>`  
 
-Use the UTF-8 emoji glyph wherever possible.  
+Use the **UTF-8** emoji glyph wherever possible.  
 If your environment doesn’t render emojis, fall back to the ASCII aliases below.  
 
 All the elements except the `scope` and the `object` should be taken from the tables below. While the `object` is free-form, it should ideally be a concise, semantically clear noun phrase. See additional recommendations for the [`object`](#-object) below.
@@ -123,6 +123,12 @@ When selecting a scope, please follow these guidelines:
 - write scopes in lowercase and use hyphens for names that consist of multiple words (for instance, `user-profile`, `error-handler`)  
 - avoid using excessively broad or generic scopes (like `core`, `misc`), as they detract from the purpose of scoping.  
 - if the change impacts the project as a whole or spans multiple areas, it is recommended to omit the scope altogether.  
+
+<br>
+<br>
+
+> [!NOTE]
+> Scopes should be written in lowercase.
 
 <br>
 
