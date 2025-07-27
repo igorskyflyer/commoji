@@ -12,6 +12,8 @@
 - **🪅 feat**: add scoped format
 - **🪅 feat**: add ASCII fallbacks
 
+<br>
+
 - **✅ fix**: fix format
 - **✅ fix**: fix typos
 
