@@ -213,16 +213,16 @@ Here are some examples of `object`s when writing commit messages that adhere to 
 
 |                **Summary**                | **Valid** |          **Reason**          |
 |:-----------------------------------------:|:---------:|:----------------------------:|
-|`📚 docs`: add ToC in README               |     ✅    |   _Specific feature added_   |
-|`📚 docs`: rename section headings         |     ✅    |      _Clear noun phrase_     |
-|`📚 docs`: update installation guide       |     ✅    |  _Specific docs subsection_  |
-|`✨ feat`: add dark mode toggle            |     ✅    |     _Pinpointed feature_     |
-|`🐛 fix`: fix login null pointer           |     ✅    |   _Precise bug identifier_   |
-|`⚡ perf`: optimize startup time           |     ✅    | _Measurable metric improved_ |
-|`📚 docs`: update docs                     |     ❌    |      _Object too broad_      |
-|`✨ feat`: add mode                        |     ❌    |      _Ambiguous object_      |
-|`🐛 fix`: fix bug                          |     ❌    |       _Generic object_       |
-|`⚡ perf`: improve performance             |     ❌    |     _Unspecified metric_     |
+|`📚 docs: add ToC in README`               |     ✅    |   _Specific feature added_   |
+|`📚 docs: rename section headings`         |     ✅    |      _Clear noun phrase_     |
+|`📚 docs: update installation guide`       |     ✅    |  _Specific docs subsection_  |
+|`✨ feat(ui): add dark mode toggle`        |     ✅    |     _Pinpointed feature_     |
+|`🐛 fix(auth): fix login null pointer`     |     ✅    |   _Precise bug identifier_   |
+|`⚡ perf: optimize startup time`           |     ✅    | _Measurable metric improved_ |
+|`📚 docs: update docs`                     |     ❌    |      _Object too broad_      |
+|`✨ feat: add mode`                        |     ❌    |      _Ambiguous object_      |
+|`🐛 fix: fix bug`                          |     ❌    |       _Generic object_       |
+|`⚡ perf: improve performance`             |     ❌    |     _Unspecified metric_     |
 
 </div>
 
@@ -242,15 +242,15 @@ The following table shows some usage examples that are valid or invalid accordin
 
 |               **Commit Message**         | Valid |                           **Why**                           |
 |:----------------------------------------:|:-----:|:-----------------------------------------------------------:|
-| `📚 docs`: update README                 |  ✅  | _All elements follow Commoji format_                         |
-| `✨ feat(auth)`: implement login flow    |  ✅  | _Emoji, tag, verb, scope and object aligned_                       |
-| `🐛 fix`: Fix Login Bug                  |  ❌  | _Verb is capitalized – should be lowercase_                  |
-| `📚` update README                       |  ❌  | _Tag (`docs`) is missing_                                    |
-| `🚀 deploy`: deploy to prod              |  ❌  | _Verb is not from verb list (`deploy` ≠ `release`)_          |
-| `🔨 refactor(auth)`: refactored auth     |  ❌  | _Verb refactored is not in imperative, present tense_        |
-| `🐛 fix`: remove typo                    |  ✅  | _Uses tag `fix`, verb `remove`, valid object_                |
-| `🔥 cleanup`: remove unused imports      |  ✅  | _Grammatically clear and semantically precise_               |
-| `✨ feat(ui)`: implement dark mode       |  ✅  | _Grammatically clear and semantically precise_               |
+| `📚 docs: update README`                 |  ✅  | _All elements follow Commoji format_                         |
+| `✨ feat(auth): implement login flow`    |  ✅  | _Emoji, tag, verb, scope and object aligned_                       |
+| `🐛 fix: Fix Login Bug`                  |  ❌  | _Verb is capitalized – should be lowercase_                  |
+| `📚 update README`                       |  ❌  | _Tag (`docs`) is missing_                                    |
+| `🚀 deploy: deploy to prod`              |  ❌  | _Verb is not from verb list (`deploy` ≠ `release`)_          |
+| `🔨 refactor(auth): refactored auth`     |  ❌  | _Verb refactored is not in imperative, present tense_        |
+| `🐛 fix: remove typo`                    |  ✅  | _Uses tag `fix`, verb `remove`, valid object_                |
+| `🔥 cleanup: remove unused imports`      |  ✅  | _Grammatically clear and semantically precise_               |
+| `✨ feat(ui): implement dark mode`       |  ✅  | _Grammatically clear and semantically precise_               |
 
 </div>
 
