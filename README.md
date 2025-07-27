@@ -13,7 +13,7 @@ specification and documentation of <code>Commoji</code>.
 <br>
 
 <blockquote>
-  🚀 Head to the <a href="https://github.com/igorskyflyer/commoji/releases/">Releases</a> page to browse the other versions.
+  🚀 Head to the <a href="https://github.com/igorskyflyer/commoji/tree/main/revisions">Revisions</a> or <a href="https://github.com/igorskyflyer/commoji/releases/">Releases</a> page to browse the other versions.
 </blockquote>
 </div>
 
