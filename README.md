@@ -274,7 +274,7 @@ The following table shows some usage examples that are valid or invalid accordin
 
 ## 🪪 License
 
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/commoji/blob/main/LICENSE.txt).
+Licensed under the [GPLv3 license](https://github.com/igorskyflyer/commoji/blob/main/LICENSE).
 
 ---
 
