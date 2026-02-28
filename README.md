@@ -184,26 +184,26 @@ When selecting a scope, please follow these guidelines:
 
 <div align="center">
 
-|    **Verb**    |               **Action Purpose** |
-|:--------------:|:---------------------------------------------:|
-| **add**        | _Introduce a new element_                     |
-| **update**     | _Modify an existing element_                  |
-| **remove**     | _Eliminate something_                         |
-| **rename**     | _Change a name or label_                      |
-| **move**       | _Reposition without modifying content_        |
-| **implement**  | _Build out functionality_                     |
-| **fix**        | _Resolve a fault or issue_                    |
-| **refactor**   | _Improve structure without changing behavior_ |
-| **optimize**   | _Improve performance or efficiency_           |
-| **test**       | _Add or modify tests_                         |
-| **configure**  | _Adjust system or environment settings_       |
-| **prepare**    | _Set up for release or deployment_            |
-| **release**    | _Publish or ship a version_                   |
-| **revert**     | _Undo a previous change_                      |
-| **merge**      | _Combine branches or changes_                 |
-| **experiment** | _Try out prototype ideas_                     |
-| **clean**      | _Purge unused or obsolete elements_           |
-| **translate**  | _Add or revise localization_                  |
+|   **Verb**   |               **Action Purpose**            |
+|:------------:|:-------------------------------------------:|
+|**add**       |_Introduce a new element_                    |
+|**update**    |_Modify an existing element_                 |
+|**remove**    |_Eliminate something_                        |
+|**rename**    |_Change a name or label_                     |
+|**move**      |_Reposition without modifying content_       |
+|**implement** |_Build out functionality_                    |
+|**fix**       |_Resolve a fault or issue_                   |
+|**refactor**  |_Improve structure without changing behavior_|
+|**optimize**  |_Improve performance or efficiency_          |
+|**test**      |_Add or modify tests_                        |
+|**configure** |_Adjust system or environment settings_      |
+|**prepare**   |_Set up for release or deployment_           |
+|**release**   |_Publish or ship a version_                  |
+|**revert**    |_Undo a previous change_                     |
+|**merge**     |_Combine branches or changes_                |
+|**experiment**|_Try out prototype ideas_                    |
+|**clean**     |_Purge unused or obsolete elements_          |
+|**translate** |_Add or revise localization_                 |
 
 </div>
 
@@ -262,19 +262,19 @@ Here are some examples of `object`s when writing commit messages that adhere to 
 
 <div align="center">
 
-|                     **Summary**           | **Valid** |          **Reason**                         |
-|:-----------------------------------------:|:---------:|:-------------------------------------------:|
-|`📚 docs: add ToC in README`               |    ✅    |  _Specific feature added_                    |
-|`📚 docs: rename section headings`         |    ✅    |      _Clear noun phrase_                     |
-|`📚 docs: update installation guide`       |    ✅    |  _Specific docs subsection_                  |
-|`✨ feature(ui): add dark mode toggle`     |    ✅    |     _Pinpointed feature_                     |
-|`🐛 bug(auth): fix login null pointer`     |    ✅    |  _Precise bug identifier_                    |
-|`⚡ metrics: optimize startup time`        |    ✅    | _Measurable metric improved_                 |
-|`📚 docs: update docs`                     |    ❌    |      _Object too broad_                      |
-|`✨ feature: add mode`                     |    ❌    |      _Ambiguous object_                      |
-|`🐛 bug: fix bug`                          |    ❌    | _Object repeats the tag's domain_            |
-|`🐛 bug: fix login`                        |    ✅    | _Object identifies the actual failure point_ |
-|`⚡ metrics: improve performance`          |    ❌    |     _Unspecified metric_                     |
+|                **Summary**           | **Valid** |          **Reason**                         |
+|:------------------------------------:|:---------:|:-------------------------------------------:|
+|`📚 docs: add ToC in README`          |    ✅    |_Specific feature added_                      |
+|`📚 docs: rename section headings`    |    ✅    |_Clear noun phrase_                           |
+|`📚 docs: update installation guide`  |    ✅    |_Specific docs subsection_                    |
+|`✨ feature(ui): add dark mode toggle`|    ✅    |_Pinpointed feature_                          |
+|`🐛 bug(auth): fix login null pointer`|    ✅    |_Precise bug identifier_                      |
+|`⚡ metrics: optimize startup time`   |    ✅    |_Measurable metric improved_                  |
+|`📚 docs: update docs`                |    ❌    |_Object too broad_                            |
+|`✨ feature: add mode`                |    ❌    |_Ambiguous object_                            |
+|`🐛 bug: fix bug`                     |    ❌    |_Object repeats the tag's domain_             |
+|`🐛 bug: fix login`                   |    ✅    |_Object identifies the actual failure point_  |
+|`⚡ metrics: improve performance`     |    ❌    |_Unspecified metric_                          |
 
 </div>
 
@@ -322,20 +322,20 @@ The following table shows some usage examples that are valid or invalid accordin
 
 <div align="center">
 
-|               **Commit Message**          | Valid |                             **Why**                         |
-|:-----------------------------------------:|:-----:|:-----------------------------------------------------------:|
-| `📚 docs: add installation guide`         |  ✅   | _Specific object identifies the exact change_               |
-| `📚 docs: update README`                  |  ❌   | _Object is too generic; lacks specific intent_              |
-| `✨ feature(auth): implement login flow`  |  ✅   | _Emoji, tag, verb, scope and object aligned_                |
-| `🐛 bug: Fix Login Bug`                   |  ❌   | _Verb is capitalized – should be lowercase_                 |
-| `📚 update ToC in README`                 |  ❌   | _Tag (`docs`) is missing_                                   |
-| `🔨 logic(auth): refactored auth`         |  ❌   | _Verb refactored is not in imperative, present tense_       |
-| `🐛 bug: remove typo`                     |  ✅   | _Uses tag `bug`, verb `remove`, valid object_               |
-| `✨ feature(ui)!: remove legacy login`    |  ✅   | _Breaking change marked with `!` after tag + scope_         |
-| `🐛 bug!: change error response format`   |  ✅   | _Breaking fix without scope_                                |
-| `🔨 logic(auth)!: rename config keys`     |  ✅   | _Breaking refactor with scope_                              |
-| `🔥 debt: clean unused imports`           |  ✅   | _Grammatically clear and semantically precise_              |
-| `✨ feature(ui): implement dark mode`     |  ✅   | _Grammatically clear and semantically precise_              |
+|             **Commit Message**         | **Valid** |                        **Why**                       |
+|:--------------------------------------:|:---------:|:----------------------------------------------------:|
+|`📚 docs: add installation guide`       |     ✅    |_Specific object identifies the exact change_          |
+|`📚 docs: update README`                |     ❌    |_Object is too generic; lacks specific intent_         |
+|`✨ feature(auth): implement login flow`|     ✅    |_Emoji, tag, verb, scope and object aligned_           |
+|`🐛 bug: Fix Login Bug`                 |     ❌    |_Verb is capitalized – should be lowercase_            |
+|`📚 update ToC in README`               |     ❌    |_Tag (`docs`) is missing_                              |
+|`🔨 logic(auth): refactored auth`       |     ❌    |_Verb refactored is not in imperative, present tense_  |
+|`🐛 bug: remove typo`                   |     ✅    |_Uses tag `bug`, verb `remove`, valid object_          |
+|`✨ feature(ui)!: remove legacy login`  |     ✅    |_Breaking change marked with `!` after tag + scope_    |
+|`🐛 bug!: change error response format` |     ✅    |_Breaking fix without scope_                           |
+|`🔨 logic(auth)!: rename config keys`   |     ✅    |_Breaking refactor with scope_                         |
+|`🔥 debt: clean unused imports`         |     ✅    |_Grammatically clear and semantically precise_         |
+|`✨ feature(ui): implement dark mode`   |     ✅    |_Grammatically clear and semantically precise_         |
 
 </div>
 
