@@ -372,11 +372,9 @@ Licensed under the [**MIT license**](https://github.com/igorskyflyer/commoji/blo
 ## Support
 
 <div align="center">
-  Engineering and documenting open-source projects<br>
-  involves a significant investment of time.
+  Engineering and documenting open-source projects involves a significant investment of time.
   <br><br>
-  If this project or its implementation has provided value,<br>
-  support is greatly appreciated.
+  If this project or its implementation has provided value, support is greatly appreciated.
   <br><br>
   <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="180" height="46"></a>
   <br><br>
