@@ -28,13 +28,14 @@ specification and documentation of <code>Commoji</code>.
 ## 📃 Table of Contents
 
 - [**Features**](#features)
-- [**The Psychology Behind Commoji**](#the-psychology-behind-commoji)
+- [**The Psychology**](#the-psychology)
 - [**Usage**](#usage)
   - [**Format**](#format)
   - [**Tags**](#tags)
   - [**Scope**](#scope)
   - [**Verbs**](#verbs)
   - [**Object**](#object)
+  - [**Breaking Changes**](#breaking-changes)
 - [**Examples**](#examples)
 - [**References**](#references)
 - [**Changelog**](#changelog)
@@ -57,9 +58,9 @@ specification and documentation of <code>Commoji</code>.
 
 ---
 
-## The Psychology Behind Commoji
+## The Psychology
 
-Commoji wasn't designed in a lab – it grew organically from real-world developer workflows because it simply *felt* better to read and write.  
+`Commoji` wasn't designed in a lab – it grew organically from real-world developer workflows because it simply *felt* better to read and write.  
 
 Here are the key psychological principles that quietly power the system:
 
@@ -91,7 +92,7 @@ Here are the key psychological principles that quietly power the system:
 
 - **Redundancy Principle (limited version)** – `Emoji` + matching `tag` provide reinforcing (not excessive) cues for the same meaning, strengthening understanding without overload.
 
-In short, Commoji doesn't just look nicer. It works *with* your brain instead of against it.
+In short, `Commoji` doesn't just look nicer. It works *with* your brain instead of against it.
 
 ---
 
@@ -281,6 +282,32 @@ Here are some examples of `object`s when writing commit messages that adhere to 
   <em>Table 3. <code>Commoji</code>'s object examples</em>
 </div>
 
+<br>
+
+### Breaking Changes
+
+To mark a breaking change (API removal, incompatible behavior change, etc.), place an exclamation mark (`!`) modifier **immediately after the tag**:
+
+- Without scope: `<emoji> <tag>!: <verb> <object>`
+- With scope: `<emoji> <tag>(<scope>)!: <verb> <object>`  
+
+Examples:
+- `✨ feat(ui)!: remove deprecated dark mode toggle`  
+- `🐛 fix!: change login response format`  
+- `🔨 refactor(auth)!: rename internal token keys`
+
+<br>
+
+**Why after the tag?**  
+It keeps the visual prefix clean and consistent: `emoji` + `tag(+scope)` + `!` + `colon`. The `!` acts as a clear modifier on the type of change, making it easy to spot when scanning history.  
+
+**Body recommendation**  
+Explain the impact in the commit body:
+
+```markdown
+**BREAKING CHANGE**: Legacy OAuth1 tokens are no longer supported. Migrate to OAuth2 before v2.0.
+```
+
 ---
 
 ## Examples
@@ -294,12 +321,15 @@ The following table shows some usage examples that are valid or invalid accordin
 |               **Commit Message**         | Valid |                           **Why**                           |
 |:----------------------------------------:|:-----:|:-----------------------------------------------------------:|
 | `📚 docs: update README`                 |  ✅  | _All elements follow Commoji format_                         |
-| `✨ feat(auth): implement login flow`    |  ✅  | _Emoji, tag, verb, scope and object aligned_                       |
+| `✨ feat(auth): implement login flow`    |  ✅  | _Emoji, tag, verb, scope and object aligned_                 |
 | `🐛 fix: Fix Login Bug`                  |  ❌  | _Verb is capitalized – should be lowercase_                  |
-| `📚 update README`                       |  ❌  | _Tag (`docs`) is missing_                                    |
+| `📚 update ToC in README`                       |  ❌  | _Tag (`docs`) is missing_                                    |
 | `🚀 deploy: deploy to prod`              |  ❌  | _Verb is not from verb list (`deploy` ≠ `release`)_          |
 | `🔨 refactor(auth): refactored auth`     |  ❌  | _Verb refactored is not in imperative, present tense_        |
 | `🐛 fix: remove typo`                    |  ✅  | _Uses tag `fix`, verb `remove`, valid object_                |
+| `✨ feat(ui)!: remove legacy login flow` |  ✅  | _Breaking change marked with `!` after tag + scope_          |
+| `🐛 fix!: change error response format`  |  ✅  | _Breaking fix without scope_                                 |
+| `🔨 refactor(auth)!: rename config keys` |  ✅  | _Breaking refactor with scope_                               |
 | `🔥 cleanup: remove unused imports`      |  ✅  | _Grammatically clear and semantically precise_               |
 | `✨ feat(ui): implement dark mode`       |  ✅  | _Grammatically clear and semantically precise_               |
 
@@ -313,7 +343,7 @@ The following table shows some usage examples that are valid or invalid accordin
 
 ## References
 
-The psychological principles in Commoji draw from established research in cognitive, visual, and multimedia psychology. Key sources include:
+The psychological principles in `Commoji` draw from established research in cognitive, visual, and multimedia psychology. Key sources include:
 
 - **Pictorial Superiority Effect & Image Processing Speed**  
   Potter, M. C., et al. (2014). "Detecting meaning in RSVP at 13 ms per picture." *Attention, Perception, & Psychophysics*, 76(2), 270–279.  
@@ -364,7 +394,7 @@ These are the foundational works that most directly support the principles. For 
 
 ## License
 
-Licensed under the [**MIT license**](https://github.com/igorskyflyer/commoji/blob/main/LICENSE.txt).
+Licensed under the [**MIT license**](https://github.com/igorskyflyer/commoji/blob/main/LICENSE).
 
 ---
 
