@@ -346,8 +346,6 @@ The psychological principles in `Commoji` draw from established research in cogn
 - **Signaling Principle & Multimedia Learning** Mayer, R. E. (2009). *Multimedia Learning* (2nd ed.). Cambridge University Press.  
   Mayer, R. E. (2021). "Multimedia learning." In *The Cambridge Handbook of Multimedia Learning* (3rd ed.).
 
-- Riordan, M. A. (2017). "Emojis as tools for emotion work." *Computers in Human Behavior*, 73, 152–159.
-
 - **Cognitive Load Theory** Sweller, J. (1988). "Cognitive load during problem solving." *Cognitive Science*, 12(2), 257–285.  
   Sweller, J., et al. (2011). "Cognitive architecture and instructional design." *Educational Psychology Review*, 23(3), 343–367.
 
