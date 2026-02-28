@@ -27,22 +27,22 @@ specification and documentation of <code>Commoji</code>.
 
 ## 📃 Table of Contents
 
-- [**Features**](#features)
-- [**The Psychology**](#the-psychology)
-- [**Usage**](#usage)
+- ✨ [**Features**](#features)
+- 🧠 [**The Psychology**](#the-psychology)
+- 🤹🏼 [**Usage**](#usage)
   - [**Format**](#format)
   - [**Tags**](#tags)
   - [**Scope**](#scope)
   - [**Verbs**](#verbs)
   - [**Object**](#object)
   - [**Breaking Changes**](#breaking-changes)
-- [**Examples**](#examples)
-- [**References**](#references)
-- [**Changelog**](#changelog)
-- [**License**](#license)
-- [**Support**](#support)
-- [**Related**](#related)
-- [**Author**](#author)
+- 🗒️ [**Examples**](#examples)
+- 🌐 [**References**](#references)
+- 📝 [**Changelog**](#changelog)
+- 🪪 [**License**](#license)
+- 💖 [**Support**](#support)
+- 🧬 [**Related**](#related)
+- 👨🏻‍💻 [**Author**](#author)
 
 ---
 
@@ -388,7 +388,7 @@ These are the foundational works that most directly support the principles. For 
 
 ## Changelog
 
-📑 See the full changelog in: [CHANGELOG.md](https://github.com/igorskyflyer/commoji/blob/main/CHANGELOG.md).
+Read about the latest changes in the [CHANGELOG](https://github.com/igorskyflyer/commoji/blob/main/CHANGELOG.md).
 
 ---
 
@@ -401,46 +401,46 @@ Licensed under the [**MIT license**](https://github.com/igorskyflyer/commoji/blo
 ## Support
 
 <div align="center">
-  I work hard for every project, including this one and your support means a lot to me!
-  <br>
-  Consider buying me a coffee. ☕
-  <br>
-  <br>
+  Engineering and documenting open-source projects<br>
+  involves a significant investment of time.
+  <br><br>
+  If this project or its implementation has provided value,<br>
+  support is greatly appreciated.
+  <br><br>
   <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="180" height="46"></a>
-  <br>
-  <br>
-  <em>Thank you for supporting my efforts!</em> 🙏😊
+  <br><br>
+  <em>Thank you for supporting these efforts!</em> 🙏😊
 </div>
 
 ---
 
 ## Related
 
-[@igor.dvlpr/scrollend-polyfill](https://www.npmjs.com/package/@igor.dvlpr/scrollend-polyfill)
+[@igorskyflyer/scrollend-polyfill](https://www.npmjs.com/package/@igorskyflyer/scrollend-polyfill)
 
 > _🛴 A performant and light (< 1.5KB) JavaScript polyfill for the scrollend Event. ⛸️_
 
 <br>
 
-[@igor.dvlpr/zing](https://www.npmjs.com/package/@igor.dvlpr/zing)
+[@igorskyflyer/zing](https://www.npmjs.com/package/@igorskyflyer/zing)
 
 > _🐌 Zing is a C# style String formatter for JavaScript that empowers Strings with positional arguments - composite formatting. 🚀_
 
 <br>
 
-[@igor.dvlpr/strip-yaml-front-matter](https://www.npmjs.com/package/@igor.dvlpr/strip-yaml-front-matter)
+[@igorskyflyer/strip-yaml-front-matter](https://www.npmjs.com/package/@igorskyflyer/strip-yaml-front-matter)
 
 > _🦓 Strips YAML front matter from a String or a file. 👾_
 
 <br>
 
-[@igor.dvlpr/registry-apppaths](https://www.npmjs.com/package/@igor.dvlpr/registry-apppaths)
+[@igorskyflyer/registry-apppaths](https://www.npmjs.com/package/@igorskyflyer/registry-apppaths)
 
 > _🪀 A Node.js module for reading the AppPaths registry key on Windows. Useful for retrieving applications that can be launched from the command prompt. 🗃_
 
 <br>
 
-[@igor.dvlpr/emojilyzer](https://www.npmjs.com/package/@igor.dvlpr/emojilyzer)
+[@igorskyflyer/emojilyzer](https://www.npmjs.com/package/@igorskyflyer/emojilyzer)
 
 > _💬 Emojifies strings, converting textual representations of emojis to graphical ones. 🖌️_
 
