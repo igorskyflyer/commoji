@@ -63,7 +63,7 @@ Commoji wasn't designed in a lab – it grew organically from real-world develop
 
 Here are the key psychological principles that quietly power the system:
 
-- **Visual Psychology (Pictorial Superiority Effect)** – Emojis are processed `~13 ms` faster than text, creating instant visual anchors for category and intent.
+- **Visual Psychology (Pictorial Superiority Effect)** – Emojis are processed in as little as `~13 ms`, far quicker than text, creating instant visual anchors for category and intent.
 
 - **Gestalt Principles (Proximity, Similarity, Figure-Ground)** – The `emoji` + `tag` prefix creates visual grouping and unity so the whole message is perceived as one meaningful unit.
 
@@ -71,7 +71,7 @@ Here are the key psychological principles that quietly power the system:
 
 - **Dual-Coding Theory** – Verbal (`tag`/`verb`/`object`) + `visual` (emoji) channels create stronger, dual-encoded memory traces.
 
-- **Parafoveal Processing & Pre-attentive Pop-out** – The colorful emoji at the start is detected in peripheral vision before conscious reading begins, guiding attention instantly.
+- **Parafoveal Processing & Pre-attentive Pop-out** – The colorful `emoji` at the start is detected in peripheral vision before conscious reading begins, guiding attention instantly.
 
 - **Emotional / Affective Priming** – Emojis subtly set tone and emotional valence (🔥 feels energetic, ✨ feels exciting), making history more engaging.
 
@@ -89,7 +89,7 @@ Here are the key psychological principles that quietly power the system:
 
 - **Familiarity Heuristic / Processing Fluency** – Once the small set of emojis/tags is learned, reading feels subjectively easier, smoother, and more pleasant.
 
-- **Redundancy Principle (limited version)** – Emoji + matching tag provide reinforcing (not excessive) cues for the same meaning, strengthening understanding without overload.
+- **Redundancy Principle (limited version)** – `Emoji` + matching `tag` provide reinforcing (not excessive) cues for the same meaning, strengthening understanding without overload.
 
 In short, Commoji doesn't just look nicer. It works *with* your brain instead of against it.
 
