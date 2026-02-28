@@ -293,7 +293,7 @@ To mark a breaking change (API removal, incompatible behavior change, etc.), pla
 
 <br>
 
-Examples:
+**Examples**:
 - `✨ feature(ui)!: remove deprecated dark mode toggle`  
 - `🐛 bug!: change login response format`  
 - `🔨 logic(auth)!: rename internal token keys`
