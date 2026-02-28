@@ -100,10 +100,10 @@ In short, `Commoji` doesn't just look nicer. It works *with* your brain instead 
 
 `Commoji` relies on a strict **Noun/Action Separation** to eliminate repetition. The `tag` specifies the domain (the *"Where"*), and the `verb` specifies the operation (the *"How"*).
 
-- when the scope is known and specific:
+- When the scope is known and specific:
 `<emoji> <tag>(<scope>): <verb> <object>`  
 
-- when the scope is unknown or global:
+- When the scope is unknown or global:
 `<emoji> <tag>: <verb> <object>`  
 
 <br>
