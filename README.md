@@ -66,6 +66,8 @@ Here are the key psychological principles that quietly power the system:
 
 - **Visual Psychology (Visual Indexing)** – Emojis function as high-contrast anchors. The brain performs `object` recognition on the icon before serial character recognition of the `text`. This decreases retrieval `latency` in long commit histories by prioritizing `visual processing` over `analytical parsing`.
 
+- **Semantic Orthogonality (Information Theory)** – By separating the `Domain` (*Noun*) from the `Operation` (*Verb*), `Commoji` ensures no redundant information. This independence of axes (**Orthogonality**) maximizes *"information per character"*, allowing the brain to construct a complete mental model of the change without parsing repetitive tautologies.
+
 - **Gestalt Principles (Proximity, Similarity, Figure-Ground)** – The `emoji` + `tag` prefix creates visual grouping and unity so the whole message is perceived as one meaningful unit.
 
 - **Cognitive Load Reduction** – Structured `prefix` + concise `object` offloads mental effort – readers decode intent at a glance instead of parsing full sentences.
@@ -87,8 +89,6 @@ Here are the key psychological principles that quietly power the system:
 - **Familiarity Heuristic / Processing Fluency** – Once the small set of emojis/tags is learned, reading feels subjectively easier, smoother, and more pleasant.
 
 - **Redundancy Principle (limited version)** – `Emoji` + matching `tag` provide reinforcing (not excessive) cues for the same meaning, strengthening understanding without overload.
-
-- **Semantic Orthogonality (Information Theory)** – By separating the `Domain` (*Noun*) from the `Operation` (*Verb*), `Commoji` ensures no redundant information. This independence of axes (**Orthogonality**) maximizes *"information per character"*, allowing the brain to construct a complete mental model of the change without parsing repetitive tautologies.
 
 In short, `Commoji` doesn't just look nicer. It works *with* your brain instead of against it.
 
