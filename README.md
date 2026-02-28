@@ -20,7 +20,7 @@ specification and documentation of <code>Commoji</code>.
 <br>
 
 <div align="center">
-  🐉 <code>Commoji</code> – psychology-based emoji commit convention that optimizes Git history for high-speed scanning and semantic clarity. 🏷️
+  🐉 <code>Commoji</code> is a psychology-based emoji commit convention that optimizes Git history for high-speed scanning and semantic clarity. 🏷️
 </div>
 
 <br>
