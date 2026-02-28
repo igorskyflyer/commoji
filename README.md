@@ -20,7 +20,7 @@ specification and documentation of <code>Commoji</code>.
 <br>
 
 <div align="center">
-  🐉 <code>Commoji</code> is a compact, expressive tagging system that blends meaning and emoji to make your commit history more readable and beautiful. 🏷️
+  🐉 <code>Commoji</code> – Psychology-based emoji commit convention that makes your git history dramatically more readable, scannable and beautiful. 🏷️
 </div>
 
 <br>
