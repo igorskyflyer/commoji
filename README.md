@@ -25,7 +25,7 @@ specification and documentation of <code>Commoji</code>.
 
 <br>
 
-## 📃 Table of Contents
+## Table of Contents
 
 - ✨ [**Features**](#features)
 - 🧠 [**The Psychology**](#the-psychology)
@@ -113,8 +113,6 @@ If your environment doesn't render emojis, fall back to the ASCII aliases below.
 
 All elements except `scope` and `object` must come from the tables below. While the `object` is free-form, it should ideally be a concise, semantically clear noun phrase. See additional recommendations for the [`object`](#object) below.
 
-<br>
-
 ### Tags
 
 `Commoji` achieves its goal by defining the following tags. These tags act as **Nouns** representing the domain or entity being modified:
@@ -157,8 +155,6 @@ All elements except `scope` and `object` must come from the tables below. While 
 > [!NOTE]
 > Tags should be written in lowercase.
 
-<br>
-
 ### Scope
 
 The scope of a commit narrows its focus to a specific section of your codebase, such as a module, feature, or directory. This enables readers to swiftly determine where the change is applicable without the necessity of reviewing the entire diff.  
@@ -173,8 +169,6 @@ When selecting a scope, please follow these guidelines:
 
 > [!NOTE]
 > Scopes should be written in lowercase.
-
-<br>
 
 ### Verbs
 
@@ -213,8 +207,6 @@ When selecting a scope, please follow these guidelines:
 
 > [!NOTE]
 > Verbs should be written in lowercase. Use the imperative, present tense.
-
-<br>
 
 ### Object
 
@@ -279,8 +271,6 @@ Here are some examples of `object`s when writing commit messages that adhere to 
 <div align="center">
   <em>Table 3. <code>Commoji</code>'s object examples</em>
 </div>
-
-<br>
 
 ### Breaking Changes
 
