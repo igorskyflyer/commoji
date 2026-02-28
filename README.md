@@ -20,7 +20,7 @@ specification and documentation of <code>Commoji</code>.
 <br>
 
 <div align="center">
-  🐉 <code>Commoji</code> – psychology-based emoji commit convention that makes your git history dramatically more readable, scannable and beautiful. 🏷️
+  🐉 <code>Commoji</code> – psychology-based emoji commit convention that optimizes Git history for high-speed scanning and semantic clarity. 🏷️
 </div>
 
 <br>
@@ -64,21 +64,17 @@ specification and documentation of <code>Commoji</code>.
 
 Here are the key psychological principles that quietly power the system:
 
-- **Visual Psychology (Pictorial Superiority Effect)** – Emojis are processed in as little as `~13 ms`, far quicker than text, creating instant visual anchors for category and intent.
+- **Visual Psychology (Visual Indexing)** – Emojis function as high-contrast anchors. The brain performs `object` recognition on the icon before serial character recognition of the `text`. This decreases retrieval `latency` in long commit histories by prioritizing `visual processing` over `analytical parsing`.
 
 - **Gestalt Principles (Proximity, Similarity, Figure-Ground)** – The `emoji` + `tag` prefix creates visual grouping and unity so the whole message is perceived as one meaningful unit.
 
 - **Cognitive Load Reduction** – Structured `prefix` + concise `object` offloads mental effort – readers decode intent at a glance instead of parsing full sentences.
 
-- **Dual-Coding Theory** – Verbal (`tag`/`verb`/`object`) + `visual` (emoji) channels create stronger, dual-encoded memory traces.
-
 - **Parafoveal Processing & Pre-attentive Pop-out** – The colorful `emoji` at the start is detected in peripheral vision before conscious reading begins, guiding attention instantly.
-
-- **Emotional / Affective Priming** – Emojis subtly set tone and emotional valence (🔥 feels energetic, ✨ feels exciting), making history more engaging.
 
 - **Icon / Symbol Processing Efficiency** – Standardized emojis act like highly-learned symbols (traffic signs), enabling near-automatic recognition after minimal familiarity.
 
-- **Reduced Ambiguity in Computer-Mediated Communication** – In lean git logs, emojis add paralinguistic cues that clarify intent and reduce misinterpretation.
+- **Contextual Reinforcement** – The `emoji` provides a semantic signal to the `text` tag. This dual-layer approach increases the `signal-to-noise` ratio. It ensures intent remains clear during rapid scrolling or when viewing logs in high density terminal environments.
 
 - **Chunking** – Fixed prefix structure breaks messages into predictable, bite-sized perceptual chunks the brain can process efficiently.
 
@@ -351,12 +347,6 @@ The following table shows some usage examples that are valid or invalid accordin
 
 The psychological principles in `Commoji` draw from established research in cognitive, visual, and multimedia psychology. Key sources include:
 
-- **Pictorial Superiority Effect & Image Processing Speed** Potter, M. C., et al. (2014). "Detecting meaning in RSVP at 13 ms per picture." *Attention, Perception, & Psychophysics*, 76(2), 270–279.  
-  [https://doi.org/10.3758/s13414-013-0606-2](https://doi.org/10.3758/s13414-013-0606-2)
-
-- **Dual-Coding Theory** Paivio, A. (1971). *Imagery and Verbal Processes*. Holt, Rinehart and Winston.  
-  Paivio, A. (1986). *Mental Representations: A Dual Coding Approach*. Oxford University Press.
-
 - **Gestalt Principles** Wertheimer, M. (1923). "Laws of Organization in Perceptual Forms." *Psychologische Forschung*, 4(1), 301–350.  
   Koffka, K. (1935). *Principles of Gestalt Psychology*. Harcourt, Brace.
 
@@ -366,8 +356,7 @@ The psychological principles in `Commoji` draw from established research in cogn
 - **Signaling Principle & Multimedia Learning** Mayer, R. E. (2009). *Multimedia Learning* (2nd ed.). Cambridge University Press.  
   Mayer, R. E. (2021). "Multimedia learning." In *The Cambridge Handbook of Multimedia Learning* (3rd ed.).
 
-- **Emotional/Affective Priming with Emojis** Danesi, M. (2017). *The Semiotics of Emoji: The Rise of Visual Language in the Age of the Internet*. Bloomsbury Academic.  
-  Riordan, M. A. (2017). "Emojis as tools for emotion work." *Computers in Human Behavior*, 73, 152–159.
+- Riordan, M. A. (2017). "Emojis as tools for emotion work." *Computers in Human Behavior*, 73, 152–159.
 
 - **Cognitive Load Theory** Sweller, J. (1988). "Cognitive load during problem solving." *Cognitive Science*, 12(2), 257–285.  
   Sweller, J., et al. (2011). "Cognitive architecture and instructional design." *Educational Psychology Review*, 23(3), 343–367.
