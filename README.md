@@ -6,7 +6,7 @@
 <div align="center">
 This file contains the
 <br>
-<strong><code>v1.2.0</code></strong> • <em><strong>28 Feb 2026</strong></em>
+<strong><code>v2.0.0</code></strong> • <em><strong>28 Feb 2026</strong></em>
 <br>
 specification and documentation of <code>Commoji</code>.
 
@@ -20,7 +20,7 @@ specification and documentation of <code>Commoji</code>.
 <br>
 
 <div align="center">
-  🐉 <code>Commoji</code> – Psychology-based emoji commit convention that makes your git history dramatically more readable, scannable and beautiful. 🏷️
+  🐉 <code>Commoji</code> – psychology-based emoji commit convention that makes your git history dramatically more readable, scannable and beautiful. 🏷️
 </div>
 
 <br>
@@ -51,7 +51,7 @@ specification and documentation of <code>Commoji</code>.
 `Commoji` blends semantic clarity with visual expressiveness in commit messages to make intent easier to convey. It's not just a tagging system; it's a **psychology-based** visual grammar for storytelling in code.
 
 - ✨ **Visual Expressiveness**: Emojis provide instant, colorful cues that make commit histories pop and easier to scan at a glance.
-- 🏷️ **Semantic Clarity**: Structured tags, verbs, and objects ensure every message clearly conveys purpose without ambiguity.
+- 🏷️ **Semantic Orthogonality**: Distinct domain tags and operational verbs ensure every message clearly conveys purpose without tautological ambiguity.
 - 📊 **Reduced Cognitive Load**: Fixed format lowers mental effort, allowing quick understanding of changes in logs or diffs.
 - 🧠 **Intuitive Design**: Draws on psychological principles like pop-out effect and chunking for a more natural reading experience.
 - 🚀 **Tooling Compatibility**: Works seamlessly with parsers, linters, and changelog generators for automated workflows.
@@ -100,13 +100,15 @@ In short, `Commoji` doesn't just look nicer. It works *with* your brain instead 
 
 ### Format
 
-`Commoji` proposes the following formats when writing commit messages:
+`Commoji` relies on a strict **Noun/Action Separation** to eliminate repetition. The `tag` specifies the domain (the *"Where"*), and the `verb` specifies the operation (the *"How"*).
 
 - when the scope is known and specific:
 `<emoji> <tag>(<scope>): <verb> <object>`  
 
 - when the scope is unknown or global:
 `<emoji> <tag>: <verb> <object>`  
+
+<br>
 
 Use the **UTF-8** emoji glyph wherever possible.  
 If your environment doesn't render emojis, fall back to the ASCII aliases below.  
@@ -117,42 +119,41 @@ All elements except `scope` and `object` must come from the tables below. While 
 
 ### Tags
 
-`Commoji` achieves its goal by defining the following tags, their purpose, emoji and the fallback/alias ASCII sequence:
+`Commoji` achieves its goal by defining the following tags. These tags act as **Nouns** representing the domain or entity being modified:
 
 <div align="center">
 
-|**Emoji**|       **Tag**       |                  **Purpose**                   |       **ASCII Alias**       |
+|**Emoji**|        **Tag**      |                  **Domain / Purpose** |       **ASCII Alias** |
 |:-------:|:-------------------:|:----------------------------------------------:|:---------------------------:|
-|   🐣    |  **init**           | _Initial commit / setup_                       |`:hatching_chick:`           |
-|   ✨    |  **feat**           | _New feature_                                  |`:sparkles:`                 |
-|   🐛    |  **fix**            | _Bug fix_                                      |`:bug:`                      |
-|   📚    |  **docs**           | _Documentation updates_                        |`:books:`                    |
-|   💄    |  **style**          | _Code style or visual tweaks (no logic change)_|`:lipstick:`                 |
-|   🔨    |  **refactor**       | _Code refactoring_                             |`:hammer:`                   |
-|   ⚡    |  **perf**           | _Performance improvements_                     |`:zap:`                      |
-|   ✅    |  **test**           | _Adding/modifying tests_                       |`:white_check_mark:`         |
-|   🏭    |  **build**          | _Build system updates_                         |`:factory:`                  |
-|   👷🏻    |  **ci**             | _CI configuration changes_                     |`:construction_worker:`      |
-|   🚀    |  **deploy**         | _Deployment to production/staging_                                   |`:rocket:`                   |
-|   🔧    |  **chore**          | _Misc tasks and maintenance_                   |`:wrench:`                   |
-|   🔬    |  **experiments**    | _Experimental features_                        |`:microscope:`               |
-|   ⏪    |  **revert**         | _Reverting changes_                            |`:rewind:`                    |
-|   🔀    |  **merge**          | _Merge commits_                                |`:twisted_rightwards_arrows:`|
-|   📦    |  **deps**           | _Dependency updates_                           |`:package:`                  |
-|   ⚙️    |  **config**         | _Configuration changes_                        |`:gear:`                     |
-|   🔥    |  **cleanup**        | _Remove dead code_                             |`:fire:`                     |
-|   🔐    |  **security**       | _Security patches or enhancements_             |`:closed_lock_with_key:`     |
-|   🧠    |  **ux**             | _UX improvements beyond styling_               |`:brain:`                    |
-|   ♿    |  **accessibility**  | _Enhancing accessibility_                      |`:wheelchair:`               |
-|   🌐    |  **i18n**           | _Internationalization / localization_          |`:globe_with_meridians:`     |
+|   🐣    |  **repo**           | _Initial setup or repository metadata_         |`:hatching_chick:`           |
+|   ✨    |  **feature**        | _New capabilities or features_                 |`:sparkles:`                 |
+|   🐛    |  **bug**            | _Faults, defects, or issues_                   |`:bug:`                      |
+|   📚    |  **docs**           | _Documentation and guides_                     |`:books:`                    |
+|   💄    |  **ui**             | _Visual elements, styles, and UX polish_       |`:lipstick:`                 |
+|   🔨    |  **logic**          | _Code architecture and refactoring_            |`:hammer:`                   |
+|   ⚡    |  **metrics**        | _Performance and efficiency metrics_           |`:zap:`                      |
+|   ✅    |  **spec**           | _Tests, assertions, and validations_           |`:white_check_mark:`         |
+|   🏭    |  **build**          | _Build system or compiler instructions_        |`:factory:`                  |
+|   👷🏻    |  **ci**             | _Continuous integration workflows_             |`:construction_worker:`      |
+|   🚀    |  **env**            | _Environments, deployments, and releases_      |`:rocket:`                   |
+|   🔧    |  **task**           | _Misc maintenance and chores_                  |`:wrench:`                   |
+|   🔬    |  **experiment**     | _Experimental prototypes_                      |`:microscope:`               |
+|   ⏪    |  **history**        | _Git history state or reverts_                 |`:rewind:`                   |
+|   🔀    |  **branch**         | _Merges and branch integration_                |`:twisted_rightwards_arrows:`|
+|   📦    |  **deps**           | _Dependencies and packages_                    |`:package:`                  |
+|   ⚙️    |  **config**         | _System and environment configuration_         |`:gear:`                     |
+|   🔥    |  **debt**           | _Technical debt and dead code_                 |`:fire:`                     |
+|   🔐    |  **security**       | _Vulnerabilities and security hardening_       |`:closed_lock_with_key:`     |
+|   🧠    |  **ux**             | _User experience flow and logic_               |`:brain:`                    |
+|   ♿    |  **accessibility**  | _A11y requirements_                            |`:wheelchair:`               |
+|   🌐    |  **i18n**           | _Localization and internationalization_        |`:globe_with_meridians:`     |
 
 </div>
 
 <div align="center">
-  <em>Table 1. <code>Commoji</code>'s tagging system</em>
+  <em>Table 1. <code>Commoji</code>'s tagging system (Domains)</em>
 </div>
 
-<br>
 <br>
 
 > [!NOTE]
@@ -171,7 +172,6 @@ When selecting a scope, please follow these guidelines:
 - if the change impacts the project as a whole or spans multiple areas, it is recommended to omit the scope altogether.  
 
 <br>
-<br>
 
 > [!NOTE]
 > Scopes should be written in lowercase.
@@ -180,11 +180,11 @@ When selecting a scope, please follow these guidelines:
 
 ### Verbs
 
-`Commoji` also proposes the following imperative verbs to be used when writing commit messages:
+`Commoji` defines verbs as the **Operation** applied to the domain tag. The list below represents the primary, standardized operations. While the convention allows for flexibility, verbs must always be a single, lowercase word in the imperative, present tense.
 
 <div align="center">
 
-|    **Verb**    |               **Action Purpose**              |
+|    **Verb**    |               **Action Purpose** |
 |:--------------:|:---------------------------------------------:|
 | **add**        | _Introduce a new element_                     |
 | **update**     | _Modify an existing element_                  |
@@ -208,10 +208,9 @@ When selecting a scope, please follow these guidelines:
 </div>
 
 <div align="center">
-  <em>Table 2. <code>Commoji</code>'s verbs</em>
+  <em>Table 2. <code>Commoji</code>'s verbs (Operations)</em>
 </div>
 
-<br>
 <br>
 
 > [!NOTE]
@@ -234,7 +233,7 @@ The object in the commit message should be specific enough to convey what change
 - use a precise noun phrase whenever applicable
 
 > ✅ Good: 📚 docs: add ToC to README
-
+>
 > ❌ Bad: 📚 docs: update README (too generic)
 
 - don't list every change in the summary
@@ -259,22 +258,23 @@ When a change truly spans multiple concerns, choose a higher-level verb:
 
 <br>
 
-Here are some examples of `object`s when writing commit messages that adhere to `Commoji`'s conventions.
+Here are some examples of `object`s when writing commit messages that adhere to `Commoji`'s orthogonal formatting.
 
 <div align="center">
 
-|                **Summary**                | **Valid** |          **Reason**          |
-|:-----------------------------------------:|:---------:|:----------------------------:|
-|`📚 docs: add ToC in README`               |     ✅    |   _Specific feature added_   |
-|`📚 docs: rename section headings`         |     ✅    |      _Clear noun phrase_     |
-|`📚 docs: update installation guide`       |     ✅    |  _Specific docs subsection_  |
-|`✨ feat(ui): add dark mode toggle`        |     ✅    |     _Pinpointed feature_     |
-|`🐛 fix(auth): fix login null pointer`     |     ✅    |   _Precise bug identifier_   |
-|`⚡ perf: optimize startup time`           |     ✅    | _Measurable metric improved_ |
-|`📚 docs: update docs`                     |     ❌    |      _Object too broad_      |
-|`✨ feat: add mode`                        |     ❌    |      _Ambiguous object_      |
-|`🐛 fix: fix bug`                          |     ❌    |       _Generic object_       |
-|`⚡ perf: improve performance`             |     ❌    |     _Unspecified metric_     |
+|                     **Summary**           | **Valid** |          **Reason**                         |
+|:-----------------------------------------:|:---------:|:-------------------------------------------:|
+|`📚 docs: add ToC in README`               |    ✅    |  _Specific feature added_                    |
+|`📚 docs: rename section headings`         |    ✅    |      _Clear noun phrase_                     |
+|`📚 docs: update installation guide`       |    ✅    |  _Specific docs subsection_                  |
+|`✨ feature(ui): add dark mode toggle`     |    ✅    |     _Pinpointed feature_                     |
+|`🐛 bug(auth): fix login null pointer`     |    ✅    |  _Precise bug identifier_                    |
+|`⚡ metrics: optimize startup time`        |    ✅    | _Measurable metric improved_                 |
+|`📚 docs: update docs`                     |    ❌    |      _Object too broad_                      |
+|`✨ feature: add mode`                     |    ❌    |      _Ambiguous object_                      |
+|`🐛 bug: fix bug`                          |    ❌    | _Object repeats the tag's domain_            |
+|`🐛 bug: fix login`                        |    ✅    | _Object identifies the actual failure point_ |
+|`⚡ metrics: improve performance`          |    ❌    |     _Unspecified metric_                     |
 
 </div>
 
@@ -291,15 +291,19 @@ To mark a breaking change (API removal, incompatible behavior change, etc.), pla
 - Without scope: `<emoji> <tag>!: <verb> <object>`
 - With scope: `<emoji> <tag>(<scope>)!: <verb> <object>`  
 
+<br>
+
 Examples:
-- `✨ feat(ui)!: remove deprecated dark mode toggle`  
-- `🐛 fix!: change login response format`  
-- `🔨 refactor(auth)!: rename internal token keys`
+- `✨ feature(ui)!: remove deprecated dark mode toggle`  
+- `🐛 bug!: change login response format`  
+- `🔨 logic(auth)!: rename internal token keys`
 
 <br>
 
 **Why after the tag?**  
-It keeps the visual prefix clean and consistent: `emoji` + `tag(+scope)` + `!` + `colon`. The `!` acts as a clear modifier on the type of change, making it easy to spot when scanning history.  
+It keeps the visual prefix clean and consistent: `emoji` + `tag(+scope)` + `!` + `colon`. The `!` acts as a clear modifier on the type of change (the noun), making it easy to spot when scanning history.  
+
+<br>
 
 **Body recommendation**  
 Explain the impact in the commit body:
@@ -318,20 +322,20 @@ The following table shows some usage examples that are valid or invalid accordin
 
 <div align="center">
 
-|               **Commit Message**         | Valid |                           **Why**                           |
-|:----------------------------------------:|:-----:|:-----------------------------------------------------------:|
-| `📚 docs: update README`                 |  ✅  | _All elements follow Commoji format_                         |
-| `✨ feat(auth): implement login flow`    |  ✅  | _Emoji, tag, verb, scope and object aligned_                 |
-| `🐛 fix: Fix Login Bug`                  |  ❌  | _Verb is capitalized – should be lowercase_                  |
-| `📚 update ToC in README`                       |  ❌  | _Tag (`docs`) is missing_                                    |
-| `🚀 deploy: deploy to prod`              |  ❌  | _Verb is not from verb list (`deploy` ≠ `release`)_          |
-| `🔨 refactor(auth): refactored auth`     |  ❌  | _Verb refactored is not in imperative, present tense_        |
-| `🐛 fix: remove typo`                    |  ✅  | _Uses tag `fix`, verb `remove`, valid object_                |
-| `✨ feat(ui)!: remove legacy login flow` |  ✅  | _Breaking change marked with `!` after tag + scope_          |
-| `🐛 fix!: change error response format`  |  ✅  | _Breaking fix without scope_                                 |
-| `🔨 refactor(auth)!: rename config keys` |  ✅  | _Breaking refactor with scope_                               |
-| `🔥 cleanup: remove unused imports`      |  ✅  | _Grammatically clear and semantically precise_               |
-| `✨ feat(ui): implement dark mode`       |  ✅  | _Grammatically clear and semantically precise_               |
+|               **Commit Message**          | Valid |                             **Why**                         |
+|:-----------------------------------------:|:-----:|:-----------------------------------------------------------:|
+| `📚 docs: add installation guide`         |  ✅   | _Specific object identifies the exact change_               |
+| `📚 docs: update README`                  |  ❌   | _Object is too generic; lacks specific intent_              |
+| `✨ feature(auth): implement login flow`  |  ✅   | _Emoji, tag, verb, scope and object aligned_                |
+| `🐛 bug: Fix Login Bug`                   |  ❌   | _Verb is capitalized – should be lowercase_                 |
+| `📚 update ToC in README`                 |  ❌   | _Tag (`docs`) is missing_                                   |
+| `🔨 logic(auth): refactored auth`         |  ❌   | _Verb refactored is not in imperative, present tense_       |
+| `🐛 bug: remove typo`                     |  ✅   | _Uses tag `bug`, verb `remove`, valid object_               |
+| `✨ feature(ui)!: remove legacy login`    |  ✅   | _Breaking change marked with `!` after tag + scope_         |
+| `🐛 bug!: change error response format`   |  ✅   | _Breaking fix without scope_                                |
+| `🔨 logic(auth)!: rename config keys`     |  ✅   | _Breaking refactor with scope_                              |
+| `🔥 debt: clean unused imports`           |  ✅   | _Grammatically clear and semantically precise_              |
+| `✨ feature(ui): implement dark mode`     |  ✅   | _Grammatically clear and semantically precise_              |
 
 </div>
 
@@ -345,50 +349,38 @@ The following table shows some usage examples that are valid or invalid accordin
 
 The psychological principles in `Commoji` draw from established research in cognitive, visual, and multimedia psychology. Key sources include:
 
-- **Pictorial Superiority Effect & Image Processing Speed**  
-  Potter, M. C., et al. (2014). "Detecting meaning in RSVP at 13 ms per picture." *Attention, Perception, & Psychophysics*, 76(2), 270–279.  
+- **Pictorial Superiority Effect & Image Processing Speed** Potter, M. C., et al. (2014). "Detecting meaning in RSVP at 13 ms per picture." *Attention, Perception, & Psychophysics*, 76(2), 270–279.  
   [https://doi.org/10.3758/s13414-013-0606-2](https://doi.org/10.3758/s13414-013-0606-2)
 
-- **Dual-Coding Theory**  
-  Paivio, A. (1971). *Imagery and Verbal Processes*. Holt, Rinehart and Winston.  
+- **Dual-Coding Theory** Paivio, A. (1971). *Imagery and Verbal Processes*. Holt, Rinehart and Winston.  
   Paivio, A. (1986). *Mental Representations: A Dual Coding Approach*. Oxford University Press.
 
-- **Gestalt Principles**  
-  Wertheimer, M. (1923). "Laws of Organization in Perceptual Forms." *Psychologische Forschung*, 4(1), 301–350.  
+- **Gestalt Principles** Wertheimer, M. (1923). "Laws of Organization in Perceptual Forms." *Psychologische Forschung*, 4(1), 301–350.  
   Koffka, K. (1935). *Principles of Gestalt Psychology*. Harcourt, Brace.
 
-- **Pop-out Effect & Feature Integration Theory**  
-  Treisman, A. M., & Gelade, G. (1980). "A feature-integration theory of attention." *Cognitive Psychology*, 12(1), 97–136.  
+- **Pop-out Effect & Feature Integration Theory** Treisman, A. M., & Gelade, G. (1980). "A feature-integration theory of attention." *Cognitive Psychology*, 12(1), 97–136.  
   [https://doi.org/10.1016/0010-0285(80)90005-5](https://doi.org/10.1016/0010-0285(80)90005-5)
 
-- **Signaling Principle & Multimedia Learning**  
-  Mayer, R. E. (2009). *Multimedia Learning* (2nd ed.). Cambridge University Press.  
+- **Signaling Principle & Multimedia Learning** Mayer, R. E. (2009). *Multimedia Learning* (2nd ed.). Cambridge University Press.  
   Mayer, R. E. (2021). "Multimedia learning." In *The Cambridge Handbook of Multimedia Learning* (3rd ed.).
 
-- **Emotional/Affective Priming with Emojis**  
-  Danesi, M. (2017). *The Semiotics of Emoji: The Rise of Visual Language in the Age of the Internet*. Bloomsbury Academic.  
+- **Emotional/Affective Priming with Emojis** Danesi, M. (2017). *The Semiotics of Emoji: The Rise of Visual Language in the Age of the Internet*. Bloomsbury Academic.  
   Riordan, M. A. (2017). "Emojis as tools for emotion work." *Computers in Human Behavior*, 73, 152–159.
 
-- **Cognitive Load Theory**  
-  Sweller, J. (1988). "Cognitive load during problem solving." *Cognitive Science*, 12(2), 257–285.  
+- **Cognitive Load Theory** Sweller, J. (1988). "Cognitive load during problem solving." *Cognitive Science*, 12(2), 257–285.  
   Sweller, J., et al. (2011). "Cognitive architecture and instructional design." *Educational Psychology Review*, 23(3), 343–367.
 
-- **Chunking**  
-  Miller, G. A. (1956). "The magical number seven, plus or minus two." *Psychological Review*, 63(2), 81–97.
+- **Chunking** Miller, G. A. (1956). "The magical number seven, plus or minus two." *Psychological Review*, 63(2), 81–97.
 
-- **Processing Fluency & Familiarity Heuristic**  
-  Schwarz, N. (2004). "Metacognitive experiences in judgment and decision making." *Journal of Consumer Psychology*, 14(4), 332–348.
+- **Processing Fluency & Familiarity Heuristic** Schwarz, N. (2004). "Metacognitive experiences in judgment and decision making." *Journal of Consumer Psychology*, 14(4), 332–348.
 
-- **Parafoveal Processing & Pre-attentive Vision**  
-  Rayner, K. (1998). "Eye movements in reading and information processing." *Psychological Bulletin*, 124(3), 372–422.
-
-These are the foundational works that most directly support the principles. For a deeper dive, search the authors' names + keywords like "emoji" or "visual attention" in Google Scholar.
+- **Parafoveal Processing & Pre-attentive Vision** Rayner, K. (1998). "Eye movements in reading and information processing." *Psychological Bulletin*, 124(3), 372–422.
 
 ---
 
 ## Changelog
 
-Read about the latest changes in the [CHANGELOG](https://github.com/igorskyflyer/commoji/blob/main/CHANGELOG.md).
+Read about the latest changes in the [**CHANGELOG**](https://github.com/igorskyflyer/commoji/blob/main/CHANGELOG.md).
 
 ---
 
