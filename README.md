@@ -91,7 +91,7 @@ Here are the key psychological principles that quietly power the system:
 
 - **Redundancy Principle (limited version)** – Emoji + matching tag provide reinforcing (not excessive) cues for the same meaning, strengthening understanding without overload.
 
-In short, Commoji doesn't just look nicer – it works *with* your brain instead of against it.
+In short, Commoji doesn't just look nicer. It works *with* your brain instead of against it.
 
 ---
 
