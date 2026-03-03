@@ -302,7 +302,9 @@ If absolutely no verb in the table fits naturally and accurately, use the closes
 
 <br>
 
-> [!TIP] Quick verb cheat-sheet
+> [!TIP]
+> **Quick verb cheat-sheet**
+>
 > - New → `add` / `implement`
 > - Change → `update` / `refactor` / `fix`
 > - Delete → `remove` / `clean`
