@@ -60,7 +60,7 @@ specification and documentation of <code>Commoji</code>.
 
 ## The Psychology
 
-`Commoji` originated from real-world attempts to make dense commit logs easier to skim quickly. Its design choices — visual anchors, strict domain–operation separation, predictable structure — turned out to align closely with well-documented mechanisms of visual perception and cognitive load reduction.
+`Commoji` originated from real-world attempts to make dense commit logs easier to skim quickly. Its design choices — visual anchors, strict domain–operation separation, predictable structure — turned out to align closely with well-documented mechanisms of visual perception and cognitive load reduction. The thinking that originated from earlier patterns used in projects like [**AdVoid**](https://github.com/the-advoid/ad-void), where emoji prefixes proved highly effective for instantly identifying module-specific changes in dense histories, evolved to a scientific-based system that `Commoji` is today.  
 
 Here are the key psychological principles that power the system:
 
