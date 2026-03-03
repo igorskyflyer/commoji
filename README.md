@@ -60,7 +60,7 @@ specification and documentation of <code>Commoji</code>.
 
 ## The Psychology
 
-`Commoji` wasn't designed in a lab – it grew organically from real-world developer workflows because it produced clearer and more efficient commit messages to read and write.
+`Commoji` originated from real-world attempts to make dense commit logs easier to skim quickly. Its design choices — visual anchors, strict domain–operation separation, predictable structure — turned out to align closely with well-documented mechanisms of visual perception and cognitive load reduction.
 
 Here are the key psychological principles that power the system:
 
