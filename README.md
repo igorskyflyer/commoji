@@ -50,9 +50,9 @@ specification and documentation of <code>Commoji</code>.
 
 `Commoji` blends semantic clarity with visual expressiveness in commit messages to make intent easier to convey. It's not just a tagging system; it's a **psychology-based** visual grammar for storytelling in code.
 
-- ✨ **Visual Expressiveness**: Emojis provide instant, colorful cues that make commit histories pop and easier to scan at a glance.
+- ✨ **Visual Expressiveness**: Emojis provide instant, colorful cues that make commit histories pop and easier to scan at a glance. Eye-tracking research confirms emojis are detected parafoveally (before direct fixation) and increase skipping rates of nearby text while reducing total reading time.
 - 🏷️ **Semantic Orthogonality**: Distinct domain tags and operational verbs ensure every message clearly conveys purpose without tautological ambiguity.
-- 📊 **Reduced Cognitive Load**: Fixed format lowers mental effort, allowing quick understanding of changes in logs or diffs.
+- 📊 **Reduced Cognitive Load**: Fixed format lowers mental effort, allowing quick understanding of changes in logs or diffs. Congruent emojis improve processing fluency and message understanding compared with plain text.
 - 🧠 **Intuitive Design**: Draws on psychological principles like pop-out effect and chunking for a more natural reading experience.
 - 🚀 **Tooling Compatibility**: Designed to work with parsers, linters, and changelog generators for automated workflows; *currently*, may require custom configuration for full support.
 
@@ -65,19 +65,19 @@ specification and documentation of <code>Commoji</code>.
 Here are the key psychological principles that power the system:
 
 - **Visual Indexing & Attentional Capture** (Treisman & eye-tracking research)  
-  Emojis act as high-contrast pre-attentive anchors. Their color and shape differences allow rapid detection during skimming — often via parafoveal preview — guiding attention to relevant commits before full text reading begins.
+  Emojis act as high-contrast pre-attentive anchors. Their color and shape differences allow rapid detection during skimming — often via parafoveal preview — guiding attention to relevant commits before full text reading begins. Eye-tracking studies confirm congruent emojis are processed parafoveally (like words), are skipped more often than incongruent ones, and reduce total fixation time on the preceding target word (Barach et al., 2021).
 
 - **Semantic Orthogonality** (Information Theory)  
-  Strict noun–verb separation eliminates redundancy. Independent axes maximize information per character and enable near-instant mental model construction.
+  Strict noun–verb separation eliminates redundancy. Independent axes maximize information per character and enable near-instant mental model construction. Large-scale analysis of GitHub commits and pull requests shows developers already use emoji prefixes for attention and content organization, leading to measurably faster team responses (Rong et al., 2022).
 
 - **Gestalt Grouping & Chunking**  
   The emoji + tag prefix creates immediate perceptual unity (proximity + similarity), turning each commit into a reliable, bite-sized chunk.
 
 - **Cognitive Load Reduction & Processing Fluency**  
-  Predictable prefix + concise object offloads parsing effort. Once learned, reading feels subjectively effortless and fast (familiarity heuristic).
+  Predictable prefix + concise object offloads parsing effort. Once learned, reading feels subjectively effortless and fast (familiarity heuristic). Messages with congruent emojis are rated as more understandable and require less cognitive effort than plain text (Daniel & Camp, 2020; Boutet et al., 2021).
 
 - **Dual-layer Signaling**  
-  Emoji and matching tag reinforce the same category without overload — increasing clarity in dense, fast-scrolling logs.
+  Emoji and matching tag reinforce the same category without overload — increasing clarity in dense, fast-scrolling logs through multimodal (visual + verbal) encoding.
 
 <br>
 
@@ -176,7 +176,7 @@ Emoji/tag pairs are **immutable**; the tag must always be preceded by its exact 
 |   ⚡    |  **metrics**        | _Performance, efficiency, and metrics_          |`:zap:`                      |
 |   ✅    |  **spec**           | _Tests, assertions, and validations_            |`:white_check_mark:`         |
 |   🏭    |  **build**          | _Build system or compiler instructions_         |`:factory:`                  |
-|   👷🏻    |  **ci**             | _Continuous integration workflows_              |`:construction_worker:`      |
+|   👷    |  **ci**             | _Continuous integration workflows_              |`:construction_worker:`      |
 |   🚀    |  **env**            | _Environments, deployments, and releases_       |`:rocket:`                   |
 |   🔧    |  **chore**           | _Miscellaneous maintenance and chores_         |`:wrench:`                   |
 |   🔬    |  **experiment**     | _Experimental prototypes_                       |`:microscope:`               |
@@ -415,9 +415,9 @@ The table below demonstrates real commit messages that fully comply — or delib
 
 The psychological foundation of `Commoji` draws from well-established research in visual perception, cognitive psychology, information theory, and multimedia learning.
 
+### Classic Foundational Works
 - **Feature Integration Theory & Pop-out Effect**  
-  Treisman, A. M., & Gelade, G. (1980). A feature-integration theory of attention. *Cognitive Psychology*, 12(1), 97–136.  
-  https://doi.org/10.1016/0010-0285(80)90005-5
+  Treisman, A. M., & Gelade, G. (1980). A feature-integration theory of attention. *Cognitive Psychology*, 12(1), 97–136. https://doi.org/10.1016/0010-0285(80)90005-5
 
 - **Gestalt Principles**  
   Wertheimer, M. (1923). Laws of Organization in Perceptual Forms. *Psychologische Forschung*, 4(1), 301–350.  
@@ -439,6 +439,19 @@ The psychological foundation of `Commoji` draws from well-established research i
 
 > [!NOTE]
 > These references informed the consolidation of principles in the Psychology section. For eye-movement and parafoveal preview benefits in reading (supporting fast scanning of emoji-prefixed commits), see Rayner, K. (1998). Eye movements in reading and information processing: 20 years of research. *Psychological Bulletin*, 124(3), 372–422.
+
+### Empirical Studies on Emoji Processing & Software Communication
+- **Barach, E., et al.** (2021). Are emojis processed like words?: Eye movements reveal the time course of semantic processing for emojified text. *Psychonomic Bulletin & Review*, 28(3), 983–997. https://doi.org/10.3758/s13423-020-01864-y  
+  *(Core evidence for parafoveal preview, skipping rates, and reduced fixation times — directly supports high-speed Git log scanning.)*
+
+- **Daniel, T. A., & Camp, A. L.** (2020). Emojis affect processing fluency on social media. *Psychology of Popular Media*, 9(2), 208–213. https://doi.org/10.1037/ppm0000219  
+  *(Shows congruent emojis make messages subjectively easier and faster to understand.)*
+
+- **Boutet, I., LeBlanc, M., et al.** (2021). Emojis influence emotional communication, social attributions, and information processing. *Computers in Human Behavior*, 119, 106722. https://doi.org/10.1016/j.chb.2021.106722  
+  *(Faster processing speed and better comprehension with congruent emojis.)*
+
+- **Rong, S., Wang, W., Mannan, U. A., et al.** (2022). An empirical study of emoji use in software development communication. *Information and Software Technology*, 148, 106912. https://doi.org/10.1016/j.infsof.2022.106912  
+  *(Large-scale GitHub analysis: emoji prefixes speed up responses and improve organization in commits/PRs — perfect real-world validation for Commoji.)*
 
 ---
 
