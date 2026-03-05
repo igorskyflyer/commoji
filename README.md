@@ -36,6 +36,7 @@ specification and documentation of <code>Commoji</code>.
   - [**Scope**](#scope)
   - [**Verbs**](#verbs)
   - [**Object**](#object)
+  - [**Tooling**](#tooling)
 - 🗒️ [**Examples**](#examples)
 - 🌐 [**References**](#references)
 - 📝 [**Changelog**](#changelog)
@@ -54,7 +55,7 @@ specification and documentation of <code>Commoji</code>.
 - 🏷️ **Semantic Orthogonality**: Distinct domain tags and operational verbs ensure every message clearly conveys purpose without tautological ambiguity.
 - 📊 **Reduced Cognitive Load**: Fixed format lowers mental effort, allowing quick understanding of changes in logs or diffs. Congruent emojis improve processing fluency and message understanding compared with plain text.
 - 🧠 **Intuitive Design**: Draws on psychological principles like pop-out effect and chunking for a more natural reading experience.
-- 🚀 **Tooling Compatibility**: Designed to work with parsers, linters, and changelog generators for automated workflows; *currently*, may require custom configuration for full support.
+- 🚀 **Tooling Compatibility**: Designed to work with parsers, linters, and changelog generators; see the [**Tooling**](#tooling) section for ready-to-use examples.
 
 ---
 
@@ -241,9 +242,8 @@ The scope narrows the commit's focus to a specific module, component, feature, o
 
 ### Verbs
 
-Verbs represent the Operation (the “how”) applied to the domain tag.
-Verbs must be chosen from the official Verbs table below. This enforces semantic orthogonality, consistency across the project, and predictable visual/mental chunking in histories.
-If absolutely no verb in the table fits naturally and accurately, use the closest one and explain any nuances in the commit body (not the summary). Avoid inventing new verbs in the summary line to preserve scannability and parser compatibility.
+Verbs represent the Operation (the “how”) applied to the domain tag.  
+**To ensure consistency and fast scanning, verbs should be selected from the official table below.** This enforces semantic orthogonality between domain (`tag`) and operation. If absolutely no table verb fits naturally and accurately, select the semantically closest one and explain nuances in the commit body (not the summary line).
 
 <div align="center">
 
@@ -374,7 +374,47 @@ It completes the sentence started by the tag + verb while staying short and scan
 
 ---
 
-### Examples
+### Tooling
+
+`Commoji` is built first and foremost for **human readers**. Full 100% automated enforcement of every rule (especially semantic orthogonality, verb choice, and object quality) is inherently difficult with today's conventional linters.
+
+#### Current possibilities
+Standard tools like `commitlint` can reliably enforce the structural parts of the spec:
+- Presence of emoji + valid tag
+- Lowercase scope
+- Header length
+- Breaking-change `!` placement
+
+Deeper rules (verb appropriateness, avoiding semantic repetition in the object, etc.) cannot be perfectly validated automatically.
+
+#### Recommended approach
+- Use the minimal `commitlint` config below for basic structural guardrails.
+- Rely on the upcoming **official Commoji VS Code Extension** (currently in development) as the primary tool for full guidance, interactive commit creation, real-time validation, and best compliance.
+
+#### Minimal commitlint config (`.commitlintrc.js`)
+
+```js
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'type-enum': [2, 'always', [
+      'repo', 'feature', 'bug', 'docs', 'ui', 'logic', 'metrics', 'spec',
+      'build', 'ci', 'env', 'chore', 'experiment', 'history', 'branch',
+      'deps', 'config', 'debt', 'security', 'ux', 'accessibility', 'i18n'
+    ]],
+    'scope-case': [2, 'always', 'lower-case'],
+    'subject-case': [0],                    // disabled — object allows brands, acronyms, proper nouns
+    'subject-empty': [2, 'never'],
+    'subject-full-stop': [2, 'never'],
+    'header-max-length': [2, 'always', 72],
+    'type-empty': [2, 'never']
+  }
+};
+```
+
+---
+
+## Examples
 
 The table below demonstrates real commit messages that fully comply — or deliberately violate — the complete set of locked `Commoji` rules (Format, Tags, Scope, Verbs, Object, Breaking Changes, and semantic orthogonality).
 
