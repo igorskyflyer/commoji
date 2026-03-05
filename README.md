@@ -21,6 +21,11 @@ specification and documentation of <code>Commoji</code>.
 
 <div align="center">
   🐉 <code>Commoji</code> is a psychology-based emoji commit convention that optimizes Git history for high-speed scanning and semantic clarity. 🏷️
+  <br>
+  <br>
+  Need a shorter, shareable summary?
+  <br>
+  <a href="https://github.com/igorskyflyer/commoji/blob/main/RESEARCH.md"><strong>RESEARCH.md – The Science Behind Commoji</strong></a>
 </div>
 
 <br>
@@ -61,12 +66,12 @@ specification and documentation of <code>Commoji</code>.
 
 ## The Psychology
 
-`Commoji` originated from real-world attempts to make dense commit logs easier to skim quickly. Its design choices — visual anchors, strict domain–operation separation, predictable structure — turned out to align closely with well-documented mechanisms of visual perception and cognitive load reduction. The thinking that originated from earlier patterns used in projects like [**AdVoid**](https://github.com/the-advoid/ad-void), where emoji prefixes proved highly effective for instantly identifying module-specific changes in dense histories, evolved to a scientific-based system that `Commoji` is today.  
+`Commoji` originated from real-world attempts to make dense commit logs easier to skim quickly. Its design choices – visual anchors, strict domain–operation separation, predictable structure – turned out to align closely with well-documented mechanisms of visual perception and cognitive load reduction. The thinking that originated from earlier patterns used in projects like [**AdVoid**](https://github.com/the-advoid/ad-void), where emoji prefixes proved highly effective for instantly identifying module-specific changes in dense histories, evolved to a scientific-based system that `Commoji` is today.  
 
 Here are the key psychological principles that power the system:
 
 - **Visual Indexing & Attentional Capture** (Treisman & eye-tracking research)  
-  Emojis act as high-contrast pre-attentive anchors. Their color and shape differences allow rapid detection during skimming — often via parafoveal preview — guiding attention to relevant commits before full text reading begins. Eye-tracking studies confirm congruent emojis are processed parafoveally (like words), are skipped more often than incongruent ones, and reduce total fixation time on the preceding target word (Barach et al., 2021).
+  Emojis act as high-contrast pre-attentive anchors. Their color and shape differences allow rapid detection during skimming – often via parafoveal preview – guiding attention to relevant commits before full text reading begins. Eye-tracking studies confirm congruent emojis are processed parafoveally (like words), are skipped more often than incongruent ones, and reduce total fixation time on the preceding target word (Barach et al., 2021).
 
 - **Semantic Orthogonality** (Information Theory)  
   Strict noun–verb separation eliminates redundancy. Independent axes maximize information per character and enable near-instant mental model construction. Large-scale analysis of GitHub commits and pull requests shows developers already use emoji prefixes for attention and content organization, leading to measurably faster team responses (Rong et al., 2022).
@@ -78,7 +83,7 @@ Here are the key psychological principles that power the system:
   Predictable prefix + concise object offloads parsing effort. Once learned, reading feels subjectively effortless and fast (familiarity heuristic). Messages with congruent emojis are rated as more understandable and require less cognitive effort than plain text (Daniel & Camp, 2020; Boutet et al., 2021).
 
 - **Dual-layer Signaling**  
-  Emoji and matching tag reinforce the same category without overload — increasing clarity in dense, fast-scrolling logs through multimodal (visual + verbal) encoding.
+  Emoji and matching tag reinforce the same category without overload – increasing clarity in dense, fast-scrolling logs through multimodal (visual + verbal) encoding.
 
 <br>
 
@@ -201,15 +206,15 @@ Emoji/tag pairs are **immutable**; the tag must always be preceded by its exact 
 
 > [!NOTE]
 > - Tags must **always** be written in lowercase.
-> - Emoji/tag pairs are immutable — never invent or swap them.
-> - Note on `chore`: use this tag only for changes that truly don't fit other domains. Frequent `chore` usage reduces semantic clarity — aim to keep it <25–30% of commits by preferring more specific tags when possible.
+> - Emoji/tag pairs are immutable – never invent or swap them.
+> - Note on `chore`: use this tag only for changes that truly don't fit other domains. Frequent `chore` usage reduces semantic clarity – aim to keep it <25–30% of commits by preferring more specific tags when possible.
 
 **Examples**
 
 - ✅ `🐛 bug: fix memory leak in caching layer`
 - ✅ `🔥 debt: remove deprecated v1 api controllers`
-- ❌ `🚨 fix: memory leak…` — `fix` is not a valid tag
-- ❌ `✨ bug: fix memory leak` — emoji/tag mismatch
+- ❌ `🚨 fix: memory leak…` – `fix` is not a valid tag
+- ❌ `✨ bug: fix memory leak` – emoji/tag mismatch
 
 <br>
 
@@ -224,16 +229,16 @@ The scope narrows the commit's focus to a specific module, component, feature, o
 - Omit the scope entirely when:
   - the change affects the whole project, or
   - the scope would be identical or semantically duplicate the tag (e.g. `metrics(performance)`, `ui(styles)`).
-- Avoid broad/generic scopes such as `core`, `misc`, `utils`, `main` — they defeat the purpose of scoping. Use `chore` tag instead and put details in the object.
+- Avoid broad/generic scopes such as `core`, `misc`, `utils`, `main` – they defeat the purpose of scoping. Use `chore` tag instead and put details in the object.
 
 #### Examples (fully compliant with Format & orthogonality)
 
 - ✅ `✨ feature(payment-gateway): add Stripe webhook handler`
 - ✅ `📚 docs(auth): add table of contents to README`
 - ✅ `🔨 logic: refactor token validation`   <!-- global / no useful scope -->
-- ❌ `💄 ui(ui): update button styles` — scope duplicates tag
-- ❌ `⚡ metrics(performance): optimize startup time` — semantic duplication
-- ❌ `🔧 chore(Misc): update utilities` — capitalized + generic
+- ❌ `💄 ui(ui): update button styles` – scope duplicates tag
+- ❌ `⚡ metrics(performance): optimize startup time` – semantic duplication
+- ❌ `🔧 chore(Misc): update utilities` – capitalized + generic
 
 > [!NOTE]
 > When in doubt, omit the scope. A clean `tag: verb object` is always preferred over a vague or redundant `(scope)`.
@@ -293,9 +298,9 @@ Verbs represent the Operation (the “how”) applied to the domain tag.
 - ✅ `🔨 logic(auth): refactor token validation`
 - ✅ `📚 docs: document new payment flow`
 - ✅ `🔐 security: harden API endpoints against XSS`
-- ❌ `🔬 experiment: experiment with caching` — `verb` repeats `tag` (use clearer phrasing)
-- ❌ `🔀 branch: merge main` — `verb` repeats `tag` (use clearer phrasing)
-- ❌ `🔨 logic(auth): refactored token validation` — wrong tense
+- ❌ `🔬 experiment: experiment with caching` – `verb` repeats `tag` (use clearer phrasing)
+- ❌ `🔀 branch: merge main` – `verb` repeats `tag` (use clearer phrasing)
+- ❌ `🔨 logic(auth): refactored token validation` – wrong tense
 
 > [!TIP]
 > When a change truly spans multiple concerns, choose the highest-level verb and explain details in the body.
@@ -324,12 +329,12 @@ It completes the sentence started by the tag + verb while staying short and scan
   - Proper nouns (names, brands: Stripe, React, Vite)
   - Acronyms and technical terms that are conventionally capitalized (API, XSS, OAuth2, URL, ToC, JSON, HTML)
   - Do not capitalize the first word of the object (avoid sentence-style capitalization) for consistency across the history.
-- Never turn the `object` into a full sentence or list — use the commit body for details.
+- Never turn the `object` into a full sentence or list – use the commit body for details.
 
 > [!IMPORTANT]
 > Avoid semantic repetition of the tag or verb in the object where possible (e.g. avoid bug: fix bug).
 >
-> Exceptions are allowed for concise, idiomatic patterns — especially dependency updates, version bumps, or technical identifiers — where including the action or version adds clarity without vagueness.
+> Exceptions are allowed for concise, idiomatic patterns – especially dependency updates, version bumps, or technical identifiers – where including the action or version adds clarity without vagueness.
 >
 
 **Examples of acceptable mild overlap:**
@@ -403,7 +408,7 @@ module.exports = {
       'deps', 'config', 'debt', 'security', 'ux', 'accessibility', 'i18n'
     ]],
     'scope-case': [2, 'always', 'lower-case'],
-    'subject-case': [0],                    // disabled — object allows brands, acronyms, proper nouns
+    'subject-case': [0],                    // disabled – object allows brands, acronyms, proper nouns
     'subject-empty': [2, 'never'],
     'subject-full-stop': [2, 'never'],
     'header-max-length': [2, 'always', 72],
@@ -416,7 +421,7 @@ module.exports = {
 
 ## Examples
 
-The table below demonstrates real commit messages that fully comply — or deliberately violate — the complete set of locked `Commoji` rules (Format, Tags, Scope, Verbs, Object, Breaking Changes, and semantic orthogonality).
+The table below demonstrates real commit messages that fully comply – or deliberately violate – the complete set of locked `Commoji` rules (Format, Tags, Scope, Verbs, Object, Breaking Changes, and semantic orthogonality).
 
 <div align="center">
 
@@ -482,7 +487,7 @@ The psychological foundation of `Commoji` draws from well-established research i
 
 ### Empirical Studies on Emoji Processing & Software Communication
 - **Barach, E., et al.** (2021). Are emojis processed like words?: Eye movements reveal the time course of semantic processing for emojified text. *Psychonomic Bulletin & Review*, 28(3), 983–997. https://doi.org/10.3758/s13423-020-01864-y  
-  *(Core evidence for parafoveal preview, skipping rates, and reduced fixation times — directly supports high-speed Git log scanning.)*
+  *(Core evidence for parafoveal preview, skipping rates, and reduced fixation times – directly supports high-speed Git log scanning.)*
 
 - **Daniel, T. A., & Camp, A. L.** (2020). Emojis affect processing fluency on social media. *Psychology of Popular Media*, 9(2), 208–213. https://doi.org/10.1037/ppm0000219  
   *(Shows congruent emojis make messages subjectively easier and faster to understand.)*
@@ -491,7 +496,7 @@ The psychological foundation of `Commoji` draws from well-established research i
   *(Faster processing speed and better comprehension with congruent emojis.)*
 
 - **Rong, S., Wang, W., Mannan, U. A., et al.** (2022). An empirical study of emoji use in software development communication. *Information and Software Technology*, 148, 106912. https://doi.org/10.1016/j.infsof.2022.106912  
-  *(Large-scale GitHub analysis: emoji prefixes speed up responses and improve organization in commits/PRs — perfect real-world validation for Commoji.)*
+  *(Large-scale GitHub analysis: emoji prefixes speed up responses and improve organization in commits/PRs – perfect real-world validation for Commoji.)*
 
 ---
 
