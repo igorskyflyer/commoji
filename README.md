@@ -6,7 +6,7 @@
 <div align="center">
 This file contains the
 <br>
-<strong><code>v2.0.0</code></strong> • <em><strong>03 Mar 2026</strong></em>
+<strong><code>v2.0.0</code></strong> • <em><strong>06 Mar 2026</strong></em>
 <br>
 specification and documentation of <code>Commoji</code>.
 
