@@ -6,7 +6,7 @@
 
 <br>
 
-**Commoji** is not just “prettier” Git history – it’s a **psychology-optimized** system proven to reduce cognitive load and accelerate scanning in dense commit logs.
+**Commoji** is not just “prettier” Git history – it's a **psychology-optimized** system proven to reduce cognitive load and accelerate scanning in dense commit logs.
 
 ### Key Benefits (backed by eye-tracking & real-world studies)
 
@@ -21,7 +21,7 @@
 
 ### The 5 Psychological Principles That Power Commoji
 
-1. **Visual Indexing & Attentional Capture** (Treisman’s Feature Integration Theory + eye-tracking)  
+1. **Visual Indexing & Attentional Capture** (Treisman's Feature Integration Theory + eye-tracking)  
    Emojis act as high-contrast pre-attentive anchors – your brain spots them instantly during skimming.
 
 2. **Semantic Orthogonality**  
@@ -52,7 +52,7 @@
 
 ---
 
-*Commoji doesn’t just look nicer – it’s engineered to work with your brain instead of against it.*  
+*Commoji doesn't just look nicer – it's engineered to work with your brain instead of against it.*  
 Made with evidence. Used in real code. 🚀
 
 [Full specification →](https://github.com/igorskyflyer/commoji)
