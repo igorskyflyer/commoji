@@ -172,7 +172,7 @@ Emoji/tag pairs are **immutable**; the tag must always be preceded by its exact 
 <div align="center">
 
 |**Category**            | **Emoji** | **Tag**          | **Domain / Purpose**                                      | **Shortcode**                  |
-|------------------------|:---------:|:----------------:|:----------------------------------------------------------|:-------------------------------|
+|:----------------------:|:---------:|:----------------:|:----------------------------------------------------------|:-------------------------------|
 | **Core**               |   ✨      | **feature**      | New capabilities or features                              | `:sparkles:`                   |
 | **Core**               |   🐛      | **bug**          | Faults, defects, or issues                                | `:bug:`                        |
 | **Core**               |   🔨      | **logic**        | Code architecture and internal structure                  | `:hammer:`                     |
