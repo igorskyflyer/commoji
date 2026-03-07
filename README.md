@@ -6,7 +6,7 @@
 <div align="center">
 This file contains the
 <br>
-<strong><code>v2.0.0</code></strong> • <em><strong>06 Mar 2026</strong></em>
+<strong><code>v2.0.1</code></strong> • <em><strong>07 Mar 2026</strong></em>
 <br>
 specification and documentation of <code>Commoji</code>.
 
@@ -171,30 +171,30 @@ Emoji/tag pairs are **immutable**; the tag must always be preceded by its exact 
 
 <div align="center">
 
-|**Emoji**|        **Tag**      |                  **Domain / Purpose** |           **Shortcode**               |
-|:-------:|:-------------------:|:-----------------------------------------------:|:---------------------------:|
-|   🐣    |  **repo**           | _Initial setup or repository metadata_          |`:hatching_chick:`           |
-|   ✨    |  **feature**        | _New capabilities or features_                  |`:sparkles:`                 |
-|   🐛    |  **bug**            | _Faults, defects, or issues_                    |`:bug:`                      |
-|   📚    |  **docs**           | _Documentation and guides_                      |`:books:`                    |
-|   💄    |  **ui**             | _Visual elements, styles, and interface polish_ |`:lipstick:`                 |
-|   🔨    |  **logic**          | _Code architecture and internal structure_      |`:hammer:`                   |
-|   ⚡    |  **metrics**        | _Performance, efficiency, and metrics_          |`:zap:`                      |
-|   ✅    |  **spec**           | _Tests, assertions, and validations_            |`:white_check_mark:`         |
-|   🏭    |  **build**          | _Build system or compiler instructions_         |`:factory:`                  |
-|   👷    |  **ci**             | _Continuous integration workflows_              |`:construction_worker:`      |
-|   🚀    |  **env**            | _Environments, deployments, and releases_       |`:rocket:`                   |
-|   🔧    |  **chore**           | _Miscellaneous maintenance and chores_         |`:wrench:`                   |
-|   🔬    |  **experiment**     | _Experimental prototypes_                       |`:microscope:`               |
-|   ⏪    |  **history**        | _Git history state or reverts_                  |`:rewind:`                   |
-|   🔀    |  **branch**         | _Merges and branch integration_                 |`:twisted_rightwards_arrows:`|
-|   📦    |  **deps**           | _Dependencies and packages_                     |`:package:`                  |
-|   ⚙️    |  **config**         | _System and environment configuration_          |`:gear:`                     |
-|   🔥    |  **debt**           | _Technical debt and dead code_                  |`:fire:`                     |
-|   🔐    |  **security**       | _Vulnerabilities and security hardening_        |`:closed_lock_with_key:`     |
-|   🧠    |  **ux**             | _User experience flows, interactions, and logic_|`:brain:`                    |
-|   ♿    |  **accessibility**  | _Accessibility (a11y) requirements_             |`:wheelchair:`               |
-|   🌐    |  **i18n**           | _Localization and internationalization_         |`:globe_with_meridians:`     |
+|**Category**            | **Emoji** | **Tag**          | **Domain / Purpose**                                      | **Shortcode**                  |
+|------------------------|:---------:|:----------------:|:----------------------------------------------------------|:-------------------------------|
+| **Core**               |   ✨      | **feature**      | New capabilities or features                              | `:sparkles:`                   |
+| **Core**               |   🐛      | **bug**          | Faults, defects, or issues                                | `:bug:`                        |
+| **Core**               |   🔨      | **logic**        | Code architecture and internal structure                  | `:hammer:`                     |
+| **Core**               |   🔥      | **debt**         | Technical debt and dead code                              | `:fire:`                       |
+| **Core**               |   🐣      | **repo**         | Initial setup or repository metadata                      | `:hatching_chick:`             |
+| **UI & Experience**    |   💄      | **ui**           | Visual elements, styles, and interface polish             | `:lipstick:`                   |
+| **UI & Experience**    |   🧠      | **ux**           | User experience flows, interactions, and logic            | `:brain:`                      |
+| **UI & Experience**    |   ♿      | **accessibility**| Accessibility (a11y) requirements                         | `:wheelchair:`                 |
+| **Docs & Quality**     |   📚      | **docs**         | Documentation and guides                                  | `:books:`                      |
+| **Docs & Quality**     |   ✅      | **spec**         | Tests, assertions, and validations                        | `:white_check_mark:`           |
+| **Build & Ops**        |   📦      | **deps**         | Dependencies and packages                                 | `:package:`                    |
+| **Build & Ops**        |   🚀      | **env**          | Environments, deployments, and releases                   | `:rocket:`                     |
+| **Build & Ops**        |   👷      | **ci**           | Continuous integration workflows                          | `:construction_worker:`        |
+| **Build & Ops**        |   🏭      | **build**        | Build system or compiler instructions                     | `:factory:`                    |
+| **Build & Ops**        |   ⚙️      | **config**       | System and environment configuration                      | `:gear:`                       |
+| **Performance**        |   ⚡      | **metrics**      | Performance, efficiency, and metrics                      | `:zap:`                        |
+| **Security**           |   🔐      | **security**     | Vulnerabilities and security hardening                    | `:closed_lock_with_key:`       |
+| **Maintenance**        |   🔧      | **chore**        | Miscellaneous maintenance and chores                      | `:wrench:`                     |
+| **Maintenance**        |   ⏪      | **history**      | Git history state or reverts                              | `:rewind:`                     |
+| **Maintenance**        |   🔀      | **branch**       | Merges and branch integration                             | `:twisted_rightwards_arrows:`  |
+| **Maintenance**        |   🌐      | **i18n**         | Localization and internationalization                     | `:globe_with_meridians:`       |
+| **Maintenance**        |   🔬      | **experiment**   | Experimental prototypes                                   | `:microscope:`                 |
 
 </div>
 
