@@ -11,6 +11,10 @@
 
 <br>
 
+[**Compare v2.0.0...v2.0.1**](https://github.com/igorskyflyer/commoji/compare/v2.0.0...v2.0.1)
+
+<br>
+
 ## v2.0.0 - *06 Mar 2026*
 
 - ✨ **feature**: introduce psychology section + full references (eye-tracking, fluency, GitHub studies)
