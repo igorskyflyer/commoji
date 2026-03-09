@@ -4,6 +4,16 @@
 
 <br>
 
+## v2.0.2 – *09 Mar 2026*
+
+- 📚 **docs**: update examples for breaking changes
+
+<br>
+
+[**Compare v2.0.1...v2.0.2**](https://github.com/igorskyflyer/commoji/compare/v2.0.1...v2.0.2)
+
+<br>
+
 ## v2.0.1 – *07 Mar 2026*
 
 - ✅ **spec**: tags table now includes a **Category** column for better visual grouping  
