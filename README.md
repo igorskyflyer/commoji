@@ -6,7 +6,7 @@
 <div align="center">
 This file contains the
 <br>
-<strong><code>v2.0.1</code></strong> • <em><strong>07 Mar 2026</strong></em>
+<strong><code>v2.0.2</code></strong> • <em><strong>09 Mar 2026</strong></em>
 <br>
 specification and documentation of <code>Commoji</code>.
 
@@ -146,7 +146,7 @@ To indicate a breaking change (API removal, incompatible API change, removed fea
 - `🐛 bug!: update login response format`
 - `✨ feature(ui)!: remove deprecated dark mode toggle`
 - `🔨 logic(auth)!: rename internal token keys`
-- `📦 deps(user-profile)!: remove lodash v4`   <!-- multi-word scope example -->
+- `📦 deps(user-profile)!: remove lodash v4`
 
 #### Why the `!` goes before the colon?
 Placing the `!` immediately before the colon (after `tag` and optional `scope`) follows established conventions while still keeping the breaking signal in the visual prefix. This ensures instant recognition during scanning and better compatibility with conventional commit parsers.
@@ -434,9 +434,9 @@ The table below demonstrates real commit messages that fully comply – or delib
 |`🔐 security: harden API endpoints against XSS`                     |    ✅    |_Valid table verb + avoids tag repetition_                                       |
 |`✨ feature(payment-gateway): add Stripe webhook handler`           |    ✅    |_Valid scope, specific object_                                               |
 |`🔥 debt: remove deprecated v1 controllers`                         |    ✅    |_No verb echo, clean debt usage_                                             |
-|`✨ feature!(ui): remove deprecated dark mode toggle`               |    ✅    |_Breaking change with scope_                                                 |
+|`✨ feature(ui)!: remove deprecated dark mode toggle`               |    ✅    |_Breaking change with scope_                                                 |
 |`🐛 bug!: update login response format`                             |    ✅    |_Breaking change without scope_                                              |
-|`📦 deps!(user-profile): remove lodash v4`                          |    ✅    |_Breaking change + multi-word scope_                                         |
+|`📦 deps(user-profile)!: remove lodash v4`                          |    ✅    |_Breaking change + multi-word scope_                                         |
 |`📚 docs: update docs`                                              |    ❌    |_Object repeats tag (violates orthogonality)_                                |
 |`⚡ metrics: optimize performance`                                  |    ❌    |_Verb echoes tag + vague object_                                             |
 |`🐛 bug: Fix Login Bug`                                             |    ❌    |_Capitalized verb + object repeats domain_                                   |
