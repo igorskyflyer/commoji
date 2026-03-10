@@ -4,6 +4,19 @@
 
 <br>
 
+## v2.1.0 – *10 Mar 2026*
+
+- 📚 **docs**: add Commit Body section with guidelines and example
+- 📚 **docs**: update TOC and fixed minor inconsistencies
+- 📚 **docs**: improve UX wording, i18n placement, and object examples
+- 📚 **docs**: improve issue referencing and breaking change body
+
+<br>
+
+[**Compare v2.0.2...v2.1.0**](https://github.com/igorskyflyer/commoji/compare/v2.0.2...v2.1.0)
+
+<br>
+
 ## v2.0.2 – *09 Mar 2026*
 
 - 📚 **docs**: update examples for breaking changes
