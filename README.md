@@ -6,7 +6,7 @@
 <div align="center">
 This file contains the
 <br>
-<strong><code>v2.0.2</code></strong> • <em><strong>09 Mar 2026</strong></em>
+<strong><code>v2.1.0</code></strong> • <em><strong>10 Mar 2026</strong></em>
 <br>
 specification and documentation of <code>Commoji</code>.
 
@@ -20,7 +20,7 @@ specification and documentation of <code>Commoji</code>.
 <br>
 
 <div align="center">
-  🐉 <code>Commoji</code> is a psychology-based emoji commit convention that optimizes Git history for high-speed scanning and semantic clarity. 🏷️
+  🐉 <code>Commoji</code> is a psychology-based decision framework and emoji commit convention that optimizes Git history for high-speed scanning and semantic clarity. 🏷️
   <br>
   <br>
   Need a shorter, shareable summary?
@@ -41,6 +41,7 @@ specification and documentation of <code>Commoji</code>.
   - [**Scope**](#scope)
   - [**Verbs**](#verbs)
   - [**Object**](#object)
+  - [**Commit Body**](#commit-body)
   - [**Tooling**](#tooling)
 - 🗒️ [**Examples**](#examples)
 - 🌐 [**References**](#references)
@@ -60,6 +61,7 @@ specification and documentation of <code>Commoji</code>.
 - 🏷️ **Semantic Orthogonality**: Distinct domain tags and operational verbs ensure every message clearly conveys purpose without tautological ambiguity.
 - 📊 **Reduced Cognitive Load**: Fixed format lowers mental effort, allowing quick understanding of changes in logs or diffs. Congruent emojis improve processing fluency and message understanding compared with plain text.
 - 🧠 **Intuitive Design**: Draws on psychological principles like pop-out effect and chunking for a more natural reading experience.
+- 🧩 **Structured Decision-Making**: Forces explicit choices along orthogonal axes (`domain` vs `operation`), turning subjective labeling into a low-friction process.
 - 🚀 **Tooling Compatibility**: Designed to work with parsers, linters, and changelog generators; see the [**Tooling**](#tooling) section for ready-to-use examples.
 
 ---
@@ -90,7 +92,7 @@ Here are the key psychological principles that power the system:
 > [!NOTE]
 > Emojis are powerful visual cues, but they may not render for every user (colorblindness, certain terminals, screen readers). The standardized shortcodes (`:sparkles:`, etc.) ensure the spec remains accessible and machine-readable.
 
-In short, `Commoji` doesn't just look nicer, it works *with* your brain instead of against it.
+This strict separation turns commit writing into a lightweight, repeatable decision framework rather than an ad-hoc prose exercise. In short, `Commoji` doesn't just look nicer, it works *with* your brain instead of against it.
 
 ---
 
@@ -115,8 +117,11 @@ The **tag** identifies the *domain* (the “what”), and the **verb** identifie
 - Exactly **one space** after the colon `:`  
 - `emoji` and `tag` are taken exactly from the official tables  
 - `scope` is always **lowercase** with hyphens (`user-profile`)  
-- `verb` is always **lowercase** imperative present tense; preferably chosen from the Verbs table, but other verbs are allowed when needed
+- `verb` is always **lowercase** imperative present tense; preferably chosen from the Verbs table, but other verbs are allowed when needed  
 - `object` must be lowercase by default. Capitalization is reserved strictly for Proper Nouns, Brands, or Technical Identifiers to preserve semantic accuracy.  
+
+**Optional**  
+- Reference GitHub issues/PRs with `#123` in the object or body (e.g. `fix login crash (#234)` or in body: `Closes #234`). 
 
 #### Emoji Rendering
 Use the actual **UTF-8 emoji character** whenever possible.  
@@ -152,7 +157,7 @@ To indicate a breaking change (API removal, incompatible API change, removed fea
 Placing the `!` immediately before the colon (after `tag` and optional `scope`) follows established conventions while still keeping the breaking signal in the visual prefix. This ensures instant recognition during scanning and better compatibility with conventional commit parsers.
 
 #### Recommended commit body
-Always explain the impact in the body using the conventional uppercase marker:
+When a change is breaking, it is **strongly recommended** to explain the impact in the body using the conventional format:
 
 ```markdown
 **BREAKING CHANGE**: Legacy OAuth1 tokens are no longer supported.  
@@ -179,7 +184,8 @@ Emoji/tag pairs are **immutable**; the tag must always be preceded by its exact 
 | **Core**               |   🔥      | **debt**         | Technical debt and dead code                              | `:fire:`                       |
 | **Core**               |   🐣      | **repo**         | Initial setup or repository metadata                      | `:hatching_chick:`             |
 | **UI & Experience**    |   💄      | **ui**           | Visual elements, styles, and interface polish             | `:lipstick:`                   |
-| **UI & Experience**    |   🧠      | **ux**           | User experience flows, interactions, and logic            | `:brain:`                      |
+| **UI & Experience**    |   🧠      | **ux**           | User experience flows, interactions, and behavior         | `:brain:`                      |
+| **UI & Experience**    |   🌐      | **i18n**         | Localization and internationalization                     | `:globe_with_meridians:`       |
 | **UI & Experience**    |   ♿      | **accessibility**| Accessibility (a11y) requirements                         | `:wheelchair:`                 |
 | **Docs & Quality**     |   📚      | **docs**         | Documentation and guides                                  | `:books:`                      |
 | **Docs & Quality**     |   ✅      | **spec**         | Tests, assertions, and validations                        | `:white_check_mark:`           |
@@ -193,7 +199,6 @@ Emoji/tag pairs are **immutable**; the tag must always be preceded by its exact 
 | **Maintenance**        |   🔧      | **chore**        | Miscellaneous maintenance and chores                      | `:wrench:`                     |
 | **Maintenance**        |   ⏪      | **history**      | Git history state or reverts                              | `:rewind:`                     |
 | **Maintenance**        |   🔀      | **branch**       | Merges and branch integration                             | `:twisted_rightwards_arrows:`  |
-| **Maintenance**        |   🌐      | **i18n**         | Localization and internationalization                     | `:globe_with_meridians:`       |
 | **Maintenance**        |   🔬      | **experiment**   | Experimental prototypes                                   | `:microscope:`                 |
 
 </div>
@@ -212,7 +217,7 @@ Emoji/tag pairs are **immutable**; the tag must always be preceded by its exact 
 **Examples**
 
 - ✅ `🐛 bug: fix memory leak in caching layer`
-- ✅ `🔥 debt: remove deprecated v1 api controllers`
+- ✅ `🔥 debt: remove deprecated v1 API controllers`
 - ❌ `🚨 fix: memory leak…` – `fix` is not a valid tag
 - ❌ `✨ bug: fix memory leak` – emoji/tag mismatch
 
@@ -247,7 +252,7 @@ The scope narrows the commit's focus to a specific module, component, feature, o
 
 ### Verbs
 
-Verbs represent the Operation (the “how”) applied to the domain tag.  
+Verbs represent the operation (the “how”) applied to the domain tag.  
 **To ensure consistency and fast scanning, verbs should be selected from the official table below.** This enforces semantic orthogonality between domain (`tag`) and operation. If absolutely no table verb fits naturally and accurately, select the semantically closest one and explain nuances in the commit body (not the summary line).
 
 <div align="center">
@@ -296,10 +301,10 @@ Verbs represent the Operation (the “how”) applied to the domain tag.
 **Examples (fully compliant)**
 
 - ✅ `🔨 logic(auth): refactor token validation`
-- ✅ `📚 docs: document new payment flow`
+- ✅ `📚 docs: add new payment flow`
 - ✅ `🔐 security: harden API endpoints against XSS`
 - ❌ `🔬 experiment: experiment with caching` – `verb` repeats `tag` (use clearer phrasing)
-- ❌ `🔀 branch: merge main` – `verb` repeats `tag` (use clearer phrasing)
+- ❌ `🔀 branch: merge main` – `verb` not in table, use `integrate` instead
 - ❌ `🔨 logic(auth): refactored token validation` – wrong tense
 
 > [!TIP]
@@ -377,6 +382,33 @@ It completes the sentence started by the tag + verb while staying short and scan
 - fixed minor typos in code blocks
 ```
 
+<br>
+
+### Commit Body
+
+The commit body is optional but **strongly recommended** when the change needs more context, especially for breaking changes, complex refactors, or when referencing issues.
+
+#### Guidelines
+- Leave a blank line after the summary line
+- Keep each line under **72 characters**
+- Use bullet points (`- `) for multiple changes or explanations
+- Common trailers (auto-linked by GitHub and many tools):
+  - `Closes #123` / `Fixes #456`
+  - `Co-authored-by: Name <email>`
+
+#### Example
+```markdown
+✨ feature(ui)!: remove deprecated dark mode toggle
+
+**BREAKING CHANGE**: The dark mode toggle has been removed due to accessibility issues.
+Users should now rely on their system preference.
+
+- removed legacy toggle component
+- updated documentation and settings panel
+
+Closes #234
+```
+
 ---
 
 ### Tooling
@@ -430,11 +462,11 @@ The table below demonstrates real commit messages that fully comply – or delib
 |`📚 docs(api): add table of contents`                               |    ✅    |_Specific object + valid scope_                                              |
 |`🔨 logic(auth): refactor token validation`                         |    ✅    |_Imperative verb, no repetition_                                             |
 |`🐛 bug: fix null pointer in login`                                 |    ✅    |_Precise object, no scope needed_                                            |
-|`📚 docs: document new payment flow`                                |    ✅    |_Valid table verb + specific object_                                         |
-|`🔐 security: harden API endpoints against XSS`                     |    ✅    |_Valid table verb + avoids tag repetition_                                       |
-|`✨ feature(payment-gateway): add Stripe webhook handler`           |    ✅    |_Valid scope, specific object_                                               |
+|`📚 docs: add new payment flow`                                     |    ✅    |_Valid table verb + specific object_                                         |
+|`🔐 security: harden API endpoints against XSS`                     |    ✅    |_Valid table verb + avoids tag repetition_                                   |
+|`✨ feature(payment-gateway): add Stripe Webhook handler`           |    ✅    |_Valid scope, specific object_                                               |
 |`🔥 debt: remove deprecated v1 controllers`                         |    ✅    |_No verb echo, clean debt usage_                                             |
-|`✨ feature(ui)!: remove deprecated dark mode toggle`               |    ✅    |_Breaking change with scope_                                                 |
+|`💄 ui!: remove deprecated dark mode toggle`                        |    ✅    |_Breaking change with scope_                                                 |
 |`🐛 bug!: update login response format`                             |    ✅    |_Breaking change without scope_                                              |
 |`📦 deps(user-profile)!: remove lodash v4`                          |    ✅    |_Breaking change + multi-word scope_                                         |
 |`📚 docs: update docs`                                              |    ❌    |_Object repeats tag (violates orthogonality)_                                |
@@ -446,7 +478,7 @@ The table below demonstrates real commit messages that fully comply – or delib
 </div>
 
 <div align="center">
-  <em>Table 4. <code>Commoji</code> commit message examples (v2.0.0)</em>
+  <em>Table 4. <code>Commoji</code> commit message examples</em>
 </div>
 
 <br>
