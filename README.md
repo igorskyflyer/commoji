@@ -6,7 +6,7 @@
 <div align="center">
 This file contains the
 <br>
-<strong><code>v2.1.0</code></strong> • <em><strong>10 Mar 2026</strong></em>
+<strong><code>v2.1.1</code></strong> • <em><strong>16 Mar 2026</strong></em>
 <br>
 specification and documentation of <code>Commoji</code>.
 
@@ -101,21 +101,20 @@ This strict separation turns commit writing into a lightweight, repeatable decis
 ### Format
 
 `Commoji` relies on a strict **Noun/Action Separation** to eliminate repetition and enforce semantic orthogonality.  
-The **tag** identifies the *domain* (the “what”), and the **verb** identifies the *operation* (the “how”).
+The **prefix** (emoji + noun domain tag) identifies the *what*, and the **verb** (action) identifies the *how*.
 
 #### Core Format
 
 - **No scope** (global change or scope unknown):  
-  `<emoji> <tag>: <verb> <object>`
+  `<prefix>: <verb> <object>`
 
 - **With scope** (specific module, component, or directory):  
-  `<emoji> <tag>(<scope>): <verb> <object>`
+  `<prefix>(<scope>): <verb> <object>`
 
 #### Spacing & Casing Rules (mandatory)
-- Exactly **one space** after the emoji  
-- **No space** between `<tag>` and `(` when a scope is present  
+- The entire `<prefix>` must be taken **exactly** from the Tags table (e.g. `✨ feature`, `🐛 bug`, `🔨 logic`, etc.)  
+- Exactly **one space** after the prefix before the colon `:`  
 - Exactly **one space** after the colon `:`  
-- `emoji` and `tag` are taken exactly from the official tables  
 - `scope` is always **lowercase** with hyphens (`user-profile`)  
 - `verb` is always **lowercase** imperative present tense; preferably chosen from the Verbs table, but other verbs are allowed when needed  
 - `object` must be lowercase by default. Capitalization is reserved strictly for Proper Nouns, Brands, or Technical Identifiers to preserve semantic accuracy.  
@@ -123,11 +122,11 @@ The **tag** identifies the *domain* (the “what”), and the **verb** identifie
 **Optional**  
 - Reference GitHub issues/PRs with `#123` in the object or body (e.g. `fix login crash (#234)` or in body: `Closes #234`). 
 
-#### Emoji Rendering
-Use the actual **UTF-8 emoji character** whenever possible.  
+#### Prefix Rendering
+Use the actual **UTF-8 emoji** as shown in the prefix whenever possible.  
 If your environment does not render emojis correctly, use the standardized **shortcodes** shown in the Tags table (e.g. `:sparkles:`, `:bug:`, `:lipstick:`).
 
-The `emoji` and `tag` **must** come from the official tables. The `verb` follows the rules defined in the [**Verbs**](#verbs) section.
+The `<prefix>` **must** come from the official Tags table. The `verb` follows the rules defined in the [**Verbs**](#verbs) section.
 
 > [!TIP]
 > This rigid prefix structure is what enables fast visual scanning and future automated tooling.
@@ -149,7 +148,7 @@ To indicate a breaking change (API removal, incompatible API change, removed fea
 #### Examples (fully compliant with Format rules)
 
 - `🐛 bug!: update login response format`
-- `✨ feature(ui)!: remove deprecated dark mode toggle`
+- `💄 ui!: remove deprecated dark mode toggle`
 - `🔨 logic(auth)!: rename internal token keys`
 - `📦 deps(user-profile)!: remove lodash v4`
 
@@ -176,30 +175,30 @@ Emoji/tag pairs are **immutable**; the tag must always be preceded by its exact 
 
 <div align="center">
 
-|**Category**            | **Emoji** | **Tag**          | **Domain / Purpose**                                      | **Shortcode**                  |
-|:----------------------:|:---------:|:----------------:|:----------------------------------------------------------|:-------------------------------|
-| **Core**               |   ✨      | **feature**      | New capabilities or features                              | `:sparkles:`                   |
-| **Core**               |   🐛      | **bug**          | Faults, defects, or issues                                | `:bug:`                        |
-| **Core**               |   🔨      | **logic**        | Code architecture and internal structure                  | `:hammer:`                     |
-| **Core**               |   🔥      | **debt**         | Technical debt and dead code                              | `:fire:`                       |
-| **Core**               |   🐣      | **repo**         | Initial setup or repository metadata                      | `:hatching_chick:`             |
-| **UI & Experience**    |   💄      | **ui**           | Visual elements, styles, and interface polish             | `:lipstick:`                   |
-| **UI & Experience**    |   🧠      | **ux**           | User experience flows, interactions, and behavior         | `:brain:`                      |
-| **UI & Experience**    |   🌐      | **i18n**         | Localization and internationalization                     | `:globe_with_meridians:`       |
-| **UI & Experience**    |   ♿      | **accessibility**| Accessibility (a11y) requirements                         | `:wheelchair:`                 |
-| **Docs & Quality**     |   📚      | **docs**         | Documentation and guides                                  | `:books:`                      |
-| **Docs & Quality**     |   ✅      | **spec**         | Tests, assertions, and validations                        | `:white_check_mark:`           |
-| **Build & Ops**        |   📦      | **deps**         | Dependencies and packages                                 | `:package:`                    |
-| **Build & Ops**        |   🚀      | **env**          | Environments, deployments, and releases                   | `:rocket:`                     |
-| **Build & Ops**        |   👷      | **ci**           | Continuous integration workflows                          | `:construction_worker:`        |
-| **Build & Ops**        |   🏭      | **build**        | Build system or compiler instructions                     | `:factory:`                    |
-| **Build & Ops**        |   ⚙️      | **config**       | System and environment configuration                      | `:gear:`                       |
-| **Performance**        |   ⚡      | **metrics**      | Performance, efficiency, and metrics                      | `:zap:`                        |
-| **Security**           |   🔐      | **security**     | Vulnerabilities and security hardening                    | `:closed_lock_with_key:`       |
-| **Maintenance**        |   🔧      | **chore**        | Miscellaneous maintenance and chores                      | `:wrench:`                     |
-| **Maintenance**        |   ⏪      | **history**      | Git history state or reverts                              | `:rewind:`                     |
-| **Maintenance**        |   🔀      | **branch**       | Merges and branch integration                             | `:twisted_rightwards_arrows:`  |
-| **Maintenance**        |   🔬      | **experiment**   | Experimental prototypes                                   | `:microscope:`                 |
+|**Category**       |**Tag**             |**Domain / Purpose**                             |**Shortcode**                |
+|:-----------------:|:------------------:|:------------------------------------------------|:----------------------------|
+|**Core**           |✨ **feature**      |New capabilities or features                     |`:sparkles:`                 |
+|**Core**           |🐛 **bug**          |Faults, defects, or issues                       |`:bug:`                      |
+|**Core**           |🔨 **logic**        |Code architecture and internal structure         |`:hammer:`                   |
+|**Core**           |🔥 **debt**         |Technical debt and dead code                     |`:fire:`                     |
+|**Core**           |🐣 **repo**         |Initial setup or repository metadata             |`:hatching_chick:`           |
+|**UI & Experience**|💄 **ui**           |Visual elements, styles, and interface polish    |`:lipstick:`                 |
+|**UI & Experience**|🧠 **ux**           |User experience flows, interactions, and behavior|`:brain:`                    |
+|**UI & Experience**|🌐 **i18n**         |Localization and internationalization            |`:globe_with_meridians:`     |
+|**UI & Experience**|♿ **accessibility**|Accessibility (a11y) requirements                |`:wheelchair:`               |
+|**Docs & Quality** |📚 **docs**         |Documentation and guides                         |`:books:`                    |
+|**Docs & Quality** |✅ **spec**         |Tests, assertions, and validations               |`:white_check_mark:`         |
+|**Build & Ops**    |📦 **deps**         |Dependencies and packages                        |`:package:`                  |
+|**Build & Ops**    |🚀 **env**          |Environments, deployments, and releases          |`:rocket:`                   |
+|**Build & Ops**    |👷 **ci**           |Continuous integration workflows                 |`:construction_worker:`      |
+|**Build & Ops**    |🏭 **build**        |Build system or compiler instructions            |`:factory:`                  |
+|**Build & Ops**    |⚙️ **config**       |System and environment configuration             |`:gear:`                     |
+|**Performance**    |⚡ **metrics**      |Performance, efficiency, and metrics             |`:zap:`                      |
+|**Security**       |🔐 **security**     |Vulnerabilities and security hardening           |`:closed_lock_with_key:`     |
+|**Maintenance**    |🔧 **chore**        |Miscellaneous maintenance and chores             |`:wrench:`                   |
+|**Maintenance**    |⏪ **history**      |Git history state or reverts                     |`:rewind:`                   | 
+|**Maintenance**    |🔀 **branch**       |Merges and branch integration                    |`:twisted_rightwards_arrows:`|
+|**Maintenance**    |🔬 **experiment**   |Experimental prototypes                          |`:microscope:`               |
 
 </div>
 
@@ -257,31 +256,31 @@ Verbs represent the operation (the “how”) applied to the domain tag.
 
 <div align="center">
 
-|   **Verb**     |               **Action Purpose**                          |
-|:--------------:|:---------------------------------------------------------:|
-|**add**         |_Introduce a new element_                                  |
-|**update**      |_Modify an existing element_                               |
-|**remove**      |_Eliminate something_                                      |
-|**rename**      |_Change a name or label_                                   |
-|**move**        |_Reposition without modifying content_                     |
-|**implement**   |_Build out functionality_                                  |
-|**fix**         |_Resolve a fault or issue_                                 |
-|**refactor**    |_Improve structure without changing behavior_              |
-|**optimize**    |_Improve performance or efficiency_                        |
-|**test**        |_Add or modify tests_                                      |
-|**configure**   |_Adjust system or environment settings_                    |
-|**prepare**     |_Set up for release or deployment_                         |
-|**release**     |_Publish or ship a version_                                |
-|**revert**      |_Undo a previous change_                                   |
-|**integrate**   |_Combine branches or changes_                              |
-|**clean**       |_Purge unused or obsolete elements_                        |
-|**translate**   |_Add or revise localization_                               |
-|**document**    |_Add or improve explanatory documentation_                 |
-|**generate**    |_Create generated / derived files or code_                 |
-|**bump**        |_Increment or set a specific version (esp. deps/packages)_ |
-|**upgrade**     |_Move to a newer major/minor version_                      |
-|**migrate**     |_Adapt code/data to new structure/format/system_           |
-|**harden**      |_Apply security measures / strengthen against threats_     |
+|**Verb**     |**Action Purpose**                                        |
+|:-----------:|:--------------------------------------------------------:|
+|**add**      |_Introduce a new element_                                 |
+|**update**   |_Modify an existing element_                              |
+|**remove**   |_Eliminate something_                                     |
+|**rename**   |_Change a name or label_                                  |
+|**move**     |_Reposition without modifying content_                    |
+|**implement**|_Build out functionality_                                 |
+|**fix**      |_Resolve a fault or issue_                                |
+|**refactor** |_Improve structure without changing behavior_             |
+|**optimize** |_Improve performance or efficiency_                       |
+|**test**     |_Add or modify tests_                                     |
+|**configure**|_Adjust system or environment settings_                   |
+|**prepare**  |_Set up for release or deployment_                        |
+|**release**  |_Publish or ship a version_                               |
+|**revert**   |_Undo a previous change_                                  |
+|**integrate**|_Combine branches or changes_                             |
+|**clean**    |_Purge unused or obsolete elements_                       |
+|**translate**|_Add or revise localization_                              |
+|**document** |_Add or improve explanatory documentation_                |
+|**generate** |_Create generated / derived files or code_                |
+|**bump**     |_Increment or set a specific version (esp. deps/packages)_|
+|**upgrade**  |_Move to a newer major/minor version_                     |
+|**migrate**  |_Adapt code/data to new structure/format/system_          |
+|**harden**   |_Apply security measures / strengthen against threats_    |
 
 </div>
 
@@ -351,17 +350,17 @@ It completes the sentence started by the tag + verb while staying short and scan
 
 <div align="center">
 
-|                **Summary**                          | **Valid** |                                         **Reason**                                      |
-|:---------------------------------------------------:|:---------:|:---------------------------------------------------------------------------------------:|
-|`📚 docs(api): add table of contents`                |    ✅    |_Specific noun phrase_                                                                   |
-|`🔨 logic(auth): refactor token validation`          |    ✅    |_Precise internal change_                                                                |
-|`🐛 bug: fix null pointer in login`                  |    ✅    |_Identifies exact failure point_                                                         |
-|`⚡ metrics: add cache layer for startup`            |    ✅    |_Specific improvement, no verb echo_                                                     |
-|`📚 docs: update installation guide`                 |    ✅    |_Clear subsection_                                                                       |
-|`📚 docs: update docs`                               |    ❌    |_Object too broad / repeats tag_                                                         |
-|`✨ feature: add mode`                               |    ❌    |_Ambiguous object_                                                                       |
-|`🐛 bug: fix bug`                                    |    ❌    |_Repeats tag_                                                                            |
-|`⚡ metrics: optimize performance`                   |    ❌    |_Vague object + minor verb-tag overlap (prefer specific noun; avoid echo where possible)_|
+|**Summary**                                |**Valid**|**Reason**                             |
+|:-----------------------------------------:|:-------:|:-------------------------------------:|
+|`📚 docs(api): add table of contents`      |✅       |_Specific noun phrase_                 |
+|`🔨 logic(auth): refactor token validation`|✅       |_Precise internal change_              |
+|`🐛 bug: fix null pointer in login`        |✅       |_Identifies exact failure point_       |
+|`⚡ metrics: add cache layer for startup`  |✅       |_Specific improvement, no verb echo_   |
+|`📚 docs: update installation guide`       |✅       |_Clear subsection_                     |
+|`📚 docs: update docs`                     |❌       |_Object too broad / repeats tag_       |
+|`✨ feature: add mode`                     |❌       |_Ambiguous object_                     |
+|`🐛 bug: fix bug`                          |❌       |_Repeats tag_                          |
+|`⚡ metrics: optimize performance`         |❌       |_Vague object + minor verb-tag overlap_|
 
 </div>
 
@@ -398,7 +397,7 @@ The commit body is optional but **strongly recommended** when the change needs m
 
 #### Example
 ```markdown
-✨ feature(ui)!: remove deprecated dark mode toggle
+💄 ui!: remove deprecated dark mode toggle
 
 **BREAKING CHANGE**: The dark mode toggle has been removed due to accessibility issues.
 Users should now rely on their system preference.
@@ -457,23 +456,23 @@ The table below demonstrates real commit messages that fully comply – or delib
 
 <div align="center">
 
-|             **Commit Message**                                      | **Valid** |                                       **Why**                             |
-|:-------------------------------------------------------------------:|:---------:|:-------------------------------------------------------------------------:|
-|`📚 docs(api): add table of contents`                               |    ✅    |_Specific object + valid scope_                                              |
-|`🔨 logic(auth): refactor token validation`                         |    ✅    |_Imperative verb, no repetition_                                             |
-|`🐛 bug: fix null pointer in login`                                 |    ✅    |_Precise object, no scope needed_                                            |
-|`📚 docs: add new payment flow`                                     |    ✅    |_Valid table verb + specific object_                                         |
-|`🔐 security: harden API endpoints against XSS`                     |    ✅    |_Valid table verb + avoids tag repetition_                                   |
-|`✨ feature(payment-gateway): add Stripe Webhook handler`           |    ✅    |_Valid scope, specific object_                                               |
-|`🔥 debt: remove deprecated v1 controllers`                         |    ✅    |_No verb echo, clean debt usage_                                             |
-|`💄 ui!: remove deprecated dark mode toggle`                        |    ✅    |_Breaking change with scope_                                                 |
-|`🐛 bug!: update login response format`                             |    ✅    |_Breaking change without scope_                                              |
-|`📦 deps(user-profile)!: remove lodash v4`                          |    ✅    |_Breaking change + multi-word scope_                                         |
-|`📚 docs: update docs`                                              |    ❌    |_Object repeats tag (violates orthogonality)_                                |
-|`⚡ metrics: optimize performance`                                  |    ❌    |_Verb echoes tag + vague object_                                             |
-|`🐛 bug: Fix Login Bug`                                             |    ❌    |_Capitalized verb + object repeats domain_                                   |
-|`🔨 logic(auth): refactored token validation`                       |    ❌    |_Past tense (must be imperative present)_                                    |
-|`💄 ui(ui): update button styles`                                   |    ❌    |_Scope duplicates tag_                                                       |
+|**Commit Message**                                       |**Valid**|**Why**                                      |
+|:-------------------------------------------------------:|:-------:|:-------------------------------------------:|
+|`📚 docs(api): add table of contents`                    |✅       |_Specific object + valid scope_              |
+|`🔨 logic(auth): refactor token validation`              |✅       |_Imperative verb, no repetition_             |
+|`🐛 bug: fix null pointer in login`                      |✅       |_Precise object, no scope needed_            |
+|`📚 docs: add new payment flow`                          |✅       |_Valid table verb + specific object_         |
+|`🔐 security: harden API endpoints against XSS`          |✅       |_Valid table verb + avoids tag repetition_   |
+|`✨ feature(payment-gateway): add Stripe Webhook handler`|✅       |_Valid scope, specific object_               |
+|`🔥 debt: remove deprecated v1 controllers`              |✅       |_No verb echo, clean debt usage_             |
+|`💄 ui!: remove deprecated dark mode toggle`             |✅       |_Breaking change with scope_                 |
+|`🐛 bug!: update login response format`                  |✅       |_Breaking change without scope_              |
+|`📦 deps(user-profile)!: remove lodash v4`               |✅       |_Breaking change + multi-word scope_         |
+|`📚 docs: update docs`                                   |❌       |_Object repeats tag (violates orthogonality)_|
+|`⚡ metrics: optimize performance`                       |❌       |_Verb echoes tag + vague object_             |
+|`🐛 bug: Fix Login Bug`                                  |❌       |_Capitalized verb + object repeats domain_   |
+|`🔨 logic(auth): refactored token validation`            |❌       |_Past tense (must be imperative present)_    |
+|`💄 ui(ui): update button styles`                        |❌       |_Scope duplicates tag_                       |
 
 </div>
 
