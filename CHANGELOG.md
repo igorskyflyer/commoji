@@ -1,10 +1,23 @@
-## 📒 Changelog
+# 📒 Changelog
 
-### of [**Commoji**](https://github.com/igorskyflyer/commoji)
+## of [**Commoji**](https://github.com/igorskyflyer/commoji)
 
 <br>
 
-## v2.1.0 – *10 Mar 2026*
+### v2.1.1 – *16 Mar 2026*
+
+- 📚 **docs**: reframe format section to use "prefix"
+- 📚 **docs**: update spacing & casing rules
+- 📚 **docs**: fix scoped examples
+- 📚 **docs**: clean up table Markdown
+
+<br>
+
+[**Compare v2.1.0...v2.1.1**](https://github.com/igorskyflyer/commoji/compare/v2.1.0...v2.1.1)
+
+<br>
+
+### v2.1.0 – *10 Mar 2026*
 
 - 📚 **docs**: add Commit Body section with guidelines and example
 - 📚 **docs**: update TOC and fixed minor inconsistencies
@@ -17,7 +30,7 @@
 
 <br>
 
-## v2.0.2 – *09 Mar 2026*
+### v2.0.2 – *09 Mar 2026*
 
 - 📚 **docs**: update examples for breaking changes
 
@@ -27,7 +40,7 @@
 
 <br>
 
-## v2.0.1 – *07 Mar 2026*
+### v2.0.1 – *07 Mar 2026*
 
 - ✅ **spec**: tags table now includes a **Category** column for better visual grouping  
 - ✅ **spec**: tags inside each category sorted by estimated everyday usefulness (most common first)
@@ -38,7 +51,7 @@
 
 <br>
 
-## v2.0.0 - *06 Mar 2026*
+### v2.0.0 - *06 Mar 2026*
 
 - ✨ **feature**: introduce psychology section + full references (eye-tracking, fluency, GitHub studies)
 - ✨ **feature**: add breaking changes syntax (`!` before colon)
@@ -61,7 +74,7 @@
 
 <br>
 
-## v1.1.0 - *27 Jul 2025*
+### v1.1.0 - *27 Jul 2025*
 
 - ✨ **feature**: add `scope`
 - ✨ **feature**: add scoped format
@@ -78,6 +91,6 @@
 
 <br>
 
-## v1.0.0 - *25 Jul 2025*
+### v1.0.0 - *25 Jul 2025*
 
 - 🚀 **launch**: initial release 🎉
