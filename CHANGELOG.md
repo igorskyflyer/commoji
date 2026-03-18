@@ -4,6 +4,37 @@
 
 <br>
 
+### v3.0.0 – *18 Mar 2026*
+
+- 📚 **docs!**: release Commoji v3.0.0 spec
+
+**BREAKING CHANGE**: spec rewritten for strict semantic orthogonality: verb and domain vocabulary no longer overlap; shortcodes prohibited in commit subjects; commitlint config now requires parserPreset.
+
+*Renamed*:
+- Tags section to Prefixes throughout
+
+*Removed*:
+- configure verb (absorbed by add / update)
+- document verb (absorbed by add / update)
+- verb-tag proximity block (no longer needed)
+- shortcode fallback for commit subjects (breaks git aliases)
+
+*Added*:
+- Querying section with git aliases
+- parserPreset + type-case: [0] to commitlint config
+- headerPattern regex with tab-safe [ ] space matching
+- Lyons (1977) reference for Semantic Orthogonality
+- Prefix domain selection rule (what vs. why)
+
+*Rewritten*:
+- 14 verb definitions - eliminated all domain vocabulary echoes
+- 7 domain descriptions - removed activity language
+- Semantic Orthogonality attribution: Information Theory to Lexical Semantics
+
+[**Compare v2.1.1...v3.0.0**](https://github.com/igorskyflyer/commoji/compare/v2.1.1...v3.0.0)
+
+<br>
+
 ### v2.1.1 – *16 Mar 2026*
 
 - 📚 **docs**: reframe format section to use "prefix"
