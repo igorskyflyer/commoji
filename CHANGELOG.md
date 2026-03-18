@@ -3,7 +3,6 @@
 ## of [**Commoji**](https://github.com/igorskyflyer/commoji)
 
 <br>
-📚 docs: release Commoji v3.0.0 specification
 
 ### v3.0.0 – *19 Mar 2026*
 
