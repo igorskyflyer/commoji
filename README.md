@@ -6,7 +6,7 @@
 <div align="center">
 This file contains the
 <br>
-<strong><code>v3.0.0</code></strong> • <em><strong>18 Mar 2026</strong></em>
+<strong><code>v3.0.0</code></strong> • <em><strong>19 Mar 2026</strong></em>
 <br>
 specification and documentation of <code>Commoji</code>.
 
@@ -89,14 +89,9 @@ Here are the key psychological principles that power the system:
 
 <br>
 
-> [!NOTE]
-> Emojis are powerful visual cues, but they may not render in every terminal
-> or screen reader. Configure the terminal and Git client to support UTF-8
-> emoji rendering - this is standard in all modern environments. The
-> shortcodes in the Prefixes table serve as a human-readable reference for
-> identifying emojis and must not be used in commit subjects.
+This strict separation turns commit writing into a lightweight, repeatable decision framework rather than an ad-hoc prose exercise. In short, `Commoji` doesn't just look nicer, it works *with* the brain instead of against it.  
 
-This strict separation turns commit writing into a lightweight, repeatable decision framework rather than an ad-hoc prose exercise. In short, `Commoji` doesn't just look nicer, it works *with* the brain instead of against it.
+Note that emojis require UTF-8 support in the terminal and Git client to render correctly - this is standard in all modern environments, but worth verifying. Shortcodes (e.g. `:sparkles:`) are provided in the [**shortcode reference**](#shortcodes) under the [**Prefixes**](#prefixes) table as a human-readable lookup aid and must never appear in commit subjects.
 
 ---
 
@@ -129,12 +124,9 @@ The **prefix** (emoji + tag) identifies the *domain* (what area of the codebase)
 
 #### Prefix Rendering
 Commit subjects **must** use the actual **UTF-8 emoji** as shown in the Prefixes table.  
-Shortcodes (e.g. `:sparkles:`, `:bug:`, `:lipstick:`) are provided in the table as a human-readable reference only - for looking up or identifying emojis - and must **never** appear in commit subjects. Using shortcodes in commits silently breaks all git aliases.
+Shortcodes (e.g. `:sparkles:`, `:bug:`, `:lipstick:`) are provided in the [**shortcode reference**](#shortcodes) table as a human-readable reference only - for looking up or identifying emojis - and must **never** appear in commit subjects. Using shortcodes in commits silently breaks all git aliases.
 
-The `<prefix>` **must** come from the official [**Prefixes**](#prefixes) table. The `verb` follows the rules defined in the [**Verbs**](#verbs) section.
-
-> [!TIP]
-> This rigid prefix structure is what enables fast visual scanning and future automated tooling.
+The `<prefix>` **must** come from the official [**Prefixes**](#prefixes) table. The `verb` follows the rules defined in the [**Verbs**](#verbs) section. This rigid prefix structure is what enables fast visual scanning and future automated tooling.
 
 <br>
 
@@ -142,7 +134,8 @@ The `<prefix>` **must** come from the official [**Prefixes**](#prefixes) table. 
 
 To indicate a breaking change (API removal, incompatible API change, removed feature, etc.), place an exclamation mark (`!`) immediately before the colon.  
 For unscoped commits, the `!` attaches directly to the `prefix`.  
-If a `scope` is provided, the `!` must immediately follow the closing parenthesis.
+For scoped commits, the `!` must immediately follow the closing parenthesis.  
+The `!` is optional - use it only when the change truly breaks existing consumers or contracts in that domain.
 
 #### Syntax
 
@@ -170,42 +163,41 @@ When a change is breaking, it is **strongly recommended** to explain the impact 
 Migrate to OAuth2 before v2.0.0.
 ```
 
-> [!NOTE]
-> The ! is optional. Use it only when the change truly breaks existing consumers or contracts in that domain.
-
 <br>
 
 ### Prefixes
 
-`Commoji` defines a fixed set of **prefixes** (emoji + tag) that act as **Nouns** representing the domain or entity being modified.
-These prefixes are **immutable**; always use the exact combination shown in the Prefix column of the table below.
+`Commoji` defines a fixed set of **prefixes** (emoji + tag) that act as **Nouns** representing the domain or entity being modified. These prefixes are **immutable** - never invent, swap, or separate the emoji from its tag. Always use the exact UTF-8 emoji as shown; shortcodes are for lookup only and must never appear in commit subjects.
 
 <div align="center">
 
-|**Prefix**             |**Category**       |**Domain / Purpose**                               |**Shortcode**                |
-|:---------------------:|:-----------------:|:--------------------------------------------------|:----------------------------|
-|✨ **feature**         |**Core**           |New capabilities or features                       |`:sparkles:`                 |
-|🐛 **bug**             |**Core**           |Faults, defects, or issues                         |`:bug:`                      |
-|🔨 **logic**           |**Core**           |Code architecture and internal structure           |`:hammer:`                   |
-|🔥 **debt**            |**Core**           |Technical debt and dead code                       |`:fire:`                     |
-|🐣 **repo**            |**Core**           |Initial setup or repository metadata               |`:hatching_chick:`           |
-|💄 **ui**              |**UI & Experience**|Visual elements, styles, and interface polish      |`:lipstick:`                 |
-|🧠 **ux**              |**UI & Experience**|User experience flows, interactions, and behavior  |`:brain:`                    |
-|🌐 **i18n**            |**UI & Experience**|Locale resources and internationalization support  |`:globe_with_meridians:`     |
-|♿ **accessibility**   |**UI & Experience**|Accessibility (a11y) requirements                  |`:wheelchair:`               |
-|📚 **docs**            |**Docs & Quality** |Documentation and guides                           |`:books:`                    |
-|✅ **spec**            |**Docs & Quality** |Test coverage, assertions, and validation rules    |`:white_check_mark:`         |
-|📦 **deps**            |**Build & Ops**    |Dependencies and packages                          |`:package:`                  |
-|🚀 **env**             |**Build & Ops**    |Deployment environments and pipeline infrastructure|`:rocket:`                   |
-|👷 **ci**              |**Build & Ops**    |Continuous integration workflows                   |`:construction_worker:`      |
-|🏭 **build**           |**Build & Ops**    |Build system or compiler instructions              |`:factory:`                  |
-|⚙️ **config**          |**Build & Ops**    |System and environment settings                    |`:gear:`                     |
-|⚡ **metrics**         |**Performance**    |Performance, efficiency, and metrics               |`:zap:`                      |
-|🔐 **security**        |**Security**       |Security vulnerabilities and protective measures   |`:closed_lock_with_key:`     |
-|🔧 **chore**           |**Maintenance**    |Miscellaneous maintenance and chores               |`:wrench:`                   |
-|⏪ **history**         |**Maintenance**    |Git commit history and its state                   |`:rewind:`                   | 
-|🔀 **branch**          |**Maintenance**    |Branch structure and merge points                  |`:twisted_rightwards_arrows:`|
-|🔬 **experiment**      |**Maintenance**    |Experimental prototypes                            |`:microscope:`               |
+|**Prefix**             |**Category**       |**Domain / Purpose**                               |
+|:---------------------:|:-----------------:|:--------------------------------------------------|
+|✨ **feature**         |**Core**           |New capabilities or features                       |
+|🐛 **bug**             |**Core**           |Faults, defects, or issues                         |
+|🔨 **logic**           |**Core**           |Code architecture and internal structure           |
+|🔥 **debt**            |**Core**           |Technical debt and dead code                       |
+|🐣 **repo**            |**Core**           |Initial setup or repository metadata               |
+|💄 **ui**              |**UI & Experience**|Visual elements, styles, and interface polish      |
+|🧠 **ux**              |**UI & Experience**|User experience flows, interactions, and behavior  |
+|🎨 **assets**          |**UI & Experience**|Static files, images, fonts, and icons             |
+|🌐 **i18n**            |**UI & Experience**|Locale resources and internationalization support  |
+|🦯 **a11y**            |**UI & Experience**|Accessibility (a11y) requirements                  |
+|📚 **docs**            |**Docs & Quality** |Documentation and guides                           |
+|✅ **spec**            |**Docs & Quality** |Test coverage, assertions, and validation rules    |
+|📐 **types**           |**Docs & Quality** |Type definitions, interfaces, and schemas          |
+|💾 **data**            |**Data**           |Database schemas, seeds, queries, and migrations   |
+|📦 **deps**            |**Build & Ops**    |Dependencies and packages                          |
+|🚀 **env**             |**Build & Ops**    |Deployment environments and pipeline infrastructure|
+|👷 **ci**              |**Build & Ops**    |Continuous integration workflows                   |
+|🏭 **build**           |**Build & Ops**    |Build system or compiler instructions              |
+|🔩 **config**          |**Build & Ops**    |System and environment settings                    |
+|📊 **metrics**         |**Performance**    |Performance, efficiency, and metrics               |
+|🔐 **security**        |**Security**       |Security vulnerabilities and protective measures   |
+|🔧 **chore**           |**Maintenance**    |Miscellaneous maintenance and chores               |
+|⌛ **history**         |**Maintenance**    |Git commit history and its state                   |
+|🔀 **branch**          |**Maintenance**    |Branch structure and merge points                  |
+|🔬 **experiment**      |**Maintenance**    |Experimental prototypes                            |
 
 </div>
 
@@ -215,29 +207,69 @@ These prefixes are **immutable**; always use the exact combination shown in the 
 
 <br>
 
-> [!IMPORTANT]
-> Choose the prefix that matches **what changed**, not **why it was changed**.  
-> A cache layer added for performance reasons is still `🔨 logic` - it changes architecture. Use `⚡ metrics` only when the commit touches measurement, profiling, benchmarking, or reporting infrastructure itself.
+#### Shortcodes
+
+<details>
+<summary>Reference</summary>
 
 <br>
 
-> [!NOTE]
-> - The entire **prefix** must be written exactly as shown, using the UTF-8 emoji. Shortcodes are for reference only and must not be used in commit subjects.
-> - Prefixes are immutable – never invent, swap, or separate the emoji from its tag.  
-> - Note on `🔧 chore`: use this prefix only for changes that truly don't fit other domains. Frequent `🔧 chore` usage reduces semantic clarity – aim to keep it &lt;25–30% of commits by preferring more specific prefixes when possible.
+|**Prefix**   |**Shortcode**                |
+|:-----------:|:---------------------------:|
+|✨ feature   |`:sparkles:`                 |
+|🐛 bug       |`:bug:`                      |
+|🔨 logic     |`:hammer:`                   |
+|🔥 debt      |`:fire:`                     |
+|🐣 repo      |`:hatching_chick:`           |
+|💄 ui        |`:lipstick:`                 |
+|🧠 ux        |`:brain:`                    |
+|🎨 assets    |`:artist_palette:`           |
+|🌐 i18n      |`:globe_with_meridians:`     |
+|🦯 a11y      |`:white_cane:`               |
+|📚 docs      |`:books:`                    |
+|✅ spec      |`:white_check_mark:`         |
+|📐 types     |`:triangular_ruler:`         |
+|💾 data      |`:floppy_disk:`              |
+|📦 deps      |`:package:`                  |
+|🚀 env       |`:rocket:`                   |
+|👷 ci        |`:construction_worker:`      |
+|🏭 build     |`:factory:`                  |
+|🔩 config    |`:nut_and_bolt:`             |
+|📊 metrics   |`:bar_chart:`                |
+|🔐 security  |`:closed_lock_with_key:`     |
+|🔧 chore     |`:wrench:`                   |
+|⌛ history   |`:hourglass:`                |
+|🔀 branch    |`:twisted_rightwards_arrows:`|
+|🔬 experiment|`:microscope:`               |
+
+</details>
+
+<br>
+
+> [!IMPORTANT]
+> Choose the prefix that matches **what changed**, not **why it was changed**.  
+> A cache layer added for performance reasons is still `🔨 logic` - it changes architecture. Adding a profiling wrapper or tracing span is also `🔨 logic` - it changes code structure. Use `📊 metrics` only when the commit touches measurement tooling, benchmarks, or reporting infrastructure itself.
+>
+> `🎨 assets` is for static files (images, fonts, icons, SVGs). Use `💄 ui` when changing how the interface looks or behaves - styles, components, layouts. If you're swapping an icon file, that's `🎨 assets`; if you're restyling the button that uses it, that's `💄 ui`.
+>
+> `🔧 chore` is a catch-all - use it only when no other prefix fits, and aim to keep it below 25–30% of commits.
+>
+> `🔥 debt` is for deliberate removal or resolution of known bad code — dead code, deprecated APIs, legacy workarounds. Use `🔧 chore` only for routine maintenance that doesn't fit any other domain (e.g. updating `.gitignore`, renaming config files). If you're deleting code, it's almost always `🔥 debt`.
+
+<br>
 
 **Examples**
 
 - ✅ `🐛 bug: fix memory leak in caching layer`
 - ✅ `🔥 debt: remove deprecated v1 API controllers`
-- ❌ `🚨 fix: memory leak…` – `🚨 fix` is not a valid prefix from the table
+- ❌ `🚨 fix: memory leak` – `🚨 fix` is not a valid prefix from the table
 - ❌ `✨ bug: fix memory leak` – wrong prefix (must use the exact combination shown in the Prefix column)
 
 <br>
 
 ### Scope
 
-The scope narrows the commit's focus to a specific module, component, feature, or directory. This lets readers instantly know *where* the change applies without opening the diff.
+The scope narrows the commit's focus to a specific module, component, feature, or directory. This lets readers instantly know *where* the change applies without opening the diff. Unlike some conventions, `Commoji` scopes must not duplicate or semantically overlap the prefix tag - the prefix already identifies the domain, so the scope should only add location information.
 
 #### Rules (mandatory)
 
@@ -245,8 +277,9 @@ The scope narrows the commit's focus to a specific module, component, feature, o
 - Always **lowercase** with hyphens for multi-word scopes.
 - Omit the scope entirely when:
   - the change affects the whole project, or
-  - the scope would be identical or semantically duplicate the tag in the prefix (e.g. `⚡ metrics(performance)`, `💄 ui(styles)`).
+  - the scope would be identical or semantically duplicate the tag in the prefix (e.g. `📊 metrics(performance)`, `💄 ui(styles)`).
 - Avoid broad/generic scopes such as `core`, `misc`, `utils`, `main` – they defeat the purpose of scoping. If no specific scope applies, omit it entirely and keep the correct domain prefix.
+- When in doubt, omit the scope - a clean `<prefix>: <verb> <object>` is always preferred over a vague or redundant `(<scope>)`.
 
 #### Examples (fully compliant with Format & orthogonality)
 
@@ -254,12 +287,9 @@ The scope narrows the commit's focus to a specific module, component, feature, o
 - ✅ `📚 docs(auth): add table of contents to README`
 - ✅ `🔨 logic: refactor token validation`   <!-- global / no useful scope -->
 - ❌ `💄 ui(ui): update button styles` – scope duplicates tag
-- ❌ `⚡ metrics(performance): optimize startup time` – semantic duplication
+- ❌ `📊 metrics(performance): optimize startup time` – semantic duplication
 - ✅ `🔨 logic: update utility parsers`  – correct domain, scope omitted when too broad
 - ❌ `🔧 chore(utils): update utility parsers` – domain replaced by chore to avoid scoping decision
-
-> [!NOTE]
-> When in doubt, omit the scope. A clean `<prefix>: <verb> <object>` is always preferred over a vague or redundant `(<scope>)`.
 
 <br>
 
@@ -271,29 +301,33 @@ If a change feels like it falls between two categories, select the verb represen
 
 <div align="center">
 
-|**Verb**     |**Action Purpose**                                   |
-|:-----------:|:---------------------------------------------------:|
-|**add**      |_Introduce a new element_                            |
-|**update**   |_Modify an existing element_                         |
-|**remove**   |_Eliminate something_                                |
-|**rename**   |_Change a name or label_                             |
-|**move**     |_Reposition without modifying content_               |
-|**implement**|_Build out functionality_                            |
-|**fix**      |_Correct something that is not working as expected_  |
-|**refactor** |_Reorganize code without changing its output_        |
-|**optimize** |_Improve throughput or reduce resource usage_        |
-|**test**     |_Verify that code works as intended_                 |
-|**prepare**  |_Set up or stage for an upcoming release_            |
-|**release**  |_Publish or ship a version_                          |
-|**revert**   |_Undo a previous change_                             |
-|**integrate**|_Combine separate code streams or systems_           |
-|**clean**    |_Purge unused or obsolete elements_                  |
-|**translate**|_Convert or adapt content for a target language_     |
-|**generate** |_Create generated / derived files or code_           |
-|**bump**     |_Increment or set a specific version number_         |
-|**upgrade**  |_Move to a newer major/minor version_                |
-|**migrate**  |_Move or adapt code/data to a new format or platform_|
-|**harden**   |_Strengthen code and systems against threats_        |
+|**Verb**     |**Action Purpose**                                    |
+|:-----------:|:----------------------------------------------------:|
+|**add**      |_Introduce a new element_                             |
+|**update**   |_Modify an existing element_                          |
+|**remove**   |_Eliminate something_                                 |
+|**rename**   |_Change a name or label_                              |
+|**move**     |_Reposition without modifying content_                |
+|**implement**|_Build out functionality_                             |
+|**fix**      |_Correct something that is not working as expected_   |
+|**refactor** |_Reorganize code without changing its output_         |
+|**optimize** |_Improve throughput or reduce resource usage_         |
+|**test**     |_Verify that code works as intended_                  |
+|**prepare**  |_Set up or stage for an upcoming release_             |
+|**release**  |_Publish or ship a version_                           |
+|**revert**   |_Undo a previous change_                              |
+|**integrate**|_Combine separate code streams or systems_            |
+|**clean**    |_Purge unused or obsolete elements_                   |
+|**translate**|_Convert or adapt content for a target language_      |
+|**generate** |_Create generated / derived files or code_            |
+|**bump**     |_Increment or set a specific version number_          |
+|**upgrade**  |_Move to a newer major/minor version_                 |
+|**migrate**  |_Move or adapt code/data to a new format or platform_ |
+|**harden**   |_Strengthen code and systems against threats_         |
+|**enable**   |_Activate a feature, flag, or capability_             |
+|**disable**  |_Deactivate a feature, flag, or capability_           |
+|**deprecate**|_Mark something as obsolete and scheduled for removal_|
+|**split**    |_Divide one module, file, or component into multiple_ |
 
 </div>
 
@@ -303,23 +337,17 @@ If a change feels like it falls between two categories, select the verb represen
 
 <br>
 
-> [!IMPORTANT]
-> Verbs must come from the table above.
-> When no entry fits perfectly, select the semantically closest verb and clarify nuances in the commit body.
-
-<br>
-
 **Examples (fully compliant)**
 
 - ✅ `👷 ci: add deployment smoke test`
 - ✅ `📚 docs: add payment flow guide`
 - ✅ `🔐 security: harden API endpoints against XSS`
+- ✅ `🔬 experiment: add Redis caching prototype`
+- ✅ `🔀 branch: integrate feature/auth-rewrite`
+- ✅ `⌛ history: revert accidental merge commit`
 - ❌ `🔬 experiment: experiment with caching` – `experiment` is not in the [**Verbs**](#verbs) table
 - ❌ `🔀 branch: merge main` – `merge` is not in the [**Verbs**](#verbs) table
 - ❌ `🔨 logic(auth): refactored token validation` – wrong tense
-
-> [!TIP]
-> When a change truly spans multiple concerns, choose the highest-level verb and explain details in the body.
 
 <br>
 
@@ -327,8 +355,11 @@ If a change feels like it falls between two categories, select the verb represen
 > **Quick verb cheat-sheet**
 >
 > - New → `add` / `implement` / `generate` _(derived or output files only)_
-> - Change → `update` / `refactor` / `fix` / `migrate` _(`migrate` only: move or adapt to a new format or platform)_
+> - Change → `update` / `refactor` / `fix` / `migrate` / `enable` / `disable` / `deprecate`
+> - Split → `split` _(divide one module, file, or component into multiple)_
 > - Delete → `remove` / `clean`
+>
+> **`update` vs `migrate`**: use `update` when modifying an existing element in place. Use `migrate` only when moving or adapting code, data, or configuration to a structurally different format, platform, or system - e.g. `migrate user schema to UUID`, `migrate config to TOML`. If no structural change occurs, it's `update`.
 
 <br>
 
@@ -356,14 +387,14 @@ It completes the sentence started by the prefix + verb while staying short and s
 |:-----------------------------------------:|:-------:|:----------------------------------------------:|
 |`📚 docs(api): add table of contents`      |✅       |_Specific noun phrase_                          |
 |`🐛 bug: fix null pointer in login`        |✅       |_Identifies exact failure point_                |
-|`⚡ metrics: add startup time benchmark`   |✅       |_Adds measurement, squarely in metrics domain_  |
+|`📊 metrics: add startup time benchmark`   |✅       |_Adds measurement, squarely in metrics domain_  |
 |`📚 docs: update installation guide`       |✅       |_Clear subsection_                              |
 |`📚 docs: update docs`                     |❌       |_Object too broad / repeats tag_                |
 |`📦 deps: bump lodash to 4.17.21`          |✅       |_Version pinned, no overlap_                    |
 |`📦 deps: upgrade zep from 6.1 to 6.3`     |✅       |_Specific version range, clean domain+operation_|
 |`✨ feature: add mode`                     |❌       |_Ambiguous object_                              |
 |`🐛 bug: fix bug`                          |❌       |_Repeats tag_                                   |
-|`⚡ metrics: optimize performance`         |❌       |_Vague object_                                  |
+|`📊 metrics: optimize performance`         |❌       |_Vague object_                                  |
 
 </div>
 
@@ -373,8 +404,7 @@ It completes the sentence started by the prefix + verb while staying short and s
 
 <br>
 
-> [!TIP]
-> When a change has many small parts, pick the single most important noun phrase for the summary and list the rest in the body:
+When a change has many small parts, pick the single most important noun phrase for the summary and list the rest in the body:  
 
 ```markdown
 📚 docs: add table of contents
@@ -434,8 +464,8 @@ Add the following to the global `~/.gitconfig` (or project `.git/config`):
     security = log --grep="^🔐 security" --oneline --decorate --color --graph
     chore    = log --grep="^🔧 chore"    --oneline --decorate --color --graph
 
-    # Breaking changes only (searches full message incl. body – rare false positives possible)
-    breaking = log --grep="^[^:]+!:" --extended-regexp --oneline --decorate --color --graph
+    breaking = log --grep="^[^:]+!:" --extended-regexp --oneline --decorate --color --graph # searches full message, not subject only
+    breaking-this-week = log --grep="^[^:]+!:" --since="1 week ago" --oneline --decorate --color --graph # same caveat
 
     # Scoped variants (more precise, ignores object/body matches)
     feat-scoped = log --grep="^✨ feature(" --oneline --decorate --color --graph
@@ -443,12 +473,13 @@ Add the following to the global `~/.gitconfig` (or project `.git/config`):
 
     # Compound / recent / filtered examples
     recent-bugs = log --grep="^🐛 bug" -n 15 --oneline --decorate --color --graph
-    # Same grep caveat as 'breaking' – searches full message, not subject only
     core-changes = log --grep="^(✨ feature|🐛 bug|🔨 logic|🔥 debt)" --extended-regexp --oneline --decorate --color --graph
-    breaking-this-week = log --grep="^[^:]+!:" --since="1 week ago" --oneline --decorate --color --graph
 ```
 
-**Why these work so well**
+> [!WARNING]
+> The `breaking` and `breaking-this-week` aliases search the **full commit message** including the body, not just the subject line. If body text incidentally contains `!:` (e.g. in code samples or prose), rare false positives may appear. All other single-domain aliases are subject-line anchored via `^` and are not affected.
+
+**Why these work so well**  
 
 - `^` anchors to start of line → no false positives from `object` or `body` for single-domain aliases (the `breaking` alias searches the full message - see caveat above)
 - Exact `emoji` + `tag` + `space` → no overlap with other `prefixes`
@@ -457,7 +488,8 @@ Add the following to the global `~/.gitconfig` (or project `.git/config`):
 
 <br>
 
-**Pro tip**
+**Pro tip**  
+
 Combine with other flags for "SQL-like" power:
 
 ```bash
@@ -513,32 +545,73 @@ module.exports = {
         '🐣 repo',
         '💄 ui',
         '🧠 ux',
+        '🎨 assets',
         '🌐 i18n',
-        '♿ accessibility',
+        '🦯 a11y',
         '📚 docs',
         '✅ spec',
+        '📐 types',
+        '💾 data',
         '📦 deps',
         '🚀 env',
         '👷 ci',
         '🏭 build',
-        '⚙️ config',
-        '⚡ metrics',
+        '🔩 config',
+        '📊 metrics',
         '🔐 security',
         '🔧 chore',
-        '⏪ history',
+        '⌛ history',
         '🔀 branch',
         '🔬 experiment'
       ]
     ],
-    'type-case': [0],
+    'type-case': [0],   // disabled - commitlint can't handle emoji-prefixed types
     'scope-case': [2, 'always', 'lower-case'],
-    'subject-case': [0],
+    'subject-case': [0], // disabled - object casing is spec-managed (proper nouns etc.)
     'subject-empty': [2, 'never'],
     'subject-full-stop': [2, 'never'],
     'header-max-length': [2, 'always', 72],
     'type-empty': [2, 'never']
   }
 }
+```
+
+#### Canonical Header Regex
+
+For use outside `commitlint` - Git hooks, custom parsers, changelog generators, CI scripts:
+```js
+/^(.+?\s[\w-]+)(?:\(([a-z][a-z0-9-]*)\))?(!)?:[ ](.+)$/
+```
+
+|**Group**|**Captures**             |**Example**                 |
+|:-------:|:-----------------------:|:--------------------------:|
+|`$1`     |Full prefix (emoji + tag)|`✨ feature`                |
+|`$2`     |Scope (optional)         |`payment-gateway`           |
+|`$3`     |Breaking `!` (optional)  |`!`                         |
+|`$4`     |Subject (verb + object)  |`add Stripe webhook handler`|
+
+#### Git Hook (`commit-msg`)
+
+Drop-in hook for projects not using Husky or lint-staged. Save as `.git/hooks/commit-msg` and make it executable (`chmod +x .git/hooks/commit-msg`). Note that this validates structural format only - verb table compliance and semantic orthogonality require the `Commoji` VS Code Extension.
+```sh
+#!/bin/sh
+# Commoji commit-msg hook - validates header structure
+
+REGEX='^.+[[:space:]][a-zA-Z0-9_-]+(\([a-z][a-z0-9-]*\))?(!)?: .+$'
+SHORTCODE_REGEX=':[a-z_]+:'
+MSG=$(head -1 "$1")
+
+if echo "$MSG" | grep -qE "$SHORTCODE_REGEX"; then
+  echo "✖ Shortcode detected in commit subject: $MSG"
+  echo "  Use the actual UTF-8 emoji instead of shortcodes (e.g. ✨ not :sparkles:)"
+  exit 1
+fi
+
+if ! echo "$MSG" | grep -qE "$REGEX"; then
+  echo "✖ Invalid Commoji format: $MSG"
+  echo "  Expected: <prefix>[(<scope>)][!]: <verb> <object>"
+  exit 1
+fi
 ```
 
 ---
@@ -552,16 +625,16 @@ The table below demonstrates real commit messages that fully comply – or delib
 |**Commit Message**                                       |**Valid**|**Why**                                           |
 |:-------------------------------------------------------:|:-------:|:------------------------------------------------:|
 |`🔨 logic(auth): refactor token validation`              |✅       |_Imperative verb, no repetition_                  |
-|`⚙️ config: update Redis connection timeout`             |✅       |_Specific object, correct domain usage_           |
+|`🔩 config: update Redis connection timeout`             |✅       |_Specific object, correct domain usage_           |
 |`📚 docs: add payment flow guide`                        |✅       |_Concise object, unambiguous docs domain_         |
 |`🔐 security: harden API endpoints against XSS`          |✅       |_Valid table verb, precise object_                |
 |`✨ feature(payment-gateway): add Stripe webhook handler`|✅       |_Valid scope, specific object_                    |
-|`⚡ metrics: optimize Redis cache eviction`              |✅       |_Specific object, clean domain+operation_         |
+|`📊 metrics: optimize Redis cache eviction`              |✅       |_Specific object, clean domain+operation_         |
 |`🔥 debt: remove deprecated v1 controllers`              |✅       |_Precise object, correct domain usage_            |
 |`🐛 bug!: update login response format`                  |✅       |_Breaking change without scope_                   |
 |`📦 deps(user-profile)!: remove lodash v4`               |✅       |_Breaking change + multi-word scope_              |
 |`📚 docs: update docs`                                   |❌       |_Object repeats tag (violates orthogonality)_     |
-|`✨ feature: new payment modal`                          |❌       |_Missing verb — object must be preceded by a verb_|
+|`✨ feature: new payment modal`                          |❌       |_Missing verb - object must be preceded by a verb_|
 |`🐛 bug: Fix Login Bug`                                  |❌       |_Capitalized verb + object repeats domain_        |
 |`🔨 logic(auth): refactored token validation`            |❌       |_Past tense (must be imperative present)_         |
 |`💄 ui(ui): update button styles`                        |❌       |_Scope duplicates tag_                            |
@@ -571,11 +644,6 @@ The table below demonstrates real commit messages that fully comply – or delib
 <div align="center">
   <em>Table 4. <code>Commoji</code> commit message examples</em>
 </div>
-
-<br>
-
-> [!TIP]
-> Use these examples as quick reference when writing or reviewing. Every valid row above follows **all** locked sections without exception.
 
 ---
 
@@ -608,8 +676,7 @@ The psychological foundation of `Commoji` draws from well-established research i
 - **Chunking & Working Memory**  
   Miller, G. A. (1956). The magical number seven, plus or minus two: Some limits on our capacity for processing information. *Psychological Review*, 63(2), 81–97.
 
-> [!NOTE]
-> These references informed the consolidation of principles in the Psychology section. For eye-movement and parafoveal preview benefits in reading (supporting fast scanning of emoji-prefixed commits), see Rayner, K. (1998). Eye movements in reading and information processing: 20 years of research. *Psychological Bulletin*, 124(3), 372–422.
+The works above informed the consolidation of principles in the Psychology section. For eye-movement and parafoveal preview benefits supporting fast scanning of emoji-prefixed commits, see also Rayner, K. (1998). Eye movements in reading and information processing: 20 years of research. *Psychological Bulletin*, 124(3), 372–422.
 
 ### Empirical Studies on Emoji Processing & Software Communication
 - **Barach, E., et al.** (2021). Are emojis processed like words?: Eye movements reveal the time course of semantic processing for emojified text. *Psychonomic Bulletin & Review*, 28(3), 983–997. https://doi.org/10.3758/s13423-020-01864-y  

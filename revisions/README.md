@@ -4,7 +4,7 @@
 
 <br>
 
-- [v3.0.0](https://github.com/igorskyflyer/commoji/releases/tag/v3.0.0) (_18-Mar-2026_)
+- [v3.0.0](https://github.com/igorskyflyer/commoji/releases/tag/v3.0.0) (_19-Mar-2026_)
 - [v2.1.1](https://github.com/igorskyflyer/commoji/releases/tag/v2.1.1) (_16-Mar-2026_)
 - [v2.1.0](https://github.com/igorskyflyer/commoji/releases/tag/v2.1.0) (_10-Mar-2026_)
 - [v2.0.2](https://github.com/igorskyflyer/commoji/releases/tag/v2.0.2) (_09-Mar-2026_)

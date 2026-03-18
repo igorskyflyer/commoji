@@ -3,8 +3,9 @@
 ## of [**Commoji**](https://github.com/igorskyflyer/commoji)
 
 <br>
+📚 docs: release Commoji v3.0.0 specification
 
-### v3.0.0 – *18 Mar 2026*
+### v3.0.0 – *19 Mar 2026*
 
 - 📚 **docs!**: release Commoji v3.0.0 spec
 
@@ -12,6 +13,7 @@
 
 *Renamed*:
 - Tags section to Prefixes throughout
+- rename accessibility to a11y across all sections
 
 *Removed*:
 - configure verb (absorbed by add / update)
@@ -25,11 +27,17 @@
 - headerPattern regex with tab-safe [ ] space matching
 - Lyons (1977) reference for Semantic Orthogonality
 - Prefix domain selection rule (what vs. why)
+- add assets, types, data prefixes and enable/disable/deprecate/split verbs
+- add canonical regex, commit-msg hook, and shortcode detection guard
+- add prefix disambiguation for logic/metrics, assets/ui, chore/debt
 
 *Rewritten*:
 - 14 verb definitions - eliminated all domain vocabulary echoes
 - 7 domain descriptions - removed activity language
 - Semantic Orthogonality attribution: Information Theory to Lexical Semantics
+- replace 4 fragile multi-codepoint emojis with single-codepoint alternatives
+- move shortcodes to collapsible reference table
+- reduce callout blocks from 14 to 4
 
 [**Compare v2.1.1...v3.0.0**](https://github.com/igorskyflyer/commoji/compare/v2.1.1...v3.0.0)
 
